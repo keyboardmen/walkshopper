@@ -9,12 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Aspects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JLRoutes.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,25 +49,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>iRate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>024BF8373E6C5AFE6C325D97857904A3</key>
+		<key>1A3719E0C43E84B7BD2579FBE621501D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>034409D1D71B40BE351DB3B7977CD234</key>
+		<key>22DABAE98754CF50F7897EFB24342A16</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>384A29853159204FC1DB074D781EC58B</key>
+		<key>25ABAFD2E7008F224B892DEF51218FE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>484BB33FD9D93DE35648B61D05936DD4</key>
+		<key>52057641FCA97573EA2FD7DBE53A925E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +82,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>614ADE821F55D2CD6B4BD53654CA5ECF</key>
+		<key>6906FED110B190F19CBF5F512A24470C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7C271B26E90F20A2102CCB574CEFAA7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8B090755233C44E8E118A8DA48015C08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7C2465779E39F517AD30CE6B15AD724</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB6863AA6957542F4CAC992A320CD75D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

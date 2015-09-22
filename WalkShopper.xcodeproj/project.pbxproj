@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F6FE4BA1BB1DF8100F39F60 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FE4B61BB1DF8100F39F60 /* SMS_SDKLocalizable.strings */; settings = {ASSET_TAGS = (); }; };
+		6F6FE4BB1BB1DF8100F39F60 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4B81BB1DF8100F39F60 /* SMS_SDK.framework */; settings = {ASSET_TAGS = (); }; };
+		6F6FE4BD1BB1E04600F39F60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */; };
+		6F6FE4BF1BB1E0C600F39F60 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */; };
+		6F6FE4C11BB1E0DC00F39F60 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */; };
 		6FA69A151BB1C74700E39B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A141BB1C74700E39B04 /* main.m */; };
 		6FA69A181BB1C74700E39B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A171BB1C74700E39B04 /* AppDelegate.m */; };
 		6FA69A1B1BB1C74700E39B04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A1A1BB1C74700E39B04 /* ViewController.m */; };
@@ -37,6 +42,12 @@
 
 /* Begin PBXFileReference section */
 		24E34D9D33755289C8C99C67 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6FE4B71BB1DF8100F39F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
+		6F6FE4B81BB1DF8100F39F60 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		6F6FE4B91BB1DF8100F39F60 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6FA69A101BB1C74700E39B04 /* WalkShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA69A141BB1C74700E39B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FA69A161BB1C74700E39B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,7 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F6FE4C11BB1E0DC00F39F60 /* libz.tbd in Frameworks */,
+				6F6FE4BF1BB1E0C600F39F60 /* libicucore.tbd in Frameworks */,
+				6F6FE4BD1BB1E04600F39F60 /* MessageUI.framework in Frameworks */,
 				75C9523B43FE08B6C0347465 /* libPods.a in Frameworks */,
+				6F6FE4BB1BB1DF8100F39F60 /* SMS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F6FE4B41BB1DF8100F39F60 /* CommonSdk */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FE4B51BB1DF8100F39F60 /* SMS_SDK */,
+			);
+			path = CommonSdk;
+			sourceTree = "<group>";
+		};
+		6F6FE4B51BB1DF8100F39F60 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FE4B61BB1DF8100F39F60 /* SMS_SDKLocalizable.strings */,
+				6F6FE4B81BB1DF8100F39F60 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
 		6FA69A071BB1C74700E39B04 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +140,7 @@
 		6FA69A121BB1C74700E39B04 /* WalkShopper */ = {
 			isa = PBXGroup;
 			children = (
+				6F6FE4B41BB1DF8100F39F60 /* CommonSdk */,
 				6FA69A161BB1C74700E39B04 /* AppDelegate.h */,
 				6FA69A171BB1C74700E39B04 /* AppDelegate.m */,
 				6FA69A191BB1C74700E39B04 /* ViewController.h */,
@@ -159,6 +192,9 @@
 		973CC142C32C7A5CD418C863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */,
+				6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */,
+				6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */,
 				24E34D9D33755289C8C99C67 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -251,6 +287,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 6FA69A071BB1C74700E39B04;
 			productRefGroup = 6FA69A111BB1C74700E39B04 /* Products */;
@@ -269,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F6FE4BA1BB1DF8100F39F60 /* SMS_SDKLocalizable.strings in Resources */,
 				6FA69A231BB1C74700E39B04 /* LaunchScreen.storyboard in Resources */,
 				6FA69A201BB1C74700E39B04 /* Assets.xcassets in Resources */,
 				6FA69A1E1BB1C74700E39B04 /* Main.storyboard in Resources */,
@@ -367,6 +405,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6F6FE4B61BB1DF8100F39F60 /* SMS_SDKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F6FE4B71BB1DF8100F39F60 /* en */,
+				6F6FE4B91BB1DF8100F39F60 /* zh-Hans */,
+			);
+			name = SMS_SDKLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		6FA69A1C1BB1C74700E39B04 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -471,6 +518,10 @@
 			baseConfigurationReference = AA903194D8B260E02F7EB2F4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
+				);
 				INFOPLIST_FILE = WalkShopper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.distancecutter.WalkShopper;
@@ -483,6 +534,10 @@
 			baseConfigurationReference = 8BEA362C24A66E179AF79E6C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
+				);
 				INFOPLIST_FILE = WalkShopper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.distancecutter.WalkShopper;
