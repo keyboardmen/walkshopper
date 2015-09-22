@@ -15,6 +15,7 @@
 		6FA69A231BB1C74700E39B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA69A211BB1C74700E39B04 /* LaunchScreen.storyboard */; };
 		6FA69A2E1BB1C74700E39B04 /* WalkShopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A2D1BB1C74700E39B04 /* WalkShopperTests.m */; };
 		6FA69A391BB1C74700E39B04 /* WalkShopperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */; };
+		75C9523B43FE08B6C0347465 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E34D9D33755289C8C99C67 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24E34D9D33755289C8C99C67 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA69A101BB1C74700E39B04 /* WalkShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA69A141BB1C74700E39B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FA69A161BB1C74700E39B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		6FA69A341BB1C74700E39B04 /* WalkShopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkShopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkShopperUITests.m; sourceTree = "<group>"; };
 		6FA69A3A1BB1C74700E39B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BEA362C24A66E179AF79E6C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AA903194D8B260E02F7EB2F4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C9523B43FE08B6C0347465 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				6FA69A2C1BB1C74700E39B04 /* WalkShopperTests */,
 				6FA69A371BB1C74700E39B04 /* WalkShopperUITests */,
 				6FA69A111BB1C74700E39B04 /* Products */,
+				82C2621B0C623C23999D0848 /* Pods */,
+				973CC142C32C7A5CD418C863 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			path = WalkShopperUITests;
 			sourceTree = "<group>";
 		};
+		82C2621B0C623C23999D0848 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA903194D8B260E02F7EB2F4 /* Pods.debug.xcconfig */,
+				8BEA362C24A66E179AF79E6C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		973CC142C32C7A5CD418C863 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24E34D9D33755289C8C99C67 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FA69A3D1BB1C74700E39B04 /* Build configuration list for PBXNativeTarget "WalkShopper" */;
 			buildPhases = (
+				597ADB9A092E34B49B4E7999 /* Check Pods Manifest.lock */,
 				6FA69A0C1BB1C74700E39B04 /* Sources */,
 				6FA69A0D1BB1C74700E39B04 /* Frameworks */,
 				6FA69A0E1BB1C74700E39B04 /* Resources */,
+				1E484F7145781BA6C282B0BF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +290,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E484F7145781BA6C282B0BF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		597ADB9A092E34B49B4E7999 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FA69A0C1BB1C74700E39B04 /* Sources */ = {
@@ -409,6 +468,7 @@
 		};
 		6FA69A3E1BB1C74700E39B04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA903194D8B260E02F7EB2F4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WalkShopper/Info.plist;
@@ -420,6 +480,7 @@
 		};
 		6FA69A3F1BB1C74700E39B04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BEA362C24A66E179AF79E6C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WalkShopper/Info.plist;
@@ -496,6 +557,7 @@
 				6FA69A3F1BB1C74700E39B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FA69A401BB1C74700E39B04 /* Build configuration list for PBXNativeTarget "WalkShopperTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +566,7 @@
 				6FA69A421BB1C74700E39B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FA69A431BB1C74700E39B04 /* Build configuration list for PBXNativeTarget "WalkShopperUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +575,7 @@
 				6FA69A451BB1C74700E39B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
