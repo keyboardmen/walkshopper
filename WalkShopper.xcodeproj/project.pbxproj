@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F6FE4BA1BB1DF8100F39F60 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FE4B61BB1DF8100F39F60 /* SMS_SDKLocalizable.strings */; settings = {ASSET_TAGS = (); }; };
-		6F6FE4BB1BB1DF8100F39F60 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4B81BB1DF8100F39F60 /* SMS_SDK.framework */; settings = {ASSET_TAGS = (); }; };
+		6F6FE4BA1BB1DF8100F39F60 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FE4B61BB1DF8100F39F60 /* SMS_SDKLocalizable.strings */; };
+		6F6FE4BB1BB1DF8100F39F60 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4B81BB1DF8100F39F60 /* SMS_SDK.framework */; };
 		6F6FE4BD1BB1E04600F39F60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */; };
 		6F6FE4BF1BB1E0C600F39F60 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */; };
 		6F6FE4C11BB1E0DC00F39F60 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */; };
 		6FA69A151BB1C74700E39B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A141BB1C74700E39B04 /* main.m */; };
 		6FA69A181BB1C74700E39B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A171BB1C74700E39B04 /* AppDelegate.m */; };
-		6FA69A1B1BB1C74700E39B04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A1A1BB1C74700E39B04 /* ViewController.m */; };
 		6FA69A1E1BB1C74700E39B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA69A1C1BB1C74700E39B04 /* Main.storyboard */; };
 		6FA69A201BB1C74700E39B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA69A1F1BB1C74700E39B04 /* Assets.xcassets */; };
 		6FA69A231BB1C74700E39B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA69A211BB1C74700E39B04 /* LaunchScreen.storyboard */; };
 		6FA69A2E1BB1C74700E39B04 /* WalkShopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A2D1BB1C74700E39B04 /* WalkShopperTests.m */; };
 		6FA69A391BB1C74700E39B04 /* WalkShopperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */; };
 		75C9523B43FE08B6C0347465 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E34D9D33755289C8C99C67 /* libPods.a */; };
+		CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */; };
+		CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */; };
+		CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C421BB2A1E200F74DD7 /* WSLoginViewController.m */; };
+		CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C451BB2A20E00F74DD7 /* WSHomeViewController.m */; };
+		CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C481BB2A22700F74DD7 /* WSMineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +56,6 @@
 		6FA69A141BB1C74700E39B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FA69A161BB1C74700E39B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6FA69A171BB1C74700E39B04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6FA69A191BB1C74700E39B04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6FA69A1A1BB1C74700E39B04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6FA69A1D1BB1C74700E39B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FA69A1F1BB1C74700E39B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA69A221BB1C74700E39B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,17 @@
 		6FA69A3A1BB1C74700E39B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEA362C24A66E179AF79E6C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AA903194D8B260E02F7EB2F4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CD872C301BB2843400F74DD7 /* WalkShopperPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkShopperPrefixHeader.pch; sourceTree = "<group>"; };
+		CD872C351BB286CA00F74DD7 /* WSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMainTabBarController.h; sourceTree = "<group>"; };
+		CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMainTabBarController.m; sourceTree = "<group>"; };
+		CD872C3E1BB29B4100F74DD7 /* WSUserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserSession.h; sourceTree = "<group>"; };
+		CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserSession.m; sourceTree = "<group>"; };
+		CD872C411BB2A1E200F74DD7 /* WSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoginViewController.h; sourceTree = "<group>"; };
+		CD872C421BB2A1E200F74DD7 /* WSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoginViewController.m; sourceTree = "<group>"; };
+		CD872C441BB2A20E00F74DD7 /* WSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSHomeViewController.h; sourceTree = "<group>"; };
+		CD872C451BB2A20E00F74DD7 /* WSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSHomeViewController.m; sourceTree = "<group>"; };
+		CD872C471BB2A22700F74DD7 /* WSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMineViewController.h; sourceTree = "<group>"; };
+		CD872C481BB2A22700F74DD7 /* WSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +114,7 @@
 		6F6FE4B41BB1DF8100F39F60 /* CommonSdk */ = {
 			isa = PBXGroup;
 			children = (
+				CD872C3D1BB2990900F74DD7 /* UIViewController+WalkShopperExtensions */,
 				6F6FE4B51BB1DF8100F39F60 /* SMS_SDK */,
 			);
 			path = CommonSdk;
@@ -140,12 +154,16 @@
 		6FA69A121BB1C74700E39B04 /* WalkShopper */ = {
 			isa = PBXGroup;
 			children = (
-				6F6FE4B41BB1DF8100F39F60 /* CommonSdk */,
 				6FA69A161BB1C74700E39B04 /* AppDelegate.h */,
 				6FA69A171BB1C74700E39B04 /* AppDelegate.m */,
-				6FA69A191BB1C74700E39B04 /* ViewController.h */,
-				6FA69A1A1BB1C74700E39B04 /* ViewController.m */,
+				CD872C301BB2843400F74DD7 /* WalkShopperPrefixHeader.pch */,
 				6FA69A1C1BB1C74700E39B04 /* Main.storyboard */,
+				CD872C341BB286CA00F74DD7 /* Main */,
+				CD872C381BB286DE00F74DD7 /* Home */,
+				CD872C391BB286E700F74DD7 /* Mine */,
+				CD872C3A1BB296A500F74DD7 /* Login */,
+				CD872C3B1BB296AF00F74DD7 /* UserSession */,
+				6F6FE4B41BB1DF8100F39F60 /* CommonSdk */,
 				6FA69A1F1BB1C74700E39B04 /* Assets.xcassets */,
 				6FA69A211BB1C74700E39B04 /* LaunchScreen.storyboard */,
 				6FA69A241BB1C74700E39B04 /* Info.plist */,
@@ -198,6 +216,58 @@
 				24E34D9D33755289C8C99C67 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD872C341BB286CA00F74DD7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CD872C351BB286CA00F74DD7 /* WSMainTabBarController.h */,
+				CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CD872C381BB286DE00F74DD7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CD872C441BB2A20E00F74DD7 /* WSHomeViewController.h */,
+				CD872C451BB2A20E00F74DD7 /* WSHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CD872C391BB286E700F74DD7 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				CD872C471BB2A22700F74DD7 /* WSMineViewController.h */,
+				CD872C481BB2A22700F74DD7 /* WSMineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		CD872C3A1BB296A500F74DD7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CD872C411BB2A1E200F74DD7 /* WSLoginViewController.h */,
+				CD872C421BB2A1E200F74DD7 /* WSLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CD872C3B1BB296AF00F74DD7 /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				CD872C3E1BB29B4100F74DD7 /* WSUserSession.h */,
+				CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */,
+			);
+			path = UserSession;
+			sourceTree = "<group>";
+		};
+		CD872C3D1BB2990900F74DD7 /* UIViewController+WalkShopperExtensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UIViewController+WalkShopperExtensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,9 +437,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FA69A1B1BB1C74700E39B04 /* ViewController.m in Sources */,
 				6FA69A181BB1C74700E39B04 /* AppDelegate.m in Sources */,
+				CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */,
 				6FA69A151BB1C74700E39B04 /* main.m in Sources */,
+				CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */,
+				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
+				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
+				CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +596,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopperPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.distancecutter.WalkShopper;
@@ -538,6 +613,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopperPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.distancecutter.WalkShopper;
