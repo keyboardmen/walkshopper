@@ -596,8 +596,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopperPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WalkShopperPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.distancecutter.WalkShopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -613,8 +614,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopperPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WalkShopperPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.distancecutter.WalkShopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";

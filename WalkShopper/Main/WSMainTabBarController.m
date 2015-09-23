@@ -23,7 +23,10 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-
+    if ([WSUserSession sharedSession].isLogin == NO) {
+        
+        return NO;
+    }
     return YES;
 }
 

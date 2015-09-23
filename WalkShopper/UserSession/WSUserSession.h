@@ -10,6 +10,8 @@
 
 @interface WSUserSession : NSObject
 
+@property (assign, nonatomic) BOOL isLogin;
+
 + (WSUserSession *)sharedSession;
 
 @end
