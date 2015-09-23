@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MSWeakTimer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,22 +62,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A3719E0C43E84B7BD2579FBE621501D</key>
+		<key>08D303B340548351F9BE46F3646111B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>22DABAE98754CF50F7897EFB24342A16</key>
+		<key>35A68E5E488E3294B6D12D0A02A69749</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25ABAFD2E7008F224B892DEF51218FE7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>52057641FCA97573EA2FD7DBE53A925E</key>
+		<key>4C43E6739BC591E976BEF8E66FD1EF99</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +82,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6906FED110B190F19CBF5F512A24470C</key>
+		<key>54663F114D93079F3980D9888E25EBB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C271B26E90F20A2102CCB574CEFAA7C</key>
+		<key>6648A0321772DAB4FE2F8E53E6CE8E41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>792550026593D759B9B4D050AC9890B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7C2465779E39F517AD30CE6B15AD724</key>
+		<key>A4E21B08C31DF91A24FE965C26229730</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB6863AA6957542F4CAC992A320CD75D</key>
+		<key>D7316D61604728CB99BB67169D5AA1F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E972ACE7208D0BF6F3F9B726A0F43695</key>
 		<dict>
 			<key>primary</key>
 			<true/>
