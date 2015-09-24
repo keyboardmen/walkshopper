@@ -7,6 +7,8 @@
 //
 
 #import "WSMainTabBarController.h"
+#import "WSMineViewController.h"
+#import "WSLoginViewController.h"
 
 @interface WSMainTabBarController () <UITabBarControllerDelegate>
 
@@ -23,10 +25,17 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-    if ([WSUserSession sharedSession].isLogin == NO) {
-        
-        return NO;
+    UINavigationController *nav = (UINavigationController *)viewController;
+    if ([nav.viewControllers.firstObject isKindOfClass:[WSMineViewController class]]) {
+        if ([WSUserSession sharedSession].isLogin == NO) {
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+            WSLoginViewController *loginVC = [storyBoard instantiateViewControllerWithIdentifier:@"WSLoginViewController"];
+            nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+            [self presentViewController:nav animated:YES completion:nil];
+            return NO;
+        }
     }
+
     return YES;
 }
 
