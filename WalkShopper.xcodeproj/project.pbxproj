@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FC51BB643DF00A60911 /* UIViewController+WSOrientations.m */; settings = {ASSET_TAGS = (); }; };
+		6F1A7FC91BB6475E00A60911 /* UIViewController+WSActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FC81BB6475E00A60911 /* UIViewController+WSActivity.m */; settings = {ASSET_TAGS = (); }; };
+		6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FCC1BB64B9B00A60911 /* UIDevice+Extensions.m */; settings = {ASSET_TAGS = (); }; };
+		6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FCF1BB64ED800A60911 /* UIViewController+WSToast.m */; settings = {ASSET_TAGS = (); }; };
+		6F1A7FD41BB6FCE900A60911 /* WSAppGeneralConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FD31BB6FCE900A60911 /* WSAppGeneralConfiguration.m */; settings = {ASSET_TAGS = (); }; };
+		6F1A7FDC1BB7007C00A60911 /* WSNetworkingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FDB1BB7007C00A60911 /* WSNetworkingUtilities.m */; settings = {ASSET_TAGS = (); }; };
+		6F1A7FDF1BB7025800A60911 /* NSData+Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */; settings = {ASSET_TAGS = (); }; };
 		6F6FE4BA1BB1DF8100F39F60 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FE4B61BB1DF8100F39F60 /* SMS_SDKLocalizable.strings */; };
 		6F6FE4BB1BB1DF8100F39F60 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4B81BB1DF8100F39F60 /* SMS_SDK.framework */; };
 		6F6FE4BD1BB1E04600F39F60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */; };
@@ -48,6 +55,20 @@
 
 /* Begin PBXFileReference section */
 		24E34D9D33755289C8C99C67 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F1A7FC41BB643DF00A60911 /* UIViewController+WSOrientations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSOrientations.h"; sourceTree = "<group>"; };
+		6F1A7FC51BB643DF00A60911 /* UIViewController+WSOrientations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSOrientations.m"; sourceTree = "<group>"; };
+		6F1A7FC71BB6475E00A60911 /* UIViewController+WSActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSActivity.h"; sourceTree = "<group>"; };
+		6F1A7FC81BB6475E00A60911 /* UIViewController+WSActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSActivity.m"; sourceTree = "<group>"; };
+		6F1A7FCB1BB64B9B00A60911 /* UIDevice+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extensions.h"; sourceTree = "<group>"; };
+		6F1A7FCC1BB64B9B00A60911 /* UIDevice+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extensions.m"; sourceTree = "<group>"; };
+		6F1A7FCE1BB64ED800A60911 /* UIViewController+WSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSToast.h"; sourceTree = "<group>"; };
+		6F1A7FCF1BB64ED800A60911 /* UIViewController+WSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSToast.m"; sourceTree = "<group>"; };
+		6F1A7FD21BB6FCE900A60911 /* WSAppGeneralConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAppGeneralConfiguration.h; sourceTree = "<group>"; };
+		6F1A7FD31BB6FCE900A60911 /* WSAppGeneralConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAppGeneralConfiguration.m; sourceTree = "<group>"; };
+		6F1A7FDA1BB7007C00A60911 /* WSNetworkingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNetworkingUtilities.h; sourceTree = "<group>"; };
+		6F1A7FDB1BB7007C00A60911 /* WSNetworkingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNetworkingUtilities.m; sourceTree = "<group>"; };
+		6F1A7FDD1BB7025800A60911 /* NSData+Crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Crypt.h"; sourceTree = "<group>"; };
+		6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Crypt.m"; sourceTree = "<group>"; };
 		6F6FE4B71BB1DF8100F39F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		6F6FE4B81BB1DF8100F39F60 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		6F6FE4B91BB1DF8100F39F60 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
@@ -116,10 +137,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F1A7FC31BB643DF00A60911 /* UIViewController+WalkShopperExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F1A7FC41BB643DF00A60911 /* UIViewController+WSOrientations.h */,
+				6F1A7FC51BB643DF00A60911 /* UIViewController+WSOrientations.m */,
+				6F1A7FC71BB6475E00A60911 /* UIViewController+WSActivity.h */,
+				6F1A7FC81BB6475E00A60911 /* UIViewController+WSActivity.m */,
+				6F1A7FCE1BB64ED800A60911 /* UIViewController+WSToast.h */,
+				6F1A7FCF1BB64ED800A60911 /* UIViewController+WSToast.m */,
+			);
+			path = "UIViewController+WalkShopperExtensions";
+			sourceTree = "<group>";
+		};
+		6F1A7FCA1BB64B8000A60911 /* UIDevice+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F1A7FCB1BB64B9B00A60911 /* UIDevice+Extensions.h */,
+				6F1A7FCC1BB64B9B00A60911 /* UIDevice+Extensions.m */,
+			);
+			path = "UIDevice+Extensions";
+			sourceTree = "<group>";
+		};
+		6F1A7FD11BB6FC8D00A60911 /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				6F1A7FD21BB6FCE900A60911 /* WSAppGeneralConfiguration.h */,
+				6F1A7FD31BB6FCE900A60911 /* WSAppGeneralConfiguration.m */,
+			);
+			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		6F1A7FD91BB7007C00A60911 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6F1A7FDD1BB7025800A60911 /* NSData+Crypt.h */,
+				6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */,
+				6F1A7FDA1BB7007C00A60911 /* WSNetworkingUtilities.h */,
+				6F1A7FDB1BB7007C00A60911 /* WSNetworkingUtilities.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		6F6FE4B41BB1DF8100F39F60 /* CommonSdk */ = {
 			isa = PBXGroup;
 			children = (
-				CD872C3D1BB2990900F74DD7 /* UIViewController+WalkShopperExtensions */,
+				6F1A7FD91BB7007C00A60911 /* Networking */,
+				6F1A7FCA1BB64B8000A60911 /* UIDevice+Extensions */,
+				6F1A7FC31BB643DF00A60911 /* UIViewController+WalkShopperExtensions */,
 				6F6FE4B51BB1DF8100F39F60 /* SMS_SDK */,
 			);
 			path = CommonSdk;
@@ -163,6 +228,7 @@
 				6FA69A171BB1C74700E39B04 /* AppDelegate.m */,
 				CD872C301BB2843400F74DD7 /* WalkShopperPrefixHeader.pch */,
 				6FA69A1C1BB1C74700E39B04 /* Main.storyboard */,
+				6F1A7FD11BB6FC8D00A60911 /* AppConfiguration */,
 				CD872C341BB286CA00F74DD7 /* Main */,
 				CD872C381BB286DE00F74DD7 /* Home */,
 				CD872C391BB286E700F74DD7 /* Mine */,
@@ -269,13 +335,6 @@
 				CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */,
 			);
 			path = UserSession;
-			sourceTree = "<group>";
-		};
-		CD872C3D1BB2990900F74DD7 /* UIViewController+WalkShopperExtensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "UIViewController+WalkShopperExtensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,11 +505,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F1A7FDF1BB7025800A60911 /* NSData+Crypt.m in Sources */,
 				6FA69A181BB1C74700E39B04 /* AppDelegate.m in Sources */,
+				6F1A7FC91BB6475E00A60911 /* UIViewController+WSActivity.m in Sources */,
+				6F1A7FD41BB6FCE900A60911 /* WSAppGeneralConfiguration.m in Sources */,
 				CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */,
+				6F1A7FDC1BB7007C00A60911 /* WSNetworkingUtilities.m in Sources */,
 				6FA69A151BB1C74700E39B04 /* main.m in Sources */,
 				CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */,
 				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
+				6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */,
+				6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */,
+				6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
 				CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */,
 				6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */,

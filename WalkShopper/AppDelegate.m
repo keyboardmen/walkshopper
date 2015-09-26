@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <SMS_SDK/SMS_SDK.h>
+#import "UIViewController+WSOrientations.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [UIViewController configDefaultInterfaceOrientations];
     [SMS_SDK registerApp:@"9cfb8e7d0120" withSecret:@"c3d1ff0fd893b2f14ded0cba9876a18d"];
     
     return YES;
