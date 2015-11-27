@@ -12,6 +12,11 @@
 
 @property (assign, nonatomic) BOOL isLogin;
 
+@property (nonatomic, strong, readonly) NSString *appId;
+@property (nonatomic, strong, readonly) NSString *aesKey;
+@property (nonatomic, strong, readonly) NSString *loginUserName;
+@property (nonatomic, strong, readonly) NSString *loginToken;
+
 + (WSUserSession *)sharedSession;
 
 @end

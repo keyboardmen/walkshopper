@@ -8,6 +8,13 @@
 
 #import "WSAppGeneralConfiguration.h"
 
+@interface WSAppGeneralConfiguration ()
+
+@property (nonatomic, strong, readwrite) NSString *appId;
+@property (nonatomic, strong, readwrite) NSString *aesKey;
+
+@end
+
 @implementation WSAppGeneralConfiguration
 
 + (instancetype)sharedInstance
@@ -20,5 +27,7 @@
     });
     return instance;
 }
+
+
 
 @end

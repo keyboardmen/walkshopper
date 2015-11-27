@@ -10,6 +10,9 @@
 
 @interface WSUserSession ()
 
+@property (nonatomic, strong, readwrite) NSString *loginUserName;
+@property (nonatomic, strong, readwrite) NSString *loginToken;
+
 @end
 
 @implementation WSUserSession
@@ -28,5 +31,7 @@
     
     return instance;
 }
+
+
 
 @end

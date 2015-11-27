@@ -10,7 +10,8 @@
 
 @interface WSAppGeneralConfiguration : NSObject
 
-
+@property (nonatomic, strong, readonly) NSString *appId;
+@property (nonatomic, strong, readonly) NSString *aesKey;
 
 + (instancetype)sharedInstance;
 

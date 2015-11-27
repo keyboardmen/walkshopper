@@ -7,7 +7,7 @@
 //
 
 #import "WSVerifyPhoneNumberViewController.h"
-#import <SMS_SDK/SMS_SDK.h>
+#import <SMS_SDK/SMSSDK.h>
 #import "MSWeakTimer.h"
 
 @interface WSVerifyPhoneNumberViewController ()
@@ -45,7 +45,7 @@
     self.timer = [MSWeakTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCountDownLabel) userInfo:nil repeats:YES dispatchQueue:dispatch_get_main_queue()];
     self.countDownLabel.hidden = NO;
     self.getVerificationCodeBtn.hidden = YES;
-    [SMS_SDK getVerificationCodeBySMSWithPhone:self.phoneNumberTextField.text zone:@"86" result:^(SMS_SDKError *error) {
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNumberTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
         if (error) {
             
         } else {
@@ -70,8 +70,8 @@
     if ([self isVerificationCodeValid] == NO) {
         return;
     }
-    [SMS_SDK commitVerifyCode:self.verificationCodeTextField.text result:^(enum SMS_ResponseState state) {
-        if (state == SMS_ResponseStateSuccess) {
+    [SMSSDK commitVerificationCode:self.verificationCodeTextField.text phoneNumber:self.phoneNumberTextField.text zone:@"86" result:^(NSError *error) {
+        if (!error) {
             NSLog(@"注册成功");
         } else {
             
