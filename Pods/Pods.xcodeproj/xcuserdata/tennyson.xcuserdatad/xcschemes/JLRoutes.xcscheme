@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "470FD30B485F2403C12E1002"
+               BlueprintIdentifier = "ADE59CA72C4744ACD7A55DD4"
                BuildableName = "libJLRoutes.a"
                BlueprintName = "JLRoutes"
                ReferencedContainer = "container:Pods.xcodeproj">
