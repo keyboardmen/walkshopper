@@ -22,6 +22,8 @@
 		6F7C3F1C1C08E3B400A82DCD /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F181C08E3B400A82DCD /* SMS_SDK.framework */; };
 		6F7C3F1E1C08E68300A82DCD /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F1D1C08E68300A82DCD /* JavaScriptCore.framework */; };
 		6F7C3F201C08E69200A82DCD /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */; };
+		6F7C3F221C08ECA100A82DCD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F211C08ECA100A82DCD /* Security.framework */; };
+		6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */; };
 		6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D1C111BB3201C001F3B23 /* Login.storyboard */; };
 		6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */; };
 		6FA69A151BB1C74700E39B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A141BB1C74700E39B04 /* main.m */; };
@@ -81,6 +83,8 @@
 		6F7C3F191C08E3B400A82DCD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
 		6F7C3F1D1C08E68300A82DCD /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		6F7C3F211C08ECA100A82DCD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		6F9D1C111BB3201C001F3B23 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6F9D1C131BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVerifyPhoneNumberViewController.h; sourceTree = "<group>"; };
 		6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVerifyPhoneNumberViewController.m; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */,
+				6F7C3F221C08ECA100A82DCD /* Security.framework in Frameworks */,
 				6F7C3F201C08E69200A82DCD /* libstdc++.tbd in Frameworks */,
 				6F7C3F1E1C08E68300A82DCD /* JavaScriptCore.framework in Frameworks */,
 				6F6FE4C11BB1E0DC00F39F60 /* libz.tbd in Frameworks */,
@@ -291,6 +297,8 @@
 		973CC142C32C7A5CD418C863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */,
+				6F7C3F211C08ECA100A82DCD /* Security.framework */,
 				6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */,
 				6F7C3F1D1C08E68300A82DCD /* JavaScriptCore.framework */,
 				6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */,

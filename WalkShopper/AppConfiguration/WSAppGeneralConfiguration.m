@@ -7,11 +7,19 @@
 //
 
 #import "WSAppGeneralConfiguration.h"
+#import <AdSupport/ASIdentifierManager.h>
 
 @interface WSAppGeneralConfiguration ()
 
 @property (nonatomic, strong, readwrite) NSString *appId;
 @property (nonatomic, strong, readwrite) NSString *aesKey;
+
+@property (nonatomic, strong) NSString *appName;
+@property (nonatomic, strong) NSString *uniqueID;
+@property (nonatomic, strong) NSString *appVersion;
+@property (nonatomic, strong) NSString *deviceType;
+@property (nonatomic, strong) NSString *systemName;
+@property (nonatomic, strong) NSString *systemVersion;
 
 @end
 
@@ -29,5 +37,9 @@
 }
 
 
+- (NSString *)uniqueID
+{
+    return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+}
 
 @end
