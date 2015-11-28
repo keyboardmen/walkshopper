@@ -26,6 +26,7 @@
 		6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */; };
 		6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D1C111BB3201C001F3B23 /* Login.storyboard */; };
 		6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */; };
+		6FA171C81C09ACD000DA7C14 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA171C71C09ACD000DA7C14 /* SystemConfiguration.framework */; };
 		6FA69A151BB1C74700E39B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A141BB1C74700E39B04 /* main.m */; };
 		6FA69A181BB1C74700E39B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A171BB1C74700E39B04 /* AppDelegate.m */; };
 		6FA69A1E1BB1C74700E39B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA69A1C1BB1C74700E39B04 /* Main.storyboard */; };
@@ -88,6 +89,7 @@
 		6F9D1C111BB3201C001F3B23 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6F9D1C131BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVerifyPhoneNumberViewController.h; sourceTree = "<group>"; };
 		6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVerifyPhoneNumberViewController.m; sourceTree = "<group>"; };
+		6FA171C71C09ACD000DA7C14 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6FA69A101BB1C74700E39B04 /* WalkShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA69A141BB1C74700E39B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FA69A161BB1C74700E39B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FA171C81C09ACD000DA7C14 /* SystemConfiguration.framework in Frameworks */,
 				6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */,
 				6F7C3F221C08ECA100A82DCD /* Security.framework in Frameworks */,
 				6F7C3F201C08E69200A82DCD /* libstdc++.tbd in Frameworks */,
@@ -297,6 +300,7 @@
 		973CC142C32C7A5CD418C863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6FA171C71C09ACD000DA7C14 /* SystemConfiguration.framework */,
 				6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */,
 				6F7C3F211C08ECA100A82DCD /* Security.framework */,
 				6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */,
