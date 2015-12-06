@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import <SMS_SDK/SMSSDK.h>
 #import "UIViewController+WSOrientations.h"
+#import "WSAppGeneralConfiguration.h"
+#import "WSViewControllerConfiguration.h"
+
 
 @interface AppDelegate ()
 
@@ -20,9 +23,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [UIViewController configDefaultInterfaceOrientations];
+    [WSViewControllerConfiguration hookViewLifeCircle];
     [SMSSDK registerApp:@"9cfb8e7d0120" withSecret:@"c3d1ff0fd893b2f14ded0cba9876a18d"];
     
     [self registerRemoteNotification];
+    [[WSAppGeneralConfiguration sharedInstance] registerAppInServer];
     
     return YES;
 }
@@ -55,7 +60,7 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-
+    NSLog(@"%@", userInfo);
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error

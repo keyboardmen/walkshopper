@@ -8,6 +8,7 @@
 
 #import "WSAppGeneralConfiguration.h"
 #import <AdSupport/ASIdentifierManager.h>
+#import "SSKeychain.h"
 
 @interface WSAppGeneralConfiguration ()
 
@@ -36,11 +37,25 @@
     return instance;
 }
 
+- (void)registerAppInServer
+{
+    NSLog(@"%@", self.uniqueID);
+}
 
 - (NSString *)uniqueID
 {
+    NSString *uId = nil;
     
-    return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    if ([[self appleIFA] length] > 0) {
+        uId = [self appleIFA];
+    } else if ([[self appleIFV] length] > 0) {
+        uId = [self appleIFV];
+    } else {
+        uId = [self randomUUID];
+    }
+ 
+
+    return uId;
 }
 
 - (NSString *)appleIFA
@@ -76,17 +91,5 @@
     CFRelease(cfuuid);
     return uuid;
 }
-
-+ (void)setValue:(NSString *)value forKey:(NSString *)key inService:(NSString *)service
-{
-    NSMutableDictionary *keychainItem = [[NSMutableDictionary alloc] init];
-    keychainItem[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
-    keychainItem[(__bridge id)kSecAttrAccessible] = (__bridge id)kSecAttrAccessibleAlways;
-    keychainItem[(__bridge id)kSecAttrAccount] = key;
-    keychainItem[(__bridge id)kSecAttrService] = service;
-    keychainItem[(__bridge id)kSecValueData] = [value dataUsingEncoding:NSUTF8StringEncoding];
-    SecItemAdd((__bridge CFDictionaryRef)keychainItem, NULL);
-}
-
 
 @end

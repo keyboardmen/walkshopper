@@ -24,6 +24,8 @@
 		6F7C3F201C08E69200A82DCD /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */; };
 		6F7C3F221C08ECA100A82DCD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F211C08ECA100A82DCD /* Security.framework */; };
 		6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */; };
+		6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */; };
+		6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */; };
 		6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D1C111BB3201C001F3B23 /* Login.storyboard */; };
 		6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */; };
 		6FA171C81C09ACD000DA7C14 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA171C71C09ACD000DA7C14 /* SystemConfiguration.framework */; };
@@ -86,6 +88,11 @@
 		6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6F7C3F211C08ECA100A82DCD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		6F903D151C14B93C00F28B0A /* UIViewController+WSHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSHook.h"; sourceTree = "<group>"; };
+		6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSHook.m"; sourceTree = "<group>"; };
+		6F903D181C14BA1700F28B0A /* WSPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPrefixHeader.pch; sourceTree = "<group>"; };
+		6F903D191C14BCDF00F28B0A /* WSViewControllerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSViewControllerConfiguration.h; sourceTree = "<group>"; };
+		6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSViewControllerConfiguration.m; sourceTree = "<group>"; };
 		6F9D1C111BB3201C001F3B23 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6F9D1C131BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVerifyPhoneNumberViewController.h; sourceTree = "<group>"; };
 		6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVerifyPhoneNumberViewController.m; sourceTree = "<group>"; };
@@ -106,7 +113,6 @@
 		6FA69A3A1BB1C74700E39B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEA362C24A66E179AF79E6C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AA903194D8B260E02F7EB2F4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		CD872C301BB2843400F74DD7 /* WalkShopperPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkShopperPrefixHeader.pch; sourceTree = "<group>"; };
 		CD872C351BB286CA00F74DD7 /* WSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMainTabBarController.h; sourceTree = "<group>"; };
 		CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMainTabBarController.m; sourceTree = "<group>"; };
 		CD872C3E1BB29B4100F74DD7 /* WSUserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserSession.h; sourceTree = "<group>"; };
@@ -164,6 +170,8 @@
 				6F1A7FC81BB6475E00A60911 /* UIViewController+WSActivity.m */,
 				6F1A7FCE1BB64ED800A60911 /* UIViewController+WSToast.h */,
 				6F1A7FCF1BB64ED800A60911 /* UIViewController+WSToast.m */,
+				6F903D151C14B93C00F28B0A /* UIViewController+WSHook.h */,
+				6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */,
 			);
 			path = "UIViewController+WalkShopperExtensions";
 			sourceTree = "<group>";
@@ -182,6 +190,8 @@
 			children = (
 				6F1A7FD21BB6FCE900A60911 /* WSAppGeneralConfiguration.h */,
 				6F1A7FD31BB6FCE900A60911 /* WSAppGeneralConfiguration.m */,
+				6F903D191C14BCDF00F28B0A /* WSViewControllerConfiguration.h */,
+				6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */,
 			);
 			path = AppConfiguration;
 			sourceTree = "<group>";
@@ -245,7 +255,6 @@
 			children = (
 				6FA69A161BB1C74700E39B04 /* AppDelegate.h */,
 				6FA69A171BB1C74700E39B04 /* AppDelegate.m */,
-				CD872C301BB2843400F74DD7 /* WalkShopperPrefixHeader.pch */,
 				6FA69A1C1BB1C74700E39B04 /* Main.storyboard */,
 				6F1A7FD11BB6FC8D00A60911 /* AppConfiguration */,
 				CD872C341BB286CA00F74DD7 /* Main */,
@@ -266,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				6FA69A141BB1C74700E39B04 /* main.m */,
+				6F903D181C14BA1700F28B0A /* WSPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -536,11 +546,13 @@
 				CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */,
 				6F1A7FDC1BB7007C00A60911 /* WSNetworkingUtilities.m in Sources */,
 				6FA69A151BB1C74700E39B04 /* main.m in Sources */,
+				6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */,
 				CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */,
 				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
 				6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */,
 				6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */,
 				6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */,
+				6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
 				CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */,
 				6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */,
@@ -697,7 +709,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WalkShopperPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WSPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -716,7 +728,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WalkShopperPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WSPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -14,5 +14,6 @@
 @property (nonatomic, strong, readonly) NSString *aesKey;
 
 + (instancetype)sharedInstance;
+- (void)registerAppInServer;
 
 @end
