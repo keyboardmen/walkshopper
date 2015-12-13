@@ -17,6 +17,8 @@
 @property (nonatomic, strong, readonly) NSString *loginUserName;
 @property (nonatomic, strong, readonly) NSString *loginToken;
 
+@property (assign, nonatomic) BOOL hasLogin;
+
 + (WSUserSession *)sharedSession;
 
 @end

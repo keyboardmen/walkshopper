@@ -24,6 +24,8 @@
 		6F7C3F201C08E69200A82DCD /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */; };
 		6F7C3F221C08ECA100A82DCD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F211C08ECA100A82DCD /* Security.framework */; };
 		6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */; };
+		6F80A6F01C1DE3F50072F4E0 /* WSLoginAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F80A6EF1C1DE3F50072F4E0 /* WSLoginAction.m */; };
+		6F80A6F31C1DEA930072F4E0 /* UIViewController+WSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F80A6F21C1DEA930072F4E0 /* UIViewController+WSUtilities.m */; };
 		6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */; };
 		6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */; };
 		6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D1C111BB3201C001F3B23 /* Login.storyboard */; };
@@ -88,6 +90,10 @@
 		6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6F7C3F211C08ECA100A82DCD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		6F80A6EE1C1DE3F50072F4E0 /* WSLoginAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoginAction.h; sourceTree = "<group>"; };
+		6F80A6EF1C1DE3F50072F4E0 /* WSLoginAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoginAction.m; sourceTree = "<group>"; };
+		6F80A6F11C1DEA930072F4E0 /* UIViewController+WSUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSUtilities.h"; sourceTree = "<group>"; };
+		6F80A6F21C1DEA930072F4E0 /* UIViewController+WSUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSUtilities.m"; sourceTree = "<group>"; };
 		6F903D151C14B93C00F28B0A /* UIViewController+WSHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSHook.h"; sourceTree = "<group>"; };
 		6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSHook.m"; sourceTree = "<group>"; };
 		6F903D181C14BA1700F28B0A /* WSPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPrefixHeader.pch; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 				6F1A7FCF1BB64ED800A60911 /* UIViewController+WSToast.m */,
 				6F903D151C14B93C00F28B0A /* UIViewController+WSHook.h */,
 				6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */,
+				6F80A6F11C1DEA930072F4E0 /* UIViewController+WSUtilities.h */,
+				6F80A6F21C1DEA930072F4E0 /* UIViewController+WSUtilities.m */,
 			);
 			path = "UIViewController+WalkShopperExtensions";
 			sourceTree = "<group>";
@@ -356,6 +364,8 @@
 				6F9D1C111BB3201C001F3B23 /* Login.storyboard */,
 				CD872C411BB2A1E200F74DD7 /* WSLoginViewController.h */,
 				CD872C421BB2A1E200F74DD7 /* WSLoginViewController.m */,
+				6F80A6EE1C1DE3F50072F4E0 /* WSLoginAction.h */,
+				6F80A6EF1C1DE3F50072F4E0 /* WSLoginAction.m */,
 				6F9D1C131BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.h */,
 				6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */,
 			);
@@ -542,8 +552,10 @@
 				6F1A7FDF1BB7025800A60911 /* NSData+Crypt.m in Sources */,
 				6FA69A181BB1C74700E39B04 /* AppDelegate.m in Sources */,
 				6F1A7FC91BB6475E00A60911 /* UIViewController+WSActivity.m in Sources */,
+				6F80A6F31C1DEA930072F4E0 /* UIViewController+WSUtilities.m in Sources */,
 				6F1A7FD41BB6FCE900A60911 /* WSAppGeneralConfiguration.m in Sources */,
 				CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */,
+				6F80A6F01C1DE3F50072F4E0 /* WSLoginAction.m in Sources */,
 				6F1A7FDC1BB7007C00A60911 /* WSNetworkingUtilities.m in Sources */,
 				6FA69A151BB1C74700E39B04 /* main.m in Sources */,
 				6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */,

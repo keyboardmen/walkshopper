@@ -22,6 +22,14 @@
 
 @implementation WSLoginViewController
 
++ (instancetype)initLoginViewController
+{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    WSLoginViewController *loginVC = [storyBoard instantiateViewControllerWithIdentifier:@"WSLoginViewController"];
+    
+    return loginVC;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"登录";
