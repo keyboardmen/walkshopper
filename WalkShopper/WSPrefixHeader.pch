@@ -18,6 +18,8 @@
 #import "WSUserSession.h"
 #import "UIViewController+WSUtilities.h"
 #import "WSLoginAction.h"
+#import "UIDevice+Extensions.h"
+#import "UIColor+Additions.h"
 
 #endif /* WSPrefixHeader_pch */
 

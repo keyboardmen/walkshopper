@@ -38,6 +38,17 @@
 		6FA69A231BB1C74700E39B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA69A211BB1C74700E39B04 /* LaunchScreen.storyboard */; };
 		6FA69A2E1BB1C74700E39B04 /* WalkShopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A2D1BB1C74700E39B04 /* WalkShopperTests.m */; };
 		6FA69A391BB1C74700E39B04 /* WalkShopperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */; };
+		6FCF9A541C25D6840055796F /* HomeImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF9A531C25D6840055796F /* HomeImages.xcassets */; };
+		6FCF9A561C25D6DB0055796F /* headImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF9A551C25D6DB0055796F /* headImage.jpg */; };
+		6FCF9A591C25D7CA0055796F /* WSHomeProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A581C25D7CA0055796F /* WSHomeProductCell.m */; };
+		6FCF9A5C1C287B520055796F /* WSSelectCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A5B1C287B520055796F /* WSSelectCountryViewController.m */; };
+		6FCF9A5E1C287B870055796F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF9A5D1C287B870055796F /* Home.storyboard */; };
+		6FCF9A621C2E8EB00055796F /* WSSelectCountryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A611C2E8EB00055796F /* WSSelectCountryFlowLayout.m */; };
+		6FCF9A651C2E99060055796F /* WSSelectCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A641C2E99060055796F /* WSSelectCountryCell.m */; };
+		6FCF9A6A1C2EA2030055796F /* LDPMPopoverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A691C2EA2030055796F /* LDPMPopoverMenu.m */; };
+		6FCF9A6E1C2EA6060055796F /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A6D1C2EA6060055796F /* UIColor+Additions.m */; };
+		6FCF9A721C2EA78A0055796F /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A711C2EA78A0055796F /* UIImage+Additions.m */; };
+		6FCF9A751C30646C0055796F /* WSContinentCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A741C30646C0055796F /* WSContinentCollectionReusableView.m */; };
 		75C9523B43FE08B6C0347465 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E34D9D33755289C8C99C67 /* libPods.a */; };
 		CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */; };
 		CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */; };
@@ -117,6 +128,25 @@
 		6FA69A341BB1C74700E39B04 /* WalkShopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkShopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkShopperUITests.m; sourceTree = "<group>"; };
 		6FA69A3A1BB1C74700E39B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FCF9A531C25D6840055796F /* HomeImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HomeImages.xcassets; sourceTree = "<group>"; };
+		6FCF9A551C25D6DB0055796F /* headImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = headImage.jpg; sourceTree = "<group>"; };
+		6FCF9A571C25D7CA0055796F /* WSHomeProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSHomeProductCell.h; sourceTree = "<group>"; };
+		6FCF9A581C25D7CA0055796F /* WSHomeProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSHomeProductCell.m; sourceTree = "<group>"; };
+		6FCF9A5A1C287B520055796F /* WSSelectCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSelectCountryViewController.h; sourceTree = "<group>"; };
+		6FCF9A5B1C287B520055796F /* WSSelectCountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSelectCountryViewController.m; sourceTree = "<group>"; };
+		6FCF9A5D1C287B870055796F /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6FCF9A601C2E8EB00055796F /* WSSelectCountryFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSelectCountryFlowLayout.h; sourceTree = "<group>"; };
+		6FCF9A611C2E8EB00055796F /* WSSelectCountryFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSelectCountryFlowLayout.m; sourceTree = "<group>"; };
+		6FCF9A631C2E99060055796F /* WSSelectCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSelectCountryCell.h; sourceTree = "<group>"; };
+		6FCF9A641C2E99060055796F /* WSSelectCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSelectCountryCell.m; sourceTree = "<group>"; };
+		6FCF9A681C2EA2030055796F /* LDPMPopoverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDPMPopoverMenu.h; sourceTree = "<group>"; };
+		6FCF9A691C2EA2030055796F /* LDPMPopoverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDPMPopoverMenu.m; sourceTree = "<group>"; };
+		6FCF9A6C1C2EA6060055796F /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		6FCF9A6D1C2EA6060055796F /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		6FCF9A701C2EA78A0055796F /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		6FCF9A711C2EA78A0055796F /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		6FCF9A731C30646C0055796F /* WSContinentCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSContinentCollectionReusableView.h; sourceTree = "<group>"; };
+		6FCF9A741C30646C0055796F /* WSContinentCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSContinentCollectionReusableView.m; sourceTree = "<group>"; };
 		8BEA362C24A66E179AF79E6C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AA903194D8B260E02F7EB2F4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD872C351BB286CA00F74DD7 /* WSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMainTabBarController.h; sourceTree = "<group>"; };
@@ -218,6 +248,9 @@
 		6F6FE4B41BB1DF8100F39F60 /* CommonSdk */ = {
 			isa = PBXGroup;
 			children = (
+				6FCF9A6F1C2EA78A0055796F /* UIImage+Extensions */,
+				6FCF9A6B1C2EA6060055796F /* UIColor+Extensions */,
+				6FCF9A661C2EA2030055796F /* ThirdParty */,
 				6F7C3F141C08E3B400A82DCD /* SMS_SDK */,
 				6F1A7FD91BB7007C00A60911 /* Networking */,
 				6F1A7FCA1BB64B8000A60911 /* UIDevice+Extensions */,
@@ -306,6 +339,41 @@
 			path = WalkShopperUITests;
 			sourceTree = "<group>";
 		};
+		6FCF9A661C2EA2030055796F /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				6FCF9A671C2EA2030055796F /* LDPMPopoverMenu */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		6FCF9A671C2EA2030055796F /* LDPMPopoverMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6FCF9A681C2EA2030055796F /* LDPMPopoverMenu.h */,
+				6FCF9A691C2EA2030055796F /* LDPMPopoverMenu.m */,
+			);
+			path = LDPMPopoverMenu;
+			sourceTree = "<group>";
+		};
+		6FCF9A6B1C2EA6060055796F /* UIColor+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6FCF9A6C1C2EA6060055796F /* UIColor+Additions.h */,
+				6FCF9A6D1C2EA6060055796F /* UIColor+Additions.m */,
+			);
+			path = "UIColor+Extensions";
+			sourceTree = "<group>";
+		};
+		6FCF9A6F1C2EA78A0055796F /* UIImage+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6FCF9A701C2EA78A0055796F /* UIImage+Additions.h */,
+				6FCF9A711C2EA78A0055796F /* UIImage+Additions.m */,
+			);
+			path = "UIImage+Extensions";
+			sourceTree = "<group>";
+		};
 		82C2621B0C623C23999D0848 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +413,19 @@
 			children = (
 				CD872C441BB2A20E00F74DD7 /* WSHomeViewController.h */,
 				CD872C451BB2A20E00F74DD7 /* WSHomeViewController.m */,
+				6FCF9A571C25D7CA0055796F /* WSHomeProductCell.h */,
+				6FCF9A581C25D7CA0055796F /* WSHomeProductCell.m */,
+				6FCF9A5A1C287B520055796F /* WSSelectCountryViewController.h */,
+				6FCF9A5B1C287B520055796F /* WSSelectCountryViewController.m */,
+				6FCF9A601C2E8EB00055796F /* WSSelectCountryFlowLayout.h */,
+				6FCF9A611C2E8EB00055796F /* WSSelectCountryFlowLayout.m */,
+				6FCF9A631C2E99060055796F /* WSSelectCountryCell.h */,
+				6FCF9A641C2E99060055796F /* WSSelectCountryCell.m */,
+				6FCF9A731C30646C0055796F /* WSContinentCollectionReusableView.h */,
+				6FCF9A741C30646C0055796F /* WSContinentCollectionReusableView.m */,
+				6FCF9A551C25D6DB0055796F /* headImage.jpg */,
+				6FCF9A531C25D6840055796F /* HomeImages.xcassets */,
+				6FCF9A5D1C287B870055796F /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -489,9 +570,12 @@
 			files = (
 				6FA69A231BB1C74700E39B04 /* LaunchScreen.storyboard in Resources */,
 				6FA69A201BB1C74700E39B04 /* Assets.xcassets in Resources */,
+				6FCF9A541C25D6840055796F /* HomeImages.xcassets in Resources */,
 				6F7C3F1A1C08E3B400A82DCD /* SMS_SDKLocalizable.strings in Resources */,
 				6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */,
 				6FA69A1E1BB1C74700E39B04 /* Main.storyboard in Resources */,
+				6FCF9A561C25D6DB0055796F /* headImage.jpg in Resources */,
+				6FCF9A5E1C287B870055796F /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,21 +634,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F1A7FDF1BB7025800A60911 /* NSData+Crypt.m in Sources */,
+				6FCF9A6A1C2EA2030055796F /* LDPMPopoverMenu.m in Sources */,
 				6FA69A181BB1C74700E39B04 /* AppDelegate.m in Sources */,
+				6FCF9A5C1C287B520055796F /* WSSelectCountryViewController.m in Sources */,
 				6F1A7FC91BB6475E00A60911 /* UIViewController+WSActivity.m in Sources */,
+				6FCF9A6E1C2EA6060055796F /* UIColor+Additions.m in Sources */,
 				6F80A6F31C1DEA930072F4E0 /* UIViewController+WSUtilities.m in Sources */,
 				6F1A7FD41BB6FCE900A60911 /* WSAppGeneralConfiguration.m in Sources */,
 				CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */,
+				6FCF9A651C2E99060055796F /* WSSelectCountryCell.m in Sources */,
 				6F80A6F01C1DE3F50072F4E0 /* WSLoginAction.m in Sources */,
 				6F1A7FDC1BB7007C00A60911 /* WSNetworkingUtilities.m in Sources */,
 				6FA69A151BB1C74700E39B04 /* main.m in Sources */,
 				6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */,
 				CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */,
+				6FCF9A721C2EA78A0055796F /* UIImage+Additions.m in Sources */,
 				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
 				6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */,
 				6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */,
+				6FCF9A751C30646C0055796F /* WSContinentCollectionReusableView.m in Sources */,
+				6FCF9A591C25D7CA0055796F /* WSHomeProductCell.m in Sources */,
 				6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */,
 				6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */,
+				6FCF9A621C2E8EB00055796F /* WSSelectCountryFlowLayout.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
 				CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */,
 				6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */,
@@ -723,9 +815,9 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WSPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.distancecutter.WalkShopper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jirong.walkshopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -742,9 +834,9 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WSPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.distancecutter.WalkShopper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jirong.walkshopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

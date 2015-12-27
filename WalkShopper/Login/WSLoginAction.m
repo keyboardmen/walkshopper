@@ -96,7 +96,7 @@
         loginViewController.loginDelegate = self;
 
         UINavigationController *naviViewController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-        [[UIViewController topmostViewController] presentViewController:naviViewController animated:YES completion:nil];
+        [[UIViewController ws_topmostViewController] presentViewController:naviViewController animated:YES completion:nil];
         self.loginViewController = naviViewController;
     }
 }

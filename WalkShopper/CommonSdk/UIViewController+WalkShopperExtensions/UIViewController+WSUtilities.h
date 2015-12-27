@@ -10,6 +10,7 @@
 
 @interface UIViewController (WSUtilities)
 
-+ (UIViewController *)topmostViewController;
++ (UIViewController *)ws_topmostViewController;
++ (UIViewController *)ws_initViewControllerWithStoryBoard:(NSString *)storyBoardName withIdentifier:(NSString *)identifier;
 
 @end

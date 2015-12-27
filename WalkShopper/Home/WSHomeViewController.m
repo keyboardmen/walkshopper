@@ -7,11 +7,16 @@
 //
 
 #import "WSHomeViewController.h"
+#import "WSHomeProductCell.h"
+#import "WSSelectCountryViewController.h"
+#import "LDPMPopoverMenu.h"
+
+static NSString * const kProductCellIdentifier = @"Home Product Cell";
+
 
 @interface WSHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 
 @end
 
@@ -20,7 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"发现";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    UIButton *createBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    [createBtn addTarget:self action:@selector(createNew:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:createBtn];
 }
 
 
@@ -33,16 +41,51 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return 15;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [WSHomeProductCell cellHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = @"发达";
-    
+    WSHomeProductCell *cell = [tableView dequeueReusableCellWithIdentifier:kProductCellIdentifier forIndexPath:indexPath];
+    [cell setSeparatorInset:UIEdgeInsetsZero];
+    [cell setLayoutMargins:UIEdgeInsetsZero];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Actions
+
+- (void)createNew:(id)sender
+{
+    NSMutableArray *menuItemArray = [NSMutableArray new];
+    NSArray *titles = @[@"我要卖", @"我要买"];
+    for (NSString *title in titles) {
+        LDPMPopoverMenuItem *item = [[LDPMPopoverMenuItem alloc]initWithTitle:title titleColor:[UIColor colorWithRGB:0xd7a101] titleFont:[UIFont systemFontOfSize:14] titleAlignment:NSTextAlignmentCenter image:nil target:self action:@selector(menuTapped:)];
+        [menuItemArray addObject:item];
+    }
+
+    LDPMPopoverMenu *menu = [[LDPMPopoverMenu alloc] initWithTintColor:[UIColor whiteColor] maskColor:[UIColor colorWithWhite:0 alpha:0.2] itemHorizontalMargin:15. itemVerticalMargin:15. leftInsetOfSepline:0 seplineColor:[UIColor lightGrayColor] arrowSize:6];
+    
+    UIWindow *window = [[UIApplication sharedApplication].delegate window];
+    
+    [menu showMenuInView:window fromView:self.navigationItem.rightBarButtonItem.customView menuItems:menuItemArray];
+    
+}
+
+- (void)menuTapped:(id)sender
+{
+    UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSelectCountryViewController class])];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

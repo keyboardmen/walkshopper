@@ -10,7 +10,7 @@
 
 @implementation UIViewController (WSUtilities)
 
-+ (UIViewController *)topmostViewController
++ (UIViewController *)ws_topmostViewController
 {
     //rootViewController需要是TabBarController,排除正在显示FirstPage的情况
     UIViewController *rootViewContoller = [UIApplication sharedApplication].delegate.window.rootViewController;
@@ -44,6 +44,14 @@
         }
     }
     return (UIViewController *) navController;
+}
+
++ (UIViewController *)ws_initViewControllerWithStoryBoard:(NSString *)storyBoardName withIdentifier:(NSString *)identifier
+{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:storyBoardName bundle:nil];
+    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:identifier];
+    
+    return viewController;
 }
 
 @end
