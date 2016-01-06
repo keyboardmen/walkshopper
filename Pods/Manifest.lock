@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - AVOSCloud (3.1.6.7)
   - iRate (1.11.4)
   - JLRoutes (1.5.3)
   - JSONModel (1.1.2)
@@ -37,6 +38,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - Aspects (~> 1.4.1)
+  - AVOSCloud (~> 3.1.6.7)
   - iRate (~> 1.11.4)
   - JLRoutes (~> 1.5.3)
   - JSONModel (~> 1.1.0)
@@ -51,6 +53,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  AVOSCloud: 7af6267747894eadfd14560db08ea99a51b57fc0
   iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
   JLRoutes: 20555d00693855b71e80715eeaae6a930a33b2f5
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
