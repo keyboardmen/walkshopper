@@ -15,11 +15,14 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <objc/runtime.h>
 
+#import <AVOSCloud/AVOSCloud.h>
+
 #import "WSUserSession.h"
 #import "UIViewController+WSUtilities.h"
 #import "WSLoginAction.h"
 #import "UIDevice+Extensions.h"
 #import "UIColor+Additions.h"
+#import "UIViewController+WSToast.h"
 
 #endif /* WSPrefixHeader_pch */
 

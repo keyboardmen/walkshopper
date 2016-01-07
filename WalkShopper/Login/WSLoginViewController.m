@@ -49,7 +49,10 @@
 
 - (void)loginBtnTapped
 {
-
+    [WSUserSession sharedSession].isLogin = YES;
+    if ([self.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
+        [self.loginDelegate loginController:self completeWithResult:YES];
+    }
 }
 
 @end

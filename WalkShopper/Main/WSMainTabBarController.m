@@ -25,13 +25,16 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
+    NSUInteger index = [self.viewControllers indexOfObject:viewController];
     UINavigationController *nav = (UINavigationController *)viewController;
     if ([nav.viewControllers.firstObject isKindOfClass:[WSMineViewController class]]) {
         if ([WSUserSession sharedSession].isLogin == NO) {
-            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-            WSLoginViewController *loginVC = [storyBoard instantiateViewControllerWithIdentifier:@"WSLoginViewController"];
-            nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
-            [self presentViewController:nav animated:YES completion:nil];
+            [WSLoginAction loginWithSuccessBlock:^{
+                self.selectedIndex = index;
+            } andFailureBlock:^{
+                
+            }];
+            
             return NO;
         }
     }

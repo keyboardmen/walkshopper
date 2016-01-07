@@ -65,6 +65,10 @@ static NSString * const kContinentViewIdentifier = @"Continent View";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    if ([self.delegate respondsToSelector:@selector(updateCountryName:)]) {
+        [self.delegate updateCountryName:self.countryRows[indexPath.section][indexPath.row]];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - setter & getter

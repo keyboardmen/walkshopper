@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WSSelectCountryDelegate;
+
 @interface WSSelectCountryViewController : UIViewController
+
+@property (weak, nonatomic) id<WSSelectCountryDelegate>delegate;
+
+@end
+
+
+@protocol WSSelectCountryDelegate <NSObject>
+
+- (void)updateCountryName:(NSString *)countryName;
 
 @end

@@ -8,8 +8,8 @@
 
 #import "WSHomeViewController.h"
 #import "WSHomeProductCell.h"
-#import "WSSelectCountryViewController.h"
 #import "LDPMPopoverMenu.h"
+#import "WSSellCreationViewController.h"
 
 static NSString * const kProductCellIdentifier = @"Home Product Cell";
 
@@ -17,6 +17,8 @@ static NSString * const kProductCellIdentifier = @"Home Product Cell";
 @interface WSHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSMutableArray *menuItemArray;
 
 @end
 
@@ -66,26 +68,43 @@ static NSString * const kProductCellIdentifier = @"Home Product Cell";
 
 - (void)createNew:(id)sender
 {
-    NSMutableArray *menuItemArray = [NSMutableArray new];
+    [self.menuItemArray removeAllObjects];
     NSArray *titles = @[@"我要卖", @"我要买"];
     for (NSString *title in titles) {
         LDPMPopoverMenuItem *item = [[LDPMPopoverMenuItem alloc]initWithTitle:title titleColor:[UIColor colorWithRGB:0xd7a101] titleFont:[UIFont systemFontOfSize:14] titleAlignment:NSTextAlignmentCenter image:nil target:self action:@selector(menuTapped:)];
-        [menuItemArray addObject:item];
+        [self.menuItemArray addObject:item];
     }
 
     LDPMPopoverMenu *menu = [[LDPMPopoverMenu alloc] initWithTintColor:[UIColor whiteColor] maskColor:[UIColor colorWithWhite:0 alpha:0.2] itemHorizontalMargin:15. itemVerticalMargin:15. leftInsetOfSepline:0 seplineColor:[UIColor lightGrayColor] arrowSize:6];
     
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     
-    [menu showMenuInView:window fromView:self.navigationItem.rightBarButtonItem.customView menuItems:menuItemArray];
+    [menu showMenuInView:window fromView:self.navigationItem.rightBarButtonItem.customView menuItems:self.menuItemArray];
     
 }
 
-- (void)menuTapped:(id)sender
+- (void)menuTapped:(LDPMPopoverMenuItem *)sender
 {
-    UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSelectCountryViewController class])];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    for (int i = 0; i < self.menuItemArray.count; i++) {
+        LDPMPopoverMenuItem *item = self.menuItemArray[i];
+        if (sender == item) {
+            if (i == 0) {
+                UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellCreationViewController class])];
+                [self.navigationController pushViewController:vc animated:YES];
+            } else if (i == 1) {
+                
+            }
+        }
+    }
+}
+
+- (NSMutableArray *)menuItemArray
+{
+    if (_menuItemArray == nil) {
+        _menuItemArray = [NSMutableArray new];
+    }
+    
+    return _menuItemArray;
 }
 
 @end

@@ -28,6 +28,8 @@
 		6F80A6F31C1DEA930072F4E0 /* UIViewController+WSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F80A6F21C1DEA930072F4E0 /* UIViewController+WSUtilities.m */; };
 		6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */; };
 		6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */; };
+		6F9B505D1C3ED2D900E3A573 /* WSSellCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */; };
+		6F9B50601C3ED58B00E3A573 /* WSBuySellCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */; };
 		6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D1C111BB3201C001F3B23 /* Login.storyboard */; };
 		6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */; };
 		6FA171C81C09ACD000DA7C14 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA171C71C09ACD000DA7C14 /* SystemConfiguration.framework */; };
@@ -49,6 +51,10 @@
 		6FCF9A6E1C2EA6060055796F /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A6D1C2EA6060055796F /* UIColor+Additions.m */; };
 		6FCF9A721C2EA78A0055796F /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A711C2EA78A0055796F /* UIImage+Additions.m */; };
 		6FCF9A751C30646C0055796F /* WSContinentCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A741C30646C0055796F /* WSContinentCollectionReusableView.m */; };
+		6FCF9A771C3D6B000055796F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A761C3D6B000055796F /* MobileCoreServices.framework */; };
+		6FCF9A791C3D6B110055796F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A781C3D6B110055796F /* CoreTelephony.framework */; };
+		6FCF9A7B1C3D6B200055796F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */; };
+		6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */; };
 		75C9523B43FE08B6C0347465 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E34D9D33755289C8C99C67 /* libPods.a */; };
 		CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */; };
 		CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */; };
@@ -110,6 +116,10 @@
 		6F903D181C14BA1700F28B0A /* WSPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPrefixHeader.pch; sourceTree = "<group>"; };
 		6F903D191C14BCDF00F28B0A /* WSViewControllerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSViewControllerConfiguration.h; sourceTree = "<group>"; };
 		6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSViewControllerConfiguration.m; sourceTree = "<group>"; };
+		6F9B505B1C3ED2D900E3A573 /* WSSellCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellCreationViewController.h; sourceTree = "<group>"; };
+		6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellCreationViewController.m; sourceTree = "<group>"; };
+		6F9B505E1C3ED58B00E3A573 /* WSBuySellCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSBuySellCountryCell.h; sourceTree = "<group>"; };
+		6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSBuySellCountryCell.m; sourceTree = "<group>"; };
 		6F9D1C111BB3201C001F3B23 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6F9D1C131BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVerifyPhoneNumberViewController.h; sourceTree = "<group>"; };
 		6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVerifyPhoneNumberViewController.m; sourceTree = "<group>"; };
@@ -147,6 +157,11 @@
 		6FCF9A711C2EA78A0055796F /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
 		6FCF9A731C30646C0055796F /* WSContinentCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSContinentCollectionReusableView.h; sourceTree = "<group>"; };
 		6FCF9A741C30646C0055796F /* WSContinentCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSContinentCollectionReusableView.m; sourceTree = "<group>"; };
+		6FCF9A761C3D6B000055796F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6FCF9A781C3D6B110055796F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6FCF9A7C1C3D7A600055796F /* WSSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSetPasswordViewController.h; sourceTree = "<group>"; };
+		6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSetPasswordViewController.m; sourceTree = "<group>"; };
 		8BEA362C24A66E179AF79E6C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AA903194D8B260E02F7EB2F4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD872C351BB286CA00F74DD7 /* WSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMainTabBarController.h; sourceTree = "<group>"; };
@@ -166,6 +181,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FCF9A7B1C3D6B200055796F /* CoreLocation.framework in Frameworks */,
+				6FCF9A791C3D6B110055796F /* CoreTelephony.framework in Frameworks */,
+				6FCF9A771C3D6B000055796F /* MobileCoreServices.framework in Frameworks */,
 				6FA171C81C09ACD000DA7C14 /* SystemConfiguration.framework in Frameworks */,
 				6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */,
 				6F7C3F221C08ECA100A82DCD /* Security.framework in Frameworks */,
@@ -386,6 +404,9 @@
 		973CC142C32C7A5CD418C863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */,
+				6FCF9A781C3D6B110055796F /* CoreTelephony.framework */,
+				6FCF9A761C3D6B000055796F /* MobileCoreServices.framework */,
 				6FA171C71C09ACD000DA7C14 /* SystemConfiguration.framework */,
 				6F7C3F231C08ED0C00A82DCD /* AdSupport.framework */,
 				6F7C3F211C08ECA100A82DCD /* Security.framework */,
@@ -415,6 +436,10 @@
 				CD872C451BB2A20E00F74DD7 /* WSHomeViewController.m */,
 				6FCF9A571C25D7CA0055796F /* WSHomeProductCell.h */,
 				6FCF9A581C25D7CA0055796F /* WSHomeProductCell.m */,
+				6F9B505B1C3ED2D900E3A573 /* WSSellCreationViewController.h */,
+				6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */,
+				6F9B505E1C3ED58B00E3A573 /* WSBuySellCountryCell.h */,
+				6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */,
 				6FCF9A5A1C287B520055796F /* WSSelectCountryViewController.h */,
 				6FCF9A5B1C287B520055796F /* WSSelectCountryViewController.m */,
 				6FCF9A601C2E8EB00055796F /* WSSelectCountryFlowLayout.h */,
@@ -449,6 +474,8 @@
 				6F80A6EF1C1DE3F50072F4E0 /* WSLoginAction.m */,
 				6F9D1C131BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.h */,
 				6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */,
+				6FCF9A7C1C3D7A600055796F /* WSSetPasswordViewController.h */,
+				6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -636,6 +663,7 @@
 				6F1A7FDF1BB7025800A60911 /* NSData+Crypt.m in Sources */,
 				6FCF9A6A1C2EA2030055796F /* LDPMPopoverMenu.m in Sources */,
 				6FA69A181BB1C74700E39B04 /* AppDelegate.m in Sources */,
+				6F9B50601C3ED58B00E3A573 /* WSBuySellCountryCell.m in Sources */,
 				6FCF9A5C1C287B520055796F /* WSSelectCountryViewController.m in Sources */,
 				6F1A7FC91BB6475E00A60911 /* UIViewController+WSActivity.m in Sources */,
 				6FCF9A6E1C2EA6060055796F /* UIColor+Additions.m in Sources */,
@@ -649,8 +677,10 @@
 				6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */,
 				CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */,
 				6FCF9A721C2EA78A0055796F /* UIImage+Additions.m in Sources */,
+				6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */,
 				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
 				6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */,
+				6F9B505D1C3ED2D900E3A573 /* WSSellCreationViewController.m in Sources */,
 				6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */,
 				6FCF9A751C30646C0055796F /* WSContinentCollectionReusableView.m in Sources */,
 				6FCF9A591C25D7CA0055796F /* WSHomeProductCell.m in Sources */,
@@ -815,7 +845,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WSPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jirong.walkshopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -834,7 +864,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WalkShopper/WSPrefixHeader.pch";
 				INFOPLIST_FILE = WalkShopper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jirong.walkshopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";

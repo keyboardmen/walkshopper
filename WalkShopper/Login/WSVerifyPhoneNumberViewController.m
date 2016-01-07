@@ -9,6 +9,7 @@
 #import "WSVerifyPhoneNumberViewController.h"
 #import <SMS_SDK/SMSSDK.h>
 #import "MSWeakTimer.h"
+#import "WSSetPasswordViewController.h"
 
 @interface WSVerifyPhoneNumberViewController ()
 
@@ -21,18 +22,20 @@
 @property (assign, nonatomic) NSInteger countDownSeconds;
 @property (strong, nonatomic) MSWeakTimer *timer;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *testBtn;
+
 @end
 
 @implementation WSVerifyPhoneNumberViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.getVerificationCodeBtn.addTarget(self, action: "getVerificationCode", forControlEvents: UIControlEvents.TouchUpInside)
-//    self.nextStepBtn.addTarget(self, action: "nextStep", forControlEvents: UIControlEvents.TouchUpInside)
-//    self.countDownLabel.hidden = true
     [self.getVerificationCodeBtn addTarget:self action:@selector(getVerificationCode) forControlEvents:UIControlEventTouchUpInside];
     [self.nextStepBtn addTarget:self action:@selector(nextStep) forControlEvents:UIControlEventTouchUpInside];
     self.countDownLabel.hidden = YES;
+    
+    [self.testBtn addTarget:self action:@selector(testNextStep) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)getVerificationCode
@@ -40,11 +43,13 @@
     if ([self isPhoneNumValid] == NO) {
         return;
     }
+
     self.countDownSeconds = 60;
     self.countDownLabel.text = [NSString stringWithFormat:@"剩余%ld秒", (long)self.countDownSeconds];
     self.timer = [MSWeakTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCountDownLabel) userInfo:nil repeats:YES dispatchQueue:dispatch_get_main_queue()];
     self.countDownLabel.hidden = NO;
     self.getVerificationCodeBtn.hidden = YES;
+  
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNumberTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
         if (error) {
             
@@ -68,18 +73,20 @@
 - (void)nextStep
 {
     if ([self isVerificationCodeValid] == NO) {
+        [self showToast:@"验证码不正确"];
         return;
     }
+    
+    __weak typeof(self) weakSelf = self;
     [SMSSDK commitVerificationCode:self.verificationCodeTextField.text phoneNumber:self.phoneNumberTextField.text zone:@"86" result:^(NSError *error) {
         if (!error) {
-            NSLog(@"注册成功");
+            WSSetPasswordViewController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([WSSetPasswordViewController class])];
+            [weakSelf.navigationController pushViewController:vc animated:YES];
         } else {
-            
+            [weakSelf showToast:@"验证码不正确"];
         }
     }];
 }
-
-
 
 - (BOOL)isPhoneNumValid
 {
@@ -108,5 +115,13 @@
     }
     return isMatch;
 }
+
+#pragma mark - test
+
+- (void)testNextStep
+{
+
+}
+
 
 @end
