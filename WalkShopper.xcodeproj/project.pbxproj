@@ -41,6 +41,9 @@
 		6FA69A231BB1C74700E39B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA69A211BB1C74700E39B04 /* LaunchScreen.storyboard */; };
 		6FA69A2E1BB1C74700E39B04 /* WalkShopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A2D1BB1C74700E39B04 /* WalkShopperTests.m */; };
 		6FA69A391BB1C74700E39B04 /* WalkShopperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */; };
+		6FC51FDA1C414DC200397633 /* NSString+Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FD91C414DC200397633 /* NSString+Crypt.m */; };
+		6FC51FDE1C4151DC00397633 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FDD1C4151DC00397633 /* NSString+Additions.m */; };
+		6FC51FE31C4179EB00397633 /* WSCommonWebUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FE21C4179EB00397633 /* WSCommonWebUrls.m */; };
 		6FCF9A541C25D6840055796F /* HomeImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF9A531C25D6840055796F /* HomeImages.xcassets */; };
 		6FCF9A561C25D6DB0055796F /* headImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF9A551C25D6DB0055796F /* headImage.jpg */; };
 		6FCF9A591C25D7CA0055796F /* WSHomeProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A581C25D7CA0055796F /* WSHomeProductCell.m */; };
@@ -139,6 +142,12 @@
 		6FA69A341BB1C74700E39B04 /* WalkShopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkShopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkShopperUITests.m; sourceTree = "<group>"; };
 		6FA69A3A1BB1C74700E39B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FC51FD81C414DC200397633 /* NSString+Crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Crypt.h"; sourceTree = "<group>"; };
+		6FC51FD91C414DC200397633 /* NSString+Crypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crypt.m"; sourceTree = "<group>"; };
+		6FC51FDC1C4151DC00397633 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		6FC51FDD1C4151DC00397633 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		6FC51FE11C4179EB00397633 /* WSCommonWebUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCommonWebUrls.h; sourceTree = "<group>"; };
+		6FC51FE21C4179EB00397633 /* WSCommonWebUrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCommonWebUrls.m; sourceTree = "<group>"; };
 		6FCF9A531C25D6840055796F /* HomeImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HomeImages.xcassets; sourceTree = "<group>"; };
 		6FCF9A551C25D6DB0055796F /* headImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = headImage.jpg; sourceTree = "<group>"; };
 		6FCF9A571C25D7CA0055796F /* WSHomeProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSHomeProductCell.h; sourceTree = "<group>"; };
@@ -257,6 +266,8 @@
 			children = (
 				6F1A7FDD1BB7025800A60911 /* NSData+Crypt.h */,
 				6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */,
+				6FC51FD81C414DC200397633 /* NSString+Crypt.h */,
+				6FC51FD91C414DC200397633 /* NSString+Crypt.m */,
 				6F1A7FDA1BB7007C00A60911 /* WSNetworkingUtilities.h */,
 				6F1A7FDB1BB7007C00A60911 /* WSNetworkingUtilities.m */,
 			);
@@ -266,6 +277,7 @@
 		6F6FE4B41BB1DF8100F39F60 /* CommonSdk */ = {
 			isa = PBXGroup;
 			children = (
+				6FC51FDB1C4151BF00397633 /* NSString+Extensions */,
 				6FCF9A6F1C2EA78A0055796F /* UIImage+Extensions */,
 				6FCF9A6B1C2EA6060055796F /* UIColor+Extensions */,
 				6FCF9A661C2EA2030055796F /* ThirdParty */,
@@ -321,6 +333,7 @@
 				CD872C391BB286E700F74DD7 /* Mine */,
 				CD872C3A1BB296A500F74DD7 /* Login */,
 				CD872C3B1BB296AF00F74DD7 /* UserSession */,
+				6FC51FDF1C41791D00397633 /* CommonDefines */,
 				6F6FE4B41BB1DF8100F39F60 /* CommonSdk */,
 				6FA69A1F1BB1C74700E39B04 /* Assets.xcassets */,
 				6FA69A211BB1C74700E39B04 /* LaunchScreen.storyboard */,
@@ -355,6 +368,24 @@
 				6FA69A3A1BB1C74700E39B04 /* Info.plist */,
 			);
 			path = WalkShopperUITests;
+			sourceTree = "<group>";
+		};
+		6FC51FDB1C4151BF00397633 /* NSString+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6FC51FDC1C4151DC00397633 /* NSString+Additions.h */,
+				6FC51FDD1C4151DC00397633 /* NSString+Additions.m */,
+			);
+			path = "NSString+Extensions";
+			sourceTree = "<group>";
+		};
+		6FC51FDF1C41791D00397633 /* CommonDefines */ = {
+			isa = PBXGroup;
+			children = (
+				6FC51FE11C4179EB00397633 /* WSCommonWebUrls.h */,
+				6FC51FE21C4179EB00397633 /* WSCommonWebUrls.m */,
+			);
+			path = CommonDefines;
 			sourceTree = "<group>";
 		};
 		6FCF9A661C2EA2030055796F /* ThirdParty */ = {
@@ -677,12 +708,15 @@
 				6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */,
 				CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */,
 				6FCF9A721C2EA78A0055796F /* UIImage+Additions.m in Sources */,
+				6FC51FDE1C4151DC00397633 /* NSString+Additions.m in Sources */,
 				6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */,
 				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
 				6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */,
 				6F9B505D1C3ED2D900E3A573 /* WSSellCreationViewController.m in Sources */,
 				6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */,
 				6FCF9A751C30646C0055796F /* WSContinentCollectionReusableView.m in Sources */,
+				6FC51FE31C4179EB00397633 /* WSCommonWebUrls.m in Sources */,
+				6FC51FDA1C414DC200397633 /* NSString+Crypt.m in Sources */,
 				6FCF9A591C25D7CA0055796F /* WSHomeProductCell.m in Sources */,
 				6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */,
 				6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */,

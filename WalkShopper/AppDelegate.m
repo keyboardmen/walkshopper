@@ -26,8 +26,6 @@
     [WSViewControllerConfiguration hookViewLifeCircle];
     [SMSSDK registerApp:@"9cfb8e7d0120" withSecret:@"c3d1ff0fd893b2f14ded0cba9876a18d"];
     
-//    [AVOSCloud setApplicationId:@"gOlx63dQcu3e10WQA4FPAk2u-gzGzoHsz" clientKey:@"v30e1pFaOY23IeeET2JKRoqm"];
-    
     [self registerRemoteNotification];
     [[WSAppGeneralConfiguration sharedInstance] registerAppInServer];
     

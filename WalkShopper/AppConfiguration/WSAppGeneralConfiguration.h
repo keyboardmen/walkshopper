@@ -12,8 +12,10 @@
 
 @property (nonatomic, strong, readonly) NSString *appId;
 @property (nonatomic, strong, readonly) NSString *aesKey;
+@property (nonatomic, strong, readonly) NSString *APILevel;
 
 + (instancetype)sharedInstance;
 - (void)registerAppInServer;
+- (NSString *)getUniqueID;
 
 @end

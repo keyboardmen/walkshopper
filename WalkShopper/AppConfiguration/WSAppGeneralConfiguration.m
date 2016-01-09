@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong, readwrite) NSString *appId;
 @property (nonatomic, strong, readwrite) NSString *aesKey;
+@property (nonatomic, strong, readwrite) NSString *APILevel;
 
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *uniqueID;
@@ -37,12 +38,39 @@
     return instance;
 }
 
-- (void)registerAppInServer
+- (instancetype)init
 {
-    NSLog(@"%@", self.uniqueID);
+    self = [super init];
+    
+    if (self) {
+        _APILevel = @"1";
+    }
+    
+    return self;
 }
 
-- (NSString *)uniqueID
+- (void)registerAppInServer
+{
+
+}
+
+- (NSString *)getUniqueID
+{
+    self.uniqueID = [SSKeychain passwordForService:@"com.jirong.walkshopper" account:@"uniqueID"];
+    
+    if (self.uniqueID == nil) {
+        self.uniqueID = [self generateUniqueID];
+        
+        NSError *error = nil;
+        [SSKeychain setPassword:self.uniqueID forService:@"com.jirong.walkshopper" account:@"uniqueID" error:&error];
+        NSString *errorDesc = [NSString stringWithFormat:@"uniqueID error:%@", error.localizedDescription];
+        NSAssert((error == nil), errorDesc);
+    }
+    
+    return self.uniqueID;
+}
+
+- (NSString *)generateUniqueID
 {
     NSString *uId = nil;
     
@@ -91,5 +119,6 @@
     CFRelease(cfuuid);
     return uuid;
 }
+
 
 @end

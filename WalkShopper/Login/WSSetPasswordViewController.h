@@ -10,4 +10,6 @@
 
 @interface WSSetPasswordViewController : UIViewController
 
+@property (strong, nonatomic) NSString *username;
+
 @end

@@ -7,8 +7,7 @@
 //
 
 #import "WSLoginViewController.h"
-#import "MSWeakTimer.h"
-
+#import "NSString+Crypt.h"
 
 @interface WSLoginViewController ()
 
@@ -49,10 +48,21 @@
 
 - (void)loginBtnTapped
 {
-    [WSUserSession sharedSession].isLogin = YES;
-    if ([self.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
-        [self.loginDelegate loginController:self completeWithResult:YES];
-    }
+    NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:@{@"username":self.usernameTextField.text, @"passwd":[self.passwordTextField.text ws_md5String]}];
+    
+    NSString *url = [[WSCommonWebUrls sharedInstance] loginUrl];
+    __weak typeof(self) weakSelf = self;
+    [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [WSUserSession sharedSession].isLogin = YES;
+        if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
+            [weakSelf.loginDelegate loginController:weakSelf completeWithResult:YES];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [WSUserSession sharedSession].isLogin = NO;
+        if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
+            [weakSelf.loginDelegate loginController:weakSelf completeWithResult:NO];
+        }
+    }];
 }
 
 @end

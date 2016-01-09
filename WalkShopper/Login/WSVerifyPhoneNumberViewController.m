@@ -81,6 +81,7 @@
     [SMSSDK commitVerificationCode:self.verificationCodeTextField.text phoneNumber:self.phoneNumberTextField.text zone:@"86" result:^(NSError *error) {
         if (!error) {
             WSSetPasswordViewController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([WSSetPasswordViewController class])];
+            vc.username = weakSelf.phoneNumberTextField.text;
             [weakSelf.navigationController pushViewController:vc animated:YES];
         } else {
             [weakSelf showToast:@"验证码不正确"];
