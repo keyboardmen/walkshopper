@@ -48,6 +48,12 @@
 
 - (void)loginBtnTapped
 {
+    [self.loginDelegate loginController:self completeWithResult:YES];
+    
+    if ([self isInputValid] == NO) {
+        return;
+    }
+    
     NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:@{@"username":self.usernameTextField.text, @"passwd":[self.passwordTextField.text ws_md5String]}];
     
     NSString *url = [[WSCommonWebUrls sharedInstance] loginUrl];
@@ -63,6 +69,21 @@
             [weakSelf.loginDelegate loginController:weakSelf completeWithResult:NO];
         }
     }];
+}
+
+- (BOOL)isInputValid
+{
+    if (self.usernameTextField.text.length == 0) {
+//        [self showToast:@"请输入用户名"];
+        [self showToast:@"请输入用户名" offset:-80];
+        return NO;
+    }
+    if (self.passwordTextField.text.length == 0) {
+//        [self showToast:@"请输入密码"];
+        [self showToast:@"请输入密码" offset:-80];
+        return NO;
+    }
+    return YES;
 }
 
 @end

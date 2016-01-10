@@ -81,7 +81,8 @@ static NSString * const kSelectDateIdentifier = @"Select Date";
         [self.navigationController pushViewController:vc animated:YES];
     } else {
         PDTSimpleCalendarViewController *vc = [self createCalendarViewControllerWithIndexPath:indexPath];
-        [self presentViewController:vc animated:YES completion:nil];
+        //[self presentViewController:vc animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
@@ -118,7 +119,8 @@ static NSString * const kSelectDateIdentifier = @"Select Date";
         self.latestDeliveryDate = [self stringFromDate:date];
     }
     [self.tableView reloadData];
-    [controller dismissViewControllerAnimated:YES completion:nil];
+    //[controller dismissViewControllerAnimated:YES completion:nil];
+    [controller.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Help functions
