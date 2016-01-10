@@ -8,14 +8,20 @@
 
 #import "WSSellCreationViewController.h"
 #import "WSSelectCountryViewController.h"
+#import <PDTSimpleCalendar/PDTSimpleCalendar.h>
 
 static NSString * const kSelectCountryIdentifier = @"Select Country";
+static NSString * const kSelectDateIdentifier = @"Select Date";
 
-@interface WSSellCreationViewController () <UITableViewDataSource, UITableViewDelegate, WSSelectCountryDelegate>
+@interface WSSellCreationViewController () <UITableViewDataSource, UITableViewDelegate, WSSelectCountryDelegate, PDTSimpleCalendarViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSString *countryName;
+@property (strong, nonatomic) NSString *leaveDate;
+@property (strong, nonatomic) NSString *backDate;
+@property (strong, nonatomic) NSString *latestDeliveryDate;
+@property (strong, nonatomic) NSIndexPath *curDatePickerIndexPath;
 
 @end
 
@@ -23,7 +29,6 @@ static NSString * const kSelectCountryIdentifier = @"Select Country";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tableView.tableFooterView = [UIView new];
 
 }
@@ -37,7 +42,7 @@ static NSString * const kSelectCountryIdentifier = @"Select Country";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -48,8 +53,18 @@ static NSString * const kSelectCountryIdentifier = @"Select Country";
         cell = [tableView dequeueReusableCellWithIdentifier:kSelectCountryIdentifier forIndexPath:indexPath];
         cell.textLabel.text = self.countryName ? : @"请选择国家";
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-    } else {
-        
+    } else if (indexPath.row == 1) {
+        cell = [tableView dequeueReusableCellWithIdentifier:kSelectDateIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = self.leaveDate ? : @"请选择出国时间";
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    } else if (indexPath.row == 2) {
+        cell = [tableView dequeueReusableCellWithIdentifier:kSelectDateIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = self.backDate ? : @"请选择回国时间";
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    } else if (indexPath.row == 3) {
+        cell = [tableView dequeueReusableCellWithIdentifier:kSelectDateIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = self.latestDeliveryDate ? : @"请选择最晚发货时间";
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
     
     return cell;
@@ -64,6 +79,9 @@ static NSString * const kSelectCountryIdentifier = @"Select Country";
         selectCountryVC.delegate = self;
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        PDTSimpleCalendarViewController *vc = [self createCalendarViewControllerWithIndexPath:indexPath];
+        [self presentViewController:vc animated:YES completion:nil];
     }
 }
 
@@ -73,6 +91,44 @@ static NSString * const kSelectCountryIdentifier = @"Select Country";
 {
     self.countryName = countryName;
     [self.tableView reloadData];
+}
+
+#pragma mark - Date picker functions
+
+- (PDTSimpleCalendarViewController *)createCalendarViewControllerWithIndexPath:(NSIndexPath *)indexPath
+{
+    PDTSimpleCalendarViewController *vc = [PDTSimpleCalendarViewController new];
+    vc.delegate = self;
+    self.curDatePickerIndexPath = indexPath;
+    
+    return vc;
+}
+
+#pragma mark - PDTSimpleCalendarViewDelegate
+
+- (void)simpleCalendarViewController:(PDTSimpleCalendarViewController *)controller didSelectDate:(NSDate *)date
+{
+    if (self.curDatePickerIndexPath.row == 1) {
+        self.leaveDate = [self stringFromDate:date];
+    }
+    if (self.curDatePickerIndexPath.row == 2) {
+        self.backDate = [self stringFromDate:date];
+    }
+    if (self.curDatePickerIndexPath.row == 3) {
+        self.latestDeliveryDate = [self stringFromDate:date];
+    }
+    [self.tableView reloadData];
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Help functions
+
+- (NSString *)stringFromDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormat = [ [NSDateFormatter alloc] init];
+    dateFormat.dateFormat = @"yyyy年MM月dd日";
+    
+    return [dateFormat stringFromDate:date];
 }
 
 @end
