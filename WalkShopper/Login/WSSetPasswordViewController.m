@@ -32,15 +32,17 @@
         return;
     }
     
+    __weak typeof(self) weakSelf = self;
+    
     NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:@{@"username":self.username, @"passwd":[self.passwdTextField.text ws_md5String]}];
     
     NSString *url = [[WSCommonWebUrls sharedInstance] registerUrl];
     [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
+        [weakSelf.navigationController popToRootViewControllerAnimated:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        NSLog(@"%@",error);
     }];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 - (BOOL)isPasswdValid

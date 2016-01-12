@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '9.0'
 
-pod 'AFNetworking', '~> 2.0'
+pod 'AFNetworking', '~> 2.6.3'
 pod 'JLRoutes', '~> 1.5.3'
 pod 'MBProgressHUD', '~> 0.9.1'
 pod 'Masonry', '~> 0.6.2'
@@ -15,3 +15,4 @@ pod 'MSWeakTimer', '~> 1.1.0'
 pod 'SSKeychain', '~> 1.2.3'
 pod 'Reachability', '~> 3.2'
 pod 'PDTSimpleCalendar', '~> 0.9.1'
+pod 'SMS_SDK', '~> 1.1.1'

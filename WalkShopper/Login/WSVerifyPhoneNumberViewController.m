@@ -121,7 +121,9 @@
 
 - (void)testNextStep
 {
-
+    WSSetPasswordViewController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([WSSetPasswordViewController class])];
+    vc.username = self.phoneNumberTextField.text;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

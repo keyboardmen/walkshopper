@@ -25,7 +25,8 @@ static NSString * const domain = @"http://115.28.228.41";
 
 - (NSString *)registerUrl
 {
-    NSString *url = [NSString stringWithFormat:@"%@/", domain];
+    NSString *path = @"project/shop_service/basic/web/index.php?r=api/account/register";
+    NSString *url = [NSString stringWithFormat:@"%@/%@", domain, path];
     return url;
 }
 

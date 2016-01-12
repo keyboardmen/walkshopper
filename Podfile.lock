@@ -33,10 +33,11 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - SMS_SDK (1.1.1)
   - SSKeychain (1.2.3)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
+  - AFNetworking (~> 2.6.3)
   - Aspects (~> 1.4.1)
   - iRate (~> 1.11.4)
   - JLRoutes (~> 1.5.3)
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - PDTSimpleCalendar (~> 0.9.1)
   - Reachability (~> 3.2)
   - SDWebImage (~> 3.7.3)
+  - SMS_SDK (~> 1.1.1)
   - SSKeychain (~> 1.2.3)
 
 SPEC CHECKSUMS:
@@ -63,6 +65,7 @@ SPEC CHECKSUMS:
   PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SMS_SDK: 904effe1239a6d2677586adf5063cdf0a0024186
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
 
 COCOAPODS: 0.38.2

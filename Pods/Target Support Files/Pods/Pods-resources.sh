@@ -59,10 +59,14 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SMS_SDK/SMS_SDK/en.lproj"
+  install_resource "SMS_SDK/SMS_SDK/zh-Hans.lproj"
   install_resource "iRate/iRate/iRate.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SMS_SDK/SMS_SDK/en.lproj"
+  install_resource "SMS_SDK/SMS_SDK/zh-Hans.lproj"
   install_resource "iRate/iRate/iRate.bundle"
 fi
 

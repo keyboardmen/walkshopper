@@ -1,0 +1,1 @@
+../../../../SMS_SDK/SMS_SDK/SMS_SDK.framework/Headers/SMSSDK+DeprecatedMethods.h
