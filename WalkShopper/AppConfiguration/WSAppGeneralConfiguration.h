@@ -17,5 +17,7 @@
 + (instancetype)sharedInstance;
 - (void)registerAppInServer;
 - (NSString *)getUniqueID;
+- (NSString *)deviceToken;
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import "WSLoginViewController.h"
 #import "NSString+Crypt.h"
+#import "WSAppGeneralConfiguration.h"
 
 @interface WSLoginViewController ()
 
@@ -43,18 +44,24 @@
 
 - (void)backBtnTapped
 {
+    if ([self.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
+        [self.loginDelegate loginController:self completeWithResult:NO];
+    }
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)loginBtnTapped
 {
-    [self.loginDelegate loginController:self completeWithResult:YES];
+//    if ([self.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
+//        [self.loginDelegate loginController:self completeWithResult:YES];
+//    }
     
     if ([self isInputValid] == NO) {
         return;
     }
     
-    NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:@{@"username":self.usernameTextField.text, @"passwd":[self.passwordTextField.text ws_md5String]}];
+    NSString *deviceToken = [[WSAppGeneralConfiguration sharedInstance] deviceToken];
+    NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:@{@"username":self.usernameTextField.text, @"passwd":[self.passwordTextField.text ws_md5String], @"deviceToken":deviceToken}];
     
     NSString *url = [[WSCommonWebUrls sharedInstance] loginUrl];
     __weak typeof(self) weakSelf = self;
@@ -74,12 +81,10 @@
 - (BOOL)isInputValid
 {
     if (self.usernameTextField.text.length == 0) {
-//        [self showToast:@"请输入用户名"];
         [self showToast:@"请输入用户名" offset:-80];
         return NO;
     }
     if (self.passwordTextField.text.length == 0) {
-//        [self showToast:@"请输入密码"];
         [self showToast:@"请输入密码" offset:-80];
         return NO;
     }

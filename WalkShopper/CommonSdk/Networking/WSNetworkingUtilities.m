@@ -60,9 +60,10 @@
     [param addEntriesFromDictionary:parameters];
     [param addEntriesFromDictionary:[self commonHttpParameters]];
     
+    NSDictionary *paramters = @{@"data":param};
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    //manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager POST:URLString parameters:param success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager POST:URLString parameters:paramters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         success(operation, responseObject);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         failure(operation, error);

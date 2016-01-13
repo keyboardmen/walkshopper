@@ -120,5 +120,15 @@
     return uuid;
 }
 
+- (NSString *)deviceToken
+{
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *token = [ud objectForKey:@"kDeviceToken"];
+    if (token == nil) {
+        token = @"";
+    }
+    return token;
+}
+
 
 @end

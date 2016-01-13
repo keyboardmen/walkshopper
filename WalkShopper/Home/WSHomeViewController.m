@@ -71,7 +71,7 @@ static NSString * const kProductCellIdentifier = @"Home Product Cell";
     [self.menuItemArray removeAllObjects];
     NSArray *titles = @[@"我要卖", @"我要买"];
     for (NSString *title in titles) {
-        LDPMPopoverMenuItem *item = [[LDPMPopoverMenuItem alloc]initWithTitle:title titleColor:[UIColor colorWithRGB:0xd7a101] titleFont:[UIFont systemFontOfSize:14] titleAlignment:NSTextAlignmentCenter image:nil target:self action:@selector(menuTapped:)];
+        LDPMPopoverMenuItem *item = [[LDPMPopoverMenuItem alloc] initWithTitle:title titleColor:[UIColor colorWithRGB:0xd7a101] titleFont:[UIFont systemFontOfSize:14] titleAlignment:NSTextAlignmentCenter image:nil target:self action:@selector(menuTapped:)];
         [self.menuItemArray addObject:item];
     }
 
@@ -92,7 +92,8 @@ static NSString * const kProductCellIdentifier = @"Home Product Cell";
                 UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellCreationViewController class])];
                 [self.navigationController pushViewController:vc animated:YES];
             } else if (i == 1) {
-                
+                UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellCreationViewController class])];
+                [self.navigationController pushViewController:vc animated:YES];
             }
         }
     }

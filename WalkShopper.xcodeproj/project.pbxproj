@@ -26,6 +26,7 @@
 		6F80A6F31C1DEA930072F4E0 /* UIViewController+WSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F80A6F21C1DEA930072F4E0 /* UIViewController+WSUtilities.m */; };
 		6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */; };
 		6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */; };
+		6F91ED4B1C4566CA00BEC860 /* WSSellProductInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F91ED4A1C4566CA00BEC860 /* WSSellProductInfoViewController.m */; };
 		6F9B505D1C3ED2D900E3A573 /* WSSellCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */; };
 		6F9B50601C3ED58B00E3A573 /* WSBuySellCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */; };
 		6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D1C111BB3201C001F3B23 /* Login.storyboard */; };
@@ -113,6 +114,8 @@
 		6F903D181C14BA1700F28B0A /* WSPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPrefixHeader.pch; sourceTree = "<group>"; };
 		6F903D191C14BCDF00F28B0A /* WSViewControllerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSViewControllerConfiguration.h; sourceTree = "<group>"; };
 		6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSViewControllerConfiguration.m; sourceTree = "<group>"; };
+		6F91ED491C4566CA00BEC860 /* WSSellProductInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellProductInfoViewController.h; sourceTree = "<group>"; };
+		6F91ED4A1C4566CA00BEC860 /* WSSellProductInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellProductInfoViewController.m; sourceTree = "<group>"; };
 		6F9B505B1C3ED2D900E3A573 /* WSSellCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellCreationViewController.h; sourceTree = "<group>"; };
 		6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellCreationViewController.m; sourceTree = "<group>"; };
 		6F9B505E1C3ED58B00E3A573 /* WSBuySellCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSBuySellCountryCell.h; sourceTree = "<group>"; };
@@ -449,6 +452,8 @@
 				6FCF9A581C25D7CA0055796F /* WSHomeProductCell.m */,
 				6F9B505B1C3ED2D900E3A573 /* WSSellCreationViewController.h */,
 				6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */,
+				6F91ED491C4566CA00BEC860 /* WSSellProductInfoViewController.h */,
+				6F91ED4A1C4566CA00BEC860 /* WSSellProductInfoViewController.m */,
 				6F9B505E1C3ED58B00E3A573 /* WSBuySellCountryCell.h */,
 				6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */,
 				6FCF9A5A1C287B520055796F /* WSSelectCountryViewController.h */,
@@ -701,6 +706,7 @@
 				6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */,
 				6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */,
 				6FCF9A621C2E8EB00055796F /* WSSelectCountryFlowLayout.m in Sources */,
+				6F91ED4B1C4566CA00BEC860 /* WSSellProductInfoViewController.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
 				CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */,
 				6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */,
@@ -844,7 +850,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
@@ -864,7 +870,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WalkShopper/CommonSdk/SMS_SDK",
