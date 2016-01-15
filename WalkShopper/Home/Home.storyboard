@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Sell Product Info View Controller-->
+        <scene sceneID="VPJ-Sh-vih">
+            <objects>
+                <viewController id="YRE-wP-zE0" customClass="WSSellProductInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQY-40-qvy"/>
+                        <viewControllerLayoutGuide type="bottom" id="mxm-qB-qep"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6w9-Sl-Fly">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-Qg-Kq4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="s2S-AH-lHe">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s2S-AH-lHe" id="Eba-M6-Uif">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DFa-Qg-Kq4" firstAttribute="top" secondItem="sQY-40-qvy" secondAttribute="bottom" id="RdO-da-Zjv"/>
+                            <constraint firstAttribute="trailing" secondItem="DFa-Qg-Kq4" secondAttribute="trailing" id="YT8-ka-UU9"/>
+                            <constraint firstItem="DFa-Qg-Kq4" firstAttribute="leading" secondItem="6w9-Sl-Fly" secondAttribute="leading" id="fn6-5k-JV8"/>
+                            <constraint firstItem="mxm-qB-qep" firstAttribute="top" secondItem="DFa-Qg-Kq4" secondAttribute="bottom" id="jTE-lc-5g1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="DFa-Qg-Kq4" id="QNS-Wb-vyv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BO1-DQ-aul" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1148" y="349"/>
+        </scene>
+        <!--Sell Creation View Controller-->
+        <scene sceneID="nhx-RW-TEb">
+            <objects>
+                <viewController storyboardIdentifier="WSSellCreationViewController" id="gvx-rT-0js" customClass="WSSellCreationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kji-x4-h0x"/>
+                        <viewControllerLayoutGuide type="bottom" id="OZS-2n-Vhm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n0b-bO-Pbs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cxF-mh-yoX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Select Country" id="aKK-VL-ywO" customClass="WSBuySellCountryCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aKK-VL-ywO" id="NHT-B7-R8l">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Select Date" id="9BF-Yv-JjW" customClass="WSBuySellCountryCell">
+                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9BF-Yv-JjW" id="38Y-9b-M9M">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Descriptions" rowHeight="100" id="ecL-cq-5Lx" customClass="WSBuySellCountryCell">
+                                        <rect key="frame" x="0.0" y="116" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ecL-cq-5Lx" id="yZW-O9-KjC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gvx-rT-0js" id="XLs-XI-jz4"/>
+                                    <outlet property="delegate" destination="gvx-rT-0js" id="hvz-Fs-l7m"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cxF-mh-yoX" secondAttribute="trailing" id="2Q8-7Y-wNB"/>
+                            <constraint firstItem="cxF-mh-yoX" firstAttribute="leading" secondItem="n0b-bO-Pbs" secondAttribute="leading" id="2bm-KM-l6s"/>
+                            <constraint firstItem="cxF-mh-yoX" firstAttribute="top" secondItem="Kji-x4-h0x" secondAttribute="bottom" id="GR8-bH-tuA"/>
+                            <constraint firstItem="OZS-2n-Vhm" firstAttribute="top" secondItem="cxF-mh-yoX" secondAttribute="bottom" id="oKm-Mg-i5L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cxF-mh-yoX" id="Fde-yP-q1e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bln-F8-b0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="349"/>
+        </scene>
+        <!--Select Country View Controller-->
+        <scene sceneID="8dM-t8-km5">
+            <objects>
+                <viewController storyboardIdentifier="WSSelectCountryViewController" id="wcG-6c-dYr" customClass="WSSelectCountryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F7i-Sv-TzS"/>
+                        <viewControllerLayoutGuide type="bottom" id="PUO-s3-4oJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gdS-aZ-Tyq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5QN-Gb-B28">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VqD-CY-Atw">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Country Cell" id="JwU-fr-MOq" customClass="WSSelectCountryCell">
+                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w0-vf-ZgG" userLabel="国家">
+                                                    <rect key="frame" x="0.0" y="15.5" width="50" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3w0-vf-ZgG" firstAttribute="leading" secondItem="JwU-fr-MOq" secondAttribute="leading" id="ehn-Nw-Rg7"/>
+                                            <constraint firstItem="3w0-vf-ZgG" firstAttribute="centerY" secondItem="JwU-fr-MOq" secondAttribute="centerY" id="pmu-NG-o2d"/>
+                                            <constraint firstAttribute="trailing" secondItem="3w0-vf-ZgG" secondAttribute="trailing" id="qek-KW-7Nj"/>
+                                        </constraints>
+                                        <size key="customSize" width="50" height="50"/>
+                                        <connections>
+                                            <outlet property="countryName" destination="3w0-vf-ZgG" id="tTr-Si-5xU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Continent View" id="PEE-pn-jQ9" customClass="WSContinentCollectionReusableView">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="亚洲" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c55-Qc-9Vo" userLabel="大洲">
+                                            <rect key="frame" x="20" y="15.5" width="30" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="0.64884099529999995" blue="0.214942986" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="c55-Qc-9Vo" firstAttribute="leading" secondItem="PEE-pn-jQ9" secondAttribute="leading" constant="20" id="AMa-TE-nBD"/>
+                                        <constraint firstItem="c55-Qc-9Vo" firstAttribute="centerY" secondItem="PEE-pn-jQ9" secondAttribute="centerY" id="z6m-gx-ZGM"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="continentNameLabel" destination="c55-Qc-9Vo" id="lP6-L3-oHh"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="wcG-6c-dYr" id="OGA-Sr-nKq"/>
+                                    <outlet property="delegate" destination="wcG-6c-dYr" id="Mzd-6O-lbt"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5QN-Gb-B28" firstAttribute="leading" secondItem="gdS-aZ-Tyq" secondAttribute="leading" id="PM3-fg-xjn"/>
+                            <constraint firstAttribute="trailing" secondItem="5QN-Gb-B28" secondAttribute="trailing" id="azL-m5-Htf"/>
+                            <constraint firstItem="PUO-s3-4oJ" firstAttribute="top" secondItem="5QN-Gb-B28" secondAttribute="bottom" id="iXv-g2-Kjs"/>
+                            <constraint firstItem="5QN-Gb-B28" firstAttribute="top" secondItem="F7i-Sv-TzS" secondAttribute="bottom" id="oPX-wy-yWY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="5QN-Gb-B28" id="Glw-C8-8QO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kh-cF-q2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="349"/>
+        </scene>
+    </scenes>
+</document>

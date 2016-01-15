@@ -1,0 +1,29 @@
+//
+//  WSPrefixHeader.pch
+//  WalkShopper
+//
+//  Created by 丁 一 on 15/12/7.
+//  Copyright © 2015年 Ding Yi. All rights reserved.
+//
+
+#ifndef WSPrefixHeader_pch
+#define WSPrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <objc/runtime.h>
+
+#import "WSUserSession.h"
+#import "UIViewController+WSUtilities.h"
+#import "WSLoginAction.h"
+#import "UIDevice+Extensions.h"
+#import "UIColor+Additions.h"
+#import "UIViewController+WSToast.h"
+#import "AFNetworking.h"
+#import "WSNetworkingUtilities.h"
+#import "WSCommonWebUrls.h"
+
+#endif /* WSPrefixHeader_pch */
+
