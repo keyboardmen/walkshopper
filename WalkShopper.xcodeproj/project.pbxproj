@@ -579,7 +579,7 @@
 				TargetAttributes = {
 					6FA69A0F1BB1C74700E39B04 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 7NY77NZ953;
+						DevelopmentTeam = A9VAJDN54X;
 					};
 					6FA69A281BB1C74700E39B04 = {
 						CreatedOnToolsVersion = 7.0;
@@ -865,7 +865,7 @@
 				INFOPLIST_FILE = WalkShopper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jirong.walkshopper;
+				PRODUCT_BUNDLE_IDENTIFIER = WS.WalkShopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -885,7 +885,7 @@
 				INFOPLIST_FILE = WalkShopper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jirong.walkshopper;
+				PRODUCT_BUNDLE_IDENTIFIER = WS.WalkShopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
