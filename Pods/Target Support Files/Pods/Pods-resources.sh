@@ -58,20 +58,16 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "EaseUI/EaseUI/resources/EaseUIResource.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "SMS_SDK/SMS_SDK/en.lproj"
   install_resource "SMS_SDK/SMS_SDK/zh-Hans.lproj"
   install_resource "iRate/iRate/iRate.bundle"
-  install_resource "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "EaseUI/EaseUI/resources/EaseUIResource.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "SMS_SDK/SMS_SDK/en.lproj"
   install_resource "SMS_SDK/SMS_SDK/zh-Hans.lproj"
   install_resource "iRate/iRate/iRate.bundle"
-  install_resource "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser.bundle"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
