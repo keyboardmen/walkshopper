@@ -22,16 +22,15 @@ PODS:
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
   - DACircularProgress (2.3.1)
-  - EaseMobSDK (2.2.1.2)
   - EaseUI (1.0.0):
     - MJRefresh (~> 3.0.6)
     - MWPhotoBrowser (~> 2.1.1)
   - iRate (1.11.4)
   - JLRoutes (1.5.3)
   - JSONModel (1.1.2)
-  - Masonry (0.6.3)
-  - MBProgressHUD (0.9.1)
-  - MJRefresh (3.0.6)
+  - Masonry (0.6.4)
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (3.0.8)
   - MSWeakTimer (1.1.0)
   - MWPhotoBrowser (2.1.1):
     - DACircularProgress (~> 2.3)
@@ -39,16 +38,15 @@ PODS:
     - SDWebImage (!= 3.7.2, ~> 3.7)
   - PDTSimpleCalendar (0.9.1)
   - Reachability (3.2)
-  - SDWebImage (3.7.3):
-    - SDWebImage/Core (= 3.7.3)
-  - SDWebImage/Core (3.7.3)
+  - SDWebImage (3.7.4):
+    - SDWebImage/Core (= 3.7.4)
+  - SDWebImage/Core (3.7.4)
   - SMS_SDK (1.1.1)
   - SSKeychain (1.2.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
   - Aspects (~> 1.4.1)
-  - EaseMobSDK (from `https://github.com/easemob/sdk-ios-cocoapods.git`)
   - EaseUI (from `https://github.com/easemob/easeui-ios-cocoapods.git`)
   - iRate (~> 1.11.4)
   - JLRoutes (~> 1.5.3)
@@ -64,15 +62,10 @@ DEPENDENCIES:
   - SSKeychain (~> 1.2.3)
 
 EXTERNAL SOURCES:
-  EaseMobSDK:
-    :git: https://github.com/easemob/sdk-ios-cocoapods.git
   EaseUI:
     :git: https://github.com/easemob/easeui-ios-cocoapods.git
 
 CHECKOUT OPTIONS:
-  EaseMobSDK:
-    :commit: 7adcd89a7a1f3dc81b0cd6f28dcf28f97f4baf5c
-    :git: https://github.com/easemob/sdk-ios-cocoapods.git
   EaseUI:
     :commit: 1c28cffad34e5ab636670acb4102efa071319cb4
     :git: https://github.com/easemob/easeui-ios-cocoapods.git
@@ -81,20 +74,19 @@ SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  EaseMobSDK: 1e6b5a6a03c1c76e717030c726bb7757297539f8
   EaseUI: d62934d78e680c36d70b281ed31c9195a465a145
   iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
   JLRoutes: 20555d00693855b71e80715eeaae6a930a33b2f5
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
-  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MJRefresh: df419e2393f9020bcd340c552e8f0cf700073f32
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   MSWeakTimer: 9426150f933b80ed3acf3f6d228e4b61f0e303c8
   MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
   PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SDWebImage: 247edd7dd80dd6124197b0d6a17846fe9d1df968
   SMS_SDK: 904effe1239a6d2677586adf5063cdf0a0024186
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
