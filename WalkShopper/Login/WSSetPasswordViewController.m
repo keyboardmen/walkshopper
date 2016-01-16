@@ -8,6 +8,7 @@
 
 #import "WSSetPasswordViewController.h"
 #import "NSString+Crypt.h"
+#import "WSNetworkingResponseObject.h"
 
 @interface WSSetPasswordViewController ()
 
@@ -37,10 +38,21 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:@{@"username":self.username, @"passwd":[self.passwdTextField.text ws_md5String]}];
     
     NSString *url = [[WSCommonWebUrls sharedInstance] registerUrl];
-    [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+    
+    [self startMaskActivity:@"正在加载中..."];
+    [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
+        [weakSelf stopMaskActivity];
+        if (responseObject.retCode == WSNetworkingResponseSuccess) {
+            [weakSelf showOkToast:@"注册成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+            });
+        } else {
+            [weakSelf showToast:responseObject.retDesc];
+        }
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@",error);
+        [weakSelf stopMaskActivity];
     }];
     
 }

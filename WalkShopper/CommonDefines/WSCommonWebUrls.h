@@ -16,5 +16,7 @@
 - (NSString *)registerUrl;
 //登录接口
 - (NSString *)loginUrl;
+//自动登录接口
+- (NSString *)autoLoginUrl;
 
 @end

@@ -21,6 +21,7 @@
 #import "UIDevice+Extensions.h"
 #import "UIColor+Additions.h"
 #import "UIViewController+WSToast.h"
+#import "UIViewController+WSActivity.h"
 #import "AFNetworking.h"
 #import "WSNetworkingUtilities.h"
 #import "WSCommonWebUrls.h"

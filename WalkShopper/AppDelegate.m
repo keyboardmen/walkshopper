@@ -29,6 +29,8 @@
     [self registerRemoteNotification];
     [[WSAppGeneralConfiguration sharedInstance] registerAppInServer];
     
+    [[WSUserSession sharedSession] autoLogin];
+    
     return YES;
 }
 

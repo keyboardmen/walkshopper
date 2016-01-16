@@ -20,5 +20,9 @@
 @property (assign, nonatomic) BOOL hasLogin;
 
 + (WSUserSession *)sharedSession;
+- (void)autoLogin;
+- (void)logout;
+- (void)saveLoginToken:(NSString *)loginToken;
+- (NSString *)readLoginToken;
 
 @end

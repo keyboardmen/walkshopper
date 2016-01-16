@@ -9,6 +9,7 @@
 #import "WSLoginViewController.h"
 #import "NSString+Crypt.h"
 #import "WSAppGeneralConfiguration.h"
+#import "WSNetworkingResponseObject.h"
 
 @interface WSLoginViewController ()
 
@@ -52,10 +53,6 @@
 
 - (void)loginBtnTapped
 {
-//    if ([self.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
-//        [self.loginDelegate loginController:self completeWithResult:YES];
-//    }
-    
     if ([self isInputValid] == NO) {
         return;
     }
@@ -65,12 +62,27 @@
     
     NSString *url = [[WSCommonWebUrls sharedInstance] loginUrl];
     __weak typeof(self) weakSelf = self;
-    [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [WSUserSession sharedSession].isLogin = YES;
-        if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
-            [weakSelf.loginDelegate loginController:weakSelf completeWithResult:YES];
+    [self startMaskActivity:@"正在加载中..."];
+    [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
+        [weakSelf stopMaskActivity];
+        if (responseObject.retCode == WSNetworkingResponseSuccess) {
+            [WSUserSession sharedSession].isLogin = YES;
+            NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
+            [[WSUserSession sharedSession] saveLoginToken:loginToken];
+            if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
+                [weakSelf.loginDelegate loginController:weakSelf completeWithResult:YES];
+            }
+        } else {
+            [weakSelf showToast:responseObject.retDesc];
+            [WSUserSession sharedSession].isLogin = NO;
+            if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
+                [weakSelf.loginDelegate loginController:weakSelf completeWithResult:NO];
+            }
         }
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [weakSelf stopMaskActivity];
+        [weakSelf showToast:error.localizedDescription];
         [WSUserSession sharedSession].isLogin = NO;
         if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
             [weakSelf.loginDelegate loginController:weakSelf completeWithResult:NO];

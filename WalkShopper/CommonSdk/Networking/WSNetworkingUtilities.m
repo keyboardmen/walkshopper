@@ -8,6 +8,7 @@
 
 #import "WSNetworkingUtilities.h"
 #import "WSAppGeneralConfiguration.h"
+#import "WSNetworkingResponseObject.h"
 
 @implementation WSNetworkingUtilities
 
@@ -35,7 +36,7 @@
 
 - (void)GET:(NSString *)URLString
         parameters:(id)parameters
-        success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+        success:(void (^)(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject))success
         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSMutableDictionary *param = [NSMutableDictionary new];
@@ -45,7 +46,8 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     //manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager GET:URLString parameters:param success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        success(operation, responseObject);
+        WSNetworkingResponseObject *response = [WSNetworkingResponseObject initWithResponseObject:responseObject];
+        success(operation, response);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         failure(operation, error);
     }];
@@ -53,7 +55,7 @@
 
 - (void)POST:(NSString *)URLString
         parameters:(id)parameters
-        success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+        success:(void (^)(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject))success
         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSMutableDictionary *param = [NSMutableDictionary new];
@@ -64,7 +66,8 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager POST:URLString parameters:paramters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        success(operation, responseObject);
+        WSNetworkingResponseObject *response = [WSNetworkingResponseObject initWithResponseObject:responseObject];
+        success(operation, response);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         failure(operation, error);
     }];
