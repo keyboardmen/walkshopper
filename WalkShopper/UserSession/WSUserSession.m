@@ -8,6 +8,9 @@
 
 #import "WSUserSession.h"
 #import "WSNetworkingResponseObject.h"
+#import "NSString+Additions.h"
+
+NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLoginStatusChangeNotification";
 
 @interface WSUserSession ()
 
@@ -39,6 +42,39 @@
     return self;
 }
 
+- (void)loginWithParamters:(NSDictionary *)parameters completionBlock:(void(^)(BOOL success, NSError *error))completionBlk
+{
+    NSString *username = [parameters objectForKey:@"username"];
+    NSString *url = [[WSCommonWebUrls sharedInstance] loginUrl];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [[WSNetworkingUtilities sharedInstance] POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
+        if (responseObject.retCode == WSNetworkingResponseSuccess) {
+            weakSelf.hasLogin = YES;
+            NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
+            [weakSelf saveUsername:username];
+            [weakSelf saveLoginToken:loginToken];
+            if (completionBlk) {
+                completionBlk(NO, nil);
+            }
+        } else {
+            weakSelf.hasLogin = NO;
+            if (completionBlk) {
+                NSDictionary *userInfo = @{NSLocalizedDescriptionKey:EMPTY_STRING_IF_NIL(responseObject.retDesc)};
+                NSError *error = [NSError errorWithDomain:@"userLoginAction" code:responseObject.retCode userInfo:userInfo];
+                completionBlk(NO, error);
+            }
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        weakSelf.hasLogin = NO;
+        if (completionBlk) {
+            completionBlk(NO, error);
+        }
+    }];
+}
+
 - (void)autoLogin
 {
     if ( _loginUserName.length == 0 || _loginToken.length == 0 ) {
@@ -52,14 +88,14 @@
     NSString *url = [[WSCommonWebUrls sharedInstance] autoLoginUrl];
     [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
         if (responseObject.retCode == WSNetworkingResponseSuccess) {
-            weakSelf.isLogin = YES;
+            weakSelf.hasLogin = YES;
             NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
             [weakSelf saveLoginToken:loginToken];
         } else {
-            weakSelf.isLogin = NO;
+            weakSelf.hasLogin = NO;
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        weakSelf.isLogin = NO;
+        weakSelf.hasLogin = NO;
     }];
     
 }
@@ -105,6 +141,14 @@
     NSString *loginToken = [ud objectForKey:@"loginToken"];
     
     return loginToken;
+}
+
+#pragma mark - getter & setter
+
+- (void)setHasLogin:(BOOL)hasLogin
+{
+    _hasLogin = hasLogin;
+    [[NSNotificationCenter defaultCenter] postNotificationName:WSUserSessionLoginStatusChangeNotification object:nil];
 }
 
 @end

@@ -10,6 +10,4 @@
 
 @interface WSMainTabBarController : UITabBarController
 
-@property (assign, nonatomic) BOOL isLogin;
-
 @end

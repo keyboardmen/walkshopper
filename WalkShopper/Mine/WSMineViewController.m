@@ -7,10 +7,13 @@
 //
 
 #import "WSMineViewController.h"
+#import "WSMineHeaderView.h"
+#import "WSUserInfoViewController.h"
 
-@interface WSMineViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface WSMineViewController () <UITableViewDataSource, UITableViewDelegate, WSMineHeaderViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet WSMineHeaderView *tableHeaderView;
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
 
@@ -23,8 +26,9 @@
     
     self.title = @"我的";
     
+    self.tableHeaderView.headerViewDelegate = self;
     self.tableView.tableFooterView = [UIView new];
-    self.dataSource = [NSMutableArray arrayWithObjects:@[@"个人信息", @"我的订单"], @[@"设置", @"关于"], nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:@[@"我的订单"], @[@"设置", @"关于"], nil];
 }
 
 
@@ -38,6 +42,16 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.dataSource[section] count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 20.0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return CGFLOAT_MIN;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,6 +71,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - WSMineHeaderViewDelegate
+
+- (void)showUserInfoViewController
+{
+    UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Mine" withIdentifier:NSStringFromClass([WSUserInfoViewController class])];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

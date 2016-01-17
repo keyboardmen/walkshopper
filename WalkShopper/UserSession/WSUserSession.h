@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const WSUserSessionLoginStatusChangeNotification;
+
+
 @interface WSUserSession : NSObject
 
-@property (assign, nonatomic) BOOL isLogin;
+@property (assign, nonatomic) BOOL isLoginning;
 
 @property (nonatomic, strong, readonly) NSString *appId;
 @property (nonatomic, strong, readonly) NSString *aesKey;
@@ -20,8 +23,11 @@
 @property (assign, nonatomic) BOOL hasLogin;
 
 + (WSUserSession *)sharedSession;
+- (void)loginWithParamters:(NSDictionary *)parameters completionBlock:(void(^)(BOOL success, NSError *error))completionBlk;
 - (void)autoLogin;
 - (void)logout;
+- (void)saveUsername:(NSString *)username;
+- (NSString *)readUsername;
 - (void)saveLoginToken:(NSString *)loginToken;
 - (NSString *)readLoginToken;
 

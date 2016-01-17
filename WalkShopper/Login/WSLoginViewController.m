@@ -60,32 +60,19 @@
     NSString *deviceToken = [[WSAppGeneralConfiguration sharedInstance] deviceToken];
     NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:@{@"username":self.usernameTextField.text, @"passwd":[self.passwordTextField.text ws_md5String], @"deviceToken":deviceToken}];
     
-    NSString *url = [[WSCommonWebUrls sharedInstance] loginUrl];
     __weak typeof(self) weakSelf = self;
     [self startMaskActivity:@"正在加载中..."];
-    [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
+    [[WSUserSession sharedSession] loginWithParamters:param completionBlock:^(BOOL success, NSError *error) {
         [weakSelf stopMaskActivity];
-        if (responseObject.retCode == WSNetworkingResponseSuccess) {
-            [WSUserSession sharedSession].isLogin = YES;
-            NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
-            [[WSUserSession sharedSession] saveLoginToken:loginToken];
+        if (success) {
             if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
                 [weakSelf.loginDelegate loginController:weakSelf completeWithResult:YES];
             }
         } else {
-            [weakSelf showToast:responseObject.retDesc];
-            [WSUserSession sharedSession].isLogin = NO;
+            [weakSelf showToast:error.localizedDescription];
             if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
                 [weakSelf.loginDelegate loginController:weakSelf completeWithResult:NO];
             }
-        }
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [weakSelf stopMaskActivity];
-        [weakSelf showToast:error.localizedDescription];
-        [WSUserSession sharedSession].isLogin = NO;
-        if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
-            [weakSelf.loginDelegate loginController:weakSelf completeWithResult:NO];
         }
     }];
 }

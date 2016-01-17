@@ -28,7 +28,7 @@
     NSUInteger index = [self.viewControllers indexOfObject:viewController];
     UINavigationController *nav = (UINavigationController *)viewController;
     if ([nav.viewControllers.firstObject isKindOfClass:[WSMineViewController class]]) {
-        if ([WSUserSession sharedSession].isLogin == NO) {
+        if ([WSUserSession sharedSession].hasLogin == NO) {
             [WSLoginAction loginWithSuccessBlock:^{
                 self.selectedIndex = index;
             } andFailureBlock:^{

@@ -15,6 +15,7 @@
 		6F1A7FD41BB6FCE900A60911 /* WSAppGeneralConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FD31BB6FCE900A60911 /* WSAppGeneralConfiguration.m */; };
 		6F1A7FDC1BB7007C00A60911 /* WSNetworkingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FDB1BB7007C00A60911 /* WSNetworkingUtilities.m */; };
 		6F1A7FDF1BB7025800A60911 /* NSData+Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */; };
+		6F4760B51C4BCA2E00F466B6 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F4760B41C4BCA2E00F466B6 /* Mine.storyboard */; };
 		6F6FE4BD1BB1E04600F39F60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */; };
 		6F6FE4BF1BB1E0C600F39F60 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */; };
 		6F6FE4C11BB1E0DC00F39F60 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */; };
@@ -27,6 +28,8 @@
 		6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */; };
 		6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */; };
 		6F91ED4B1C4566CA00BEC860 /* WSSellProductInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F91ED4A1C4566CA00BEC860 /* WSSellProductInfoViewController.m */; };
+		6F9506CC1C4C116B00389AF6 /* WSUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9506CB1C4C116B00389AF6 /* WSUserInfoViewController.m */; };
+		6F9506CF1C4C11D800389AF6 /* WSUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9506CE1C4C11D800389AF6 /* WSUserInfoCell.m */; };
 		6F9B505D1C3ED2D900E3A573 /* WSSellCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */; };
 		6F9B50601C3ED58B00E3A573 /* WSBuySellCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */; };
 		6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D1C111BB3201C001F3B23 /* Login.storyboard */; };
@@ -58,6 +61,7 @@
 		6FCF9A7B1C3D6B200055796F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */; };
 		6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */; };
 		6FEE02361C4A053B000DC27A /* WSNetworkingResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE02351C4A053B000DC27A /* WSNetworkingResponseObject.m */; };
+		6FEE02391C4BC535000DC27A /* WSMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE02381C4BC535000DC27A /* WSMineHeaderView.m */; };
 		CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */; };
 		CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */; };
 		CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C421BB2A1E200F74DD7 /* WSLoginViewController.m */; };
@@ -99,6 +103,7 @@
 		6F1A7FDB1BB7007C00A60911 /* WSNetworkingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNetworkingUtilities.m; sourceTree = "<group>"; };
 		6F1A7FDD1BB7025800A60911 /* NSData+Crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Crypt.h"; sourceTree = "<group>"; };
 		6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Crypt.m"; sourceTree = "<group>"; };
+		6F4760B41C4BCA2E00F466B6 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -117,6 +122,10 @@
 		6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSViewControllerConfiguration.m; sourceTree = "<group>"; };
 		6F91ED491C4566CA00BEC860 /* WSSellProductInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellProductInfoViewController.h; sourceTree = "<group>"; };
 		6F91ED4A1C4566CA00BEC860 /* WSSellProductInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellProductInfoViewController.m; sourceTree = "<group>"; };
+		6F9506CA1C4C116B00389AF6 /* WSUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserInfoViewController.h; sourceTree = "<group>"; };
+		6F9506CB1C4C116B00389AF6 /* WSUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserInfoViewController.m; sourceTree = "<group>"; };
+		6F9506CD1C4C11D800389AF6 /* WSUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserInfoCell.h; sourceTree = "<group>"; };
+		6F9506CE1C4C11D800389AF6 /* WSUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserInfoCell.m; sourceTree = "<group>"; };
 		6F9B505B1C3ED2D900E3A573 /* WSSellCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellCreationViewController.h; sourceTree = "<group>"; };
 		6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellCreationViewController.m; sourceTree = "<group>"; };
 		6F9B505E1C3ED58B00E3A573 /* WSBuySellCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSBuySellCountryCell.h; sourceTree = "<group>"; };
@@ -171,6 +180,8 @@
 		6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSetPasswordViewController.m; sourceTree = "<group>"; };
 		6FEE02341C4A053B000DC27A /* WSNetworkingResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNetworkingResponseObject.h; sourceTree = "<group>"; };
 		6FEE02351C4A053B000DC27A /* WSNetworkingResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNetworkingResponseObject.m; sourceTree = "<group>"; };
+		6FEE02371C4BC535000DC27A /* WSMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMineHeaderView.h; sourceTree = "<group>"; };
+		6FEE02381C4BC535000DC27A /* WSMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMineHeaderView.m; sourceTree = "<group>"; };
 		C7E5B324AD8A04BF26D3687A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD872C351BB286CA00F74DD7 /* WSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMainTabBarController.h; sourceTree = "<group>"; };
 		CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMainTabBarController.m; sourceTree = "<group>"; };
@@ -285,6 +296,17 @@
 				6F1A7FC31BB643DF00A60911 /* UIViewController+WalkShopperExtensions */,
 			);
 			path = CommonSdk;
+			sourceTree = "<group>";
+		};
+		6F9506C91C4C116B00389AF6 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				6F9506CA1C4C116B00389AF6 /* WSUserInfoViewController.h */,
+				6F9506CB1C4C116B00389AF6 /* WSUserInfoViewController.m */,
+				6F9506CD1C4C11D800389AF6 /* WSUserInfoCell.h */,
+				6F9506CE1C4C11D800389AF6 /* WSUserInfoCell.m */,
+			);
+			path = UserInfo;
 			sourceTree = "<group>";
 		};
 		6FA69A071BB1C74700E39B04 = {
@@ -479,8 +501,12 @@
 		CD872C391BB286E700F74DD7 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				6F9506C91C4C116B00389AF6 /* UserInfo */,
 				CD872C471BB2A22700F74DD7 /* WSMineViewController.h */,
 				CD872C481BB2A22700F74DD7 /* WSMineViewController.m */,
+				6FEE02371C4BC535000DC27A /* WSMineHeaderView.h */,
+				6FEE02381C4BC535000DC27A /* WSMineHeaderView.m */,
+				6F4760B41C4BCA2E00F466B6 /* Mine.storyboard */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -580,7 +606,7 @@
 				TargetAttributes = {
 					6FA69A0F1BB1C74700E39B04 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = A9VAJDN54X;
+						DevelopmentTeam = 7NY77NZ953;
 					};
 					6FA69A281BB1C74700E39B04 = {
 						CreatedOnToolsVersion = 7.0;
@@ -625,6 +651,7 @@
 				6FA69A1E1BB1C74700E39B04 /* Main.storyboard in Resources */,
 				6FCF9A561C25D6DB0055796F /* headImage.jpg in Resources */,
 				6FCF9A5E1C287B870055796F /* Home.storyboard in Resources */,
+				6F4760B51C4BCA2E00F466B6 /* Mine.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +733,7 @@
 				6FCF9A6E1C2EA6060055796F /* UIColor+Additions.m in Sources */,
 				6F80A6F31C1DEA930072F4E0 /* UIViewController+WSUtilities.m in Sources */,
 				6F1A7FD41BB6FCE900A60911 /* WSAppGeneralConfiguration.m in Sources */,
+				6F9506CC1C4C116B00389AF6 /* WSUserInfoViewController.m in Sources */,
 				CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */,
 				6FCF9A651C2E99060055796F /* WSSelectCountryCell.m in Sources */,
 				6F80A6F01C1DE3F50072F4E0 /* WSLoginAction.m in Sources */,
@@ -713,6 +741,7 @@
 				6FA69A151BB1C74700E39B04 /* main.m in Sources */,
 				6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */,
 				CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */,
+				6FEE02391C4BC535000DC27A /* WSMineHeaderView.m in Sources */,
 				6FCF9A721C2EA78A0055796F /* UIImage+Additions.m in Sources */,
 				6FC51FDE1C4151DC00397633 /* NSString+Additions.m in Sources */,
 				6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */,
@@ -727,6 +756,7 @@
 				6FCF9A591C25D7CA0055796F /* WSHomeProductCell.m in Sources */,
 				6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */,
 				6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */,
+				6F9506CF1C4C11D800389AF6 /* WSUserInfoCell.m in Sources */,
 				6FCF9A621C2E8EB00055796F /* WSSelectCountryFlowLayout.m in Sources */,
 				6F91ED4B1C4566CA00BEC860 /* WSSellProductInfoViewController.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,

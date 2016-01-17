@@ -16,3 +16,5 @@
 - (BOOL)ws_isEmptyOrWhitespace;
 
 @end
+
+#define EMPTY_STRING_IF_NIL(a) (((a) == nil) ? @"" : (a))

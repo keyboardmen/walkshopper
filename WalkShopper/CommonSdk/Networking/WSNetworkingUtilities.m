@@ -9,6 +9,7 @@
 #import "WSNetworkingUtilities.h"
 #import "WSAppGeneralConfiguration.h"
 #import "WSNetworkingResponseObject.h"
+#import "NSString+Additions.h"
 
 @implementation WSNetworkingUtilities
 
@@ -25,11 +26,12 @@
 
 - (NSDictionary *)commonHttpParameters
 {
-    NSDictionary *params = @{ @"uniqueId":[[WSAppGeneralConfiguration sharedInstance] getUniqueID]
-                              , @"systemName":[[UIDevice currentDevice] systemName]
-                              , @"systemVersion":[[UIDevice currentDevice] systemVersion]
-                              , @"deviceType":[[UIDevice currentDevice] model]
-                              , @"apiLevel":[[WSAppGeneralConfiguration sharedInstance] APILevel] };
+    NSDictionary *params = @{ @"uniqueId":EMPTY_STRING_IF_NIL([[WSAppGeneralConfiguration sharedInstance] getUniqueID]),
+                              @"systemName":EMPTY_STRING_IF_NIL([[UIDevice currentDevice] systemName]),
+                              @"systemVersion":EMPTY_STRING_IF_NIL([[UIDevice currentDevice] systemVersion]),
+                              @"deviceType":EMPTY_STRING_IF_NIL([[UIDevice currentDevice] model]),
+                              @"apiLevel":EMPTY_STRING_IF_NIL([[WSAppGeneralConfiguration sharedInstance] APILevel]), 
+                              };
     
     return params;
 }

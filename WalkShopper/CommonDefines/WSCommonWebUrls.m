@@ -38,7 +38,7 @@ static NSString * const domain = @"http://115.28.228.41";
 
 - (NSString *)autoLoginUrl
 {
-    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/autoLogin", domain];
+    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/autologin", domain];
     return url;
 }
 
