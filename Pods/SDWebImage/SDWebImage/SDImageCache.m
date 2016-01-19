@@ -116,12 +116,6 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
         // Set decompression to YES
         _shouldDecompressImages = YES;
 
-        // memory cache enabled
-        _shouldCacheImagesInMemory = YES;
-
-        // Disable iCloud
-        _shouldDisableiCloud = YES;
-
         dispatch_sync(_ioQueue, ^{
             _fileManager = [NSFileManager new];
         });
@@ -181,9 +175,8 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     }
     unsigned char r[CC_MD5_DIGEST_LENGTH];
     CC_MD5(str, (CC_LONG)strlen(str), r);
-    NSString *filename = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%@",
-                          r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10],
-                          r[11], r[12], r[13], r[14], r[15], [[key pathExtension] isEqualToString:@""] ? @"" : [NSString stringWithFormat:@".%@", [key pathExtension]]];
+    NSString *filename = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
+                                                    r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10], r[11], r[12], r[13], r[14], r[15]];
 
     return filename;
 }
@@ -200,11 +193,9 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     if (!image || !key) {
         return;
     }
-    // if memory cache is enabled
-    if (self.shouldCacheImagesInMemory) {
-        NSUInteger cost = SDCacheCostForImage(image);
-        [self.memCache setObject:image forKey:key cost:cost];
-    }
+
+    NSUInteger cost = SDCacheCostForImage(image);
+    [self.memCache setObject:image forKey:key cost:cost];
 
     if (toDisk) {
         dispatch_async(self.ioQueue, ^{
@@ -246,17 +237,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
                     [_fileManager createDirectoryAtPath:_diskCachePath withIntermediateDirectories:YES attributes:nil error:NULL];
                 }
 
-                // get cache Path for image key
-                NSString *cachePathForKey = [self defaultCachePathForKey:key];
-                // transform to NSUrl
-                NSURL *fileURL = [NSURL fileURLWithPath:cachePathForKey];
-
-                [_fileManager createFileAtPath:cachePathForKey contents:data attributes:nil];
-
-                // disable iCloud backup
-                if (self.shouldDisableiCloud) {
-                    [fileURL setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
-                }
+                [_fileManager createFileAtPath:[self defaultCachePathForKey:key] contents:data attributes:nil];
             }
         });
     }
@@ -296,7 +277,6 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 }
 
 - (UIImage *)imageFromDiskCacheForKey:(NSString *)key {
-
     // First check the in-memory cache...
     UIImage *image = [self imageFromMemoryCacheForKey:key];
     if (image) {
@@ -305,7 +285,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
     // Second check the disk cache...
     UIImage *diskImage = [self diskImageForKey:key];
-    if (diskImage && self.shouldCacheImagesInMemory) {
+    if (diskImage) {
         NSUInteger cost = SDCacheCostForImage(diskImage);
         [self.memCache setObject:diskImage forKey:key cost:cost];
     }
@@ -376,7 +356,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
         @autoreleasepool {
             UIImage *diskImage = [self diskImageForKey:key];
-            if (diskImage && self.shouldCacheImagesInMemory) {
+            if (diskImage) {
                 NSUInteger cost = SDCacheCostForImage(diskImage);
                 [self.memCache setObject:diskImage forKey:key cost:cost];
             }
@@ -407,11 +387,9 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     if (key == nil) {
         return;
     }
-
-    if (self.shouldCacheImagesInMemory) {
-        [self.memCache removeObjectForKey:key];
-    }
-
+    
+    [self.memCache removeObjectForKey:key];
+    
     if (fromDisk) {
         dispatch_async(self.ioQueue, ^{
             [_fileManager removeItemAtPath:[self defaultCachePathForKey:key] error:nil];

@@ -42,6 +42,7 @@
 		6FA69A231BB1C74700E39B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA69A211BB1C74700E39B04 /* LaunchScreen.storyboard */; };
 		6FA69A2E1BB1C74700E39B04 /* WalkShopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A2D1BB1C74700E39B04 /* WalkShopperTests.m */; };
 		6FA69A391BB1C74700E39B04 /* WalkShopperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */; };
+		6FBEF5CC1C4D64B4004D1609 /* WSImagePickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBEF5CB1C4D64B4004D1609 /* WSImagePickerUtil.m */; };
 		6FC51FDA1C414DC200397633 /* NSString+Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FD91C414DC200397633 /* NSString+Crypt.m */; };
 		6FC51FDE1C4151DC00397633 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FDD1C4151DC00397633 /* NSString+Additions.m */; };
 		6FC51FE31C4179EB00397633 /* WSCommonWebUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FE21C4179EB00397633 /* WSCommonWebUrls.m */; };
@@ -148,6 +149,8 @@
 		6FA69A341BB1C74700E39B04 /* WalkShopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkShopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkShopperUITests.m; sourceTree = "<group>"; };
 		6FA69A3A1BB1C74700E39B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FBEF5CA1C4D64B4004D1609 /* WSImagePickerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSImagePickerUtil.h; sourceTree = "<group>"; };
+		6FBEF5CB1C4D64B4004D1609 /* WSImagePickerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSImagePickerUtil.m; sourceTree = "<group>"; };
 		6FC51FD81C414DC200397633 /* NSString+Crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Crypt.h"; sourceTree = "<group>"; };
 		6FC51FD91C414DC200397633 /* NSString+Crypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crypt.m"; sourceTree = "<group>"; };
 		6FC51FDC1C4151DC00397633 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -287,6 +290,7 @@
 		6F6FE4B41BB1DF8100F39F60 /* CommonSdk */ = {
 			isa = PBXGroup;
 			children = (
+				6FBEF5C91C4D645C004D1609 /* ImageHelper */,
 				6FC51FDB1C4151BF00397633 /* NSString+Extensions */,
 				6FCF9A6F1C2EA78A0055796F /* UIImage+Extensions */,
 				6FCF9A6B1C2EA6060055796F /* UIColor+Extensions */,
@@ -378,6 +382,15 @@
 				6FA69A3A1BB1C74700E39B04 /* Info.plist */,
 			);
 			path = WalkShopperUITests;
+			sourceTree = "<group>";
+		};
+		6FBEF5C91C4D645C004D1609 /* ImageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6FBEF5CA1C4D64B4004D1609 /* WSImagePickerUtil.h */,
+				6FBEF5CB1C4D64B4004D1609 /* WSImagePickerUtil.m */,
+			);
+			path = ImageHelper;
 			sourceTree = "<group>";
 		};
 		6FC51FDB1C4151BF00397633 /* NSString+Extensions */ = {
@@ -548,7 +561,6 @@
 				6FA69A0D1BB1C74700E39B04 /* Frameworks */,
 				6FA69A0E1BB1C74700E39B04 /* Resources */,
 				5A45556A0EEDF39E2AFACA58 /* Copy Pods Resources */,
-				CE01B6909EAED0E71649FC1F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -702,21 +714,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CE01B6909EAED0E71649FC1F /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -757,6 +754,7 @@
 				6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */,
 				6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */,
 				6F9506CF1C4C11D800389AF6 /* WSUserInfoCell.m in Sources */,
+				6FBEF5CC1C4D64B4004D1609 /* WSImagePickerUtil.m in Sources */,
 				6FCF9A621C2E8EB00055796F /* WSSelectCountryFlowLayout.m in Sources */,
 				6F91ED4B1C4566CA00BEC860 /* WSSellProductInfoViewController.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
