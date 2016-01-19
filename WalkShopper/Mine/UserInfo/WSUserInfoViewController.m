@@ -8,6 +8,7 @@
 
 #import "WSUserInfoViewController.h"
 #import "WSUserInfoCell.h"
+#import "WSImagePickerUtil.h"
 
 @interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -59,6 +60,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    if ( indexPath.section == 0 && indexPath.row == 1 ) {
+        [WSImagePickerUtil showImagePickerActionSheetWithController:self];
+    }
     
 }
 

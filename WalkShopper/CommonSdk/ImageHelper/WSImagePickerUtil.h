@@ -10,4 +10,6 @@
 
 @interface WSImagePickerUtil : NSObject
 
++ (void)showImagePickerActionSheetWithController:(UIViewController *)viewController;
+
 @end

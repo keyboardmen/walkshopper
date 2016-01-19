@@ -43,6 +43,7 @@
 		6FA69A2E1BB1C74700E39B04 /* WalkShopperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A2D1BB1C74700E39B04 /* WalkShopperTests.m */; };
 		6FA69A391BB1C74700E39B04 /* WalkShopperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA69A381BB1C74700E39B04 /* WalkShopperUITests.m */; };
 		6FBEF5CC1C4D64B4004D1609 /* WSImagePickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBEF5CB1C4D64B4004D1609 /* WSImagePickerUtil.m */; };
+		6FBEF5CE1C4EBF2E004D1609 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBEF5CD1C4EBF2E004D1609 /* Photos.framework */; };
 		6FC51FDA1C414DC200397633 /* NSString+Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FD91C414DC200397633 /* NSString+Crypt.m */; };
 		6FC51FDE1C4151DC00397633 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FDD1C4151DC00397633 /* NSString+Additions.m */; };
 		6FC51FE31C4179EB00397633 /* WSCommonWebUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC51FE21C4179EB00397633 /* WSCommonWebUrls.m */; };
@@ -151,6 +152,7 @@
 		6FA69A3A1BB1C74700E39B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FBEF5CA1C4D64B4004D1609 /* WSImagePickerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSImagePickerUtil.h; sourceTree = "<group>"; };
 		6FBEF5CB1C4D64B4004D1609 /* WSImagePickerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSImagePickerUtil.m; sourceTree = "<group>"; };
+		6FBEF5CD1C4EBF2E004D1609 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		6FC51FD81C414DC200397633 /* NSString+Crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Crypt.h"; sourceTree = "<group>"; };
 		6FC51FD91C414DC200397633 /* NSString+Crypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crypt.m"; sourceTree = "<group>"; };
 		6FC51FDC1C4151DC00397633 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FBEF5CE1C4EBF2E004D1609 /* Photos.framework in Frameworks */,
 				6FCF9A7B1C3D6B200055796F /* CoreLocation.framework in Frameworks */,
 				6FCF9A791C3D6B110055796F /* CoreTelephony.framework in Frameworks */,
 				6FCF9A771C3D6B000055796F /* MobileCoreServices.framework in Frameworks */,
@@ -449,6 +452,7 @@
 		973CC142C32C7A5CD418C863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6FBEF5CD1C4EBF2E004D1609 /* Photos.framework */,
 				6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */,
 				6FCF9A781C3D6B110055796F /* CoreTelephony.framework */,
 				6FCF9A761C3D6B000055796F /* MobileCoreServices.framework */,
