@@ -10,7 +10,7 @@
 #import "WSUserInfoCell.h"
 #import "WSImagePickerUtil.h"
 
-@interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -64,6 +64,19 @@
         [WSImagePickerUtil showImagePickerActionSheetWithController:self];
     }
     
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *portraitImg = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
