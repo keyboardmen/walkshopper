@@ -15,6 +15,8 @@
 #import "RobotChatViewController.h"
 #import "UserProfileManager.h"
 #import "RealtimeSearchUtil.h"
+#import "ContactListViewController.h"
+#import "AddFriendViewController.h"
 
 @implementation EMConversation (search)
 
@@ -389,5 +391,15 @@
     NSLog(NSLocalizedString(@"message.endReceiveOffine", @"End to receive offline messages"));
 }
 
+#pragma mark - event response
+- (IBAction)leftBarButtonPressed:(id)sender {
+    ContactListViewController *contactsVC = [[ContactListViewController alloc] init];
+    [self.navigationController pushViewController:contactsVC animated:YES];
+}
+
+- (IBAction)rightBarButtonPressed:(id)sender {
+    AddFriendViewController *addController = [[AddFriendViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:addController animated:YES];
+}
 
 @end

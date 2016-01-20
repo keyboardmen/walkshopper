@@ -216,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="1174" y="-552"/>
         </scene>
-        <!--Message View Controller-->
+        <!--消息-->
         <scene sceneID="dqH-Yc-e4n">
             <objects>
-                <viewController id="79I-JZ-xuP" customClass="WSMessageViewController" customModule="WalkShopper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="79I-JZ-xuP" customClass="ConversationListController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="va3-eT-hwG"/>
                         <viewControllerLayoutGuide type="bottom" id="PWA-Zm-rh2"/>
@@ -229,7 +229,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BXp-g2-Fl5"/>
+                    <navigationItem key="navigationItem" title="消息" id="BXp-g2-Fl5">
+                        <barButtonItem key="leftBarButtonItem" image="tabbar_contactsHL" id="pco-iP-fdG">
+                            <connections>
+                                <action selector="leftBarButtonPressed:" destination="79I-JZ-xuP" id="b4E-pt-WPY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="VCA-wD-R7L">
+                            <connections>
+                                <action selector="rightBarButtonPressed:" destination="79I-JZ-xuP" id="feN-EW-Qkf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dA-MG-RzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,5 +422,6 @@
     </scenes>
     <resources>
         <image name="headImage.jpg" width="200" height="200"/>
+        <image name="tabbar_contactsHL" width="200" height="200"/>
     </resources>
 </document>

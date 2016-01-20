@@ -272,7 +272,6 @@
 		3A1A3D2B1C4F3488003E33F5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1A3D2A1C4F3488003E33F5 /* AddressBook.framework */; };
 		3A1A3D2D1C4F3492003E33F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1A3D2C1C4F3492003E33F5 /* MapKit.framework */; };
 		3A1A3D341C4F3B79003E33F5 /* libEaseUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1A3D321C4F38DB003E33F5 /* libEaseUI.a */; };
-		3A1A3D371C4F4CFB003E33F5 /* WSMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A3D361C4F4CFB003E33F5 /* WSMessageViewController.swift */; };
 		6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FC51BB643DF00A60911 /* UIViewController+WSOrientations.m */; };
 		6F1A7FC91BB6475E00A60911 /* UIViewController+WSActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FC81BB6475E00A60911 /* UIViewController+WSActivity.m */; };
 		6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FCC1BB64B9B00A60911 /* UIDevice+Extensions.m */; };
@@ -789,7 +788,6 @@
 		3A1A3D2E1C4F375C003E33F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A1A3D301C4F3763003E33F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3A1A3D321C4F38DB003E33F5 /* libEaseUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEaseUI.a; path = Pods/EaseUI/EaseUI/lib/libEaseUI.a; sourceTree = "<group>"; };
-		3A1A3D361C4F4CFB003E33F5 /* WSMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSMessageViewController.swift; sourceTree = "<group>"; };
 		6F1A7FC41BB643DF00A60911 /* UIViewController+WSOrientations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSOrientations.h"; sourceTree = "<group>"; };
 		6F1A7FC51BB643DF00A60911 /* UIViewController+WSOrientations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSOrientations.m"; sourceTree = "<group>"; };
 		6F1A7FC71BB6475E00A60911 /* UIViewController+WSActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSActivity.h"; sourceTree = "<group>"; };
@@ -948,7 +946,6 @@
 		3A1A3A191C4F32E4003E33F5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				3A1A3D351C4F4CDA003E33F5 /* Message */,
 				3A1A3A1A1C4F32E4003E33F5 /* ChatUI */,
 				3A1A3BB01C4F32E4003E33F5 /* EaseMobSDK */,
 				3A1A3C1B1C4F32E4003E33F5 /* WSChatRegister.swift */,
@@ -2039,14 +2036,6 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
-		3A1A3D351C4F4CDA003E33F5 /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				3A1A3D361C4F4CFB003E33F5 /* WSMessageViewController.swift */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
 		6F1A7FC31BB643DF00A60911 /* UIViewController+WalkShopperExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -2767,7 +2756,6 @@
 				6FCF9A651C2E99060055796F /* WSSelectCountryCell.m in Sources */,
 				6F80A6F01C1DE3F50072F4E0 /* WSLoginAction.m in Sources */,
 				3A1A3C471C4F32E4003E33F5 /* PublicGroupListViewController.m in Sources */,
-				3A1A3D371C4F4CFB003E33F5 /* WSMessageViewController.swift in Sources */,
 				3A1A3C4C1C4F32E4003E33F5 /* ContactListViewController.m in Sources */,
 				3A1A3C491C4F32E4003E33F5 /* ChatroomListViewController.m in Sources */,
 				6F1A7FDC1BB7007C00A60911 /* WSNetworkingUtilities.m in Sources */,
