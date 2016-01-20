@@ -326,6 +326,7 @@
 		6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */; };
 		6FE5362C1C4FE234009841A8 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */; };
 		6FE5362D1C4FE234009841A8 /* 城市码表.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6FE5362B1C4FE234009841A8 /* 城市码表.csv */; };
+		6FE536301C4FE3FB009841A8 /* WSImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */; };
 		6FEE02361C4A053B000DC27A /* WSNetworkingResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE02351C4A053B000DC27A /* WSNetworkingResponseObject.m */; };
 		6FEE02391C4BC535000DC27A /* WSMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE02381C4BC535000DC27A /* WSMineHeaderView.m */; };
 		CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */; };
@@ -881,6 +882,8 @@
 		6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSetPasswordViewController.m; sourceTree = "<group>"; };
 		6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		6FE5362B1C4FE234009841A8 /* 城市码表.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "城市码表.csv"; sourceTree = "<group>"; };
+		6FE5362E1C4FE3FB009841A8 /* WSImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSImageCropperViewController.h; sourceTree = "<group>"; };
+		6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSImageCropperViewController.m; sourceTree = "<group>"; };
 		6FEE02341C4A053B000DC27A /* WSNetworkingResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNetworkingResponseObject.h; sourceTree = "<group>"; };
 		6FEE02351C4A053B000DC27A /* WSNetworkingResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNetworkingResponseObject.m; sourceTree = "<group>"; };
 		6FEE02371C4BC535000DC27A /* WSMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMineHeaderView.h; sourceTree = "<group>"; };
@@ -2186,6 +2189,8 @@
 			children = (
 				6FBEF5CA1C4D64B4004D1609 /* WSImagePickerUtil.h */,
 				6FBEF5CB1C4D64B4004D1609 /* WSImagePickerUtil.m */,
+				6FE5362E1C4FE3FB009841A8 /* WSImageCropperViewController.h */,
+				6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */,
 			);
 			path = ImageHelper;
 			sourceTree = "<group>";
@@ -2778,6 +2783,7 @@
 				3A1A3C4A1C4F32E4003E33F5 /* MyChatroomListViewController.m in Sources */,
 				3A1A3C5B1C4F32E4003E33F5 /* RobotChatViewController.m in Sources */,
 				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
+				6FE536301C4FE3FB009841A8 /* WSImageCropperViewController.m in Sources */,
 				3A1A3C321C4F32E4003E33F5 /* UIViewController+DismissKeyboard.m in Sources */,
 				3A1A3C331C4F32E4003E33F5 /* UIViewController+HUD.m in Sources */,
 				6FEE02361C4A053B000DC27A /* WSNetworkingResponseObject.m in Sources */,

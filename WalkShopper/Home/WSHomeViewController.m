@@ -71,11 +71,11 @@ static NSString * const kProductCellIdentifier = @"Home Product Cell";
     [self.menuItemArray removeAllObjects];
     NSArray *titles = @[@"我要卖", @"我要买"];
     for (NSString *title in titles) {
-        LDPMPopoverMenuItem *item = [[LDPMPopoverMenuItem alloc] initWithTitle:title titleColor:[UIColor colorWithRGB:0xd7a101] titleFont:[UIFont systemFontOfSize:14] titleAlignment:NSTextAlignmentCenter image:nil target:self action:@selector(menuTapped:)];
+        LDPMPopoverMenuItem *item = [[LDPMPopoverMenuItem alloc] initWithTitle:title titleColor:[UIColor colorWithRGB:0x0E2947] titleFont:[UIFont systemFontOfSize:14] titleAlignment:NSTextAlignmentCenter image:nil target:self action:@selector(menuTapped:)];
         [self.menuItemArray addObject:item];
     }
 
-    LDPMPopoverMenu *menu = [[LDPMPopoverMenu alloc] initWithTintColor:[UIColor whiteColor] maskColor:[UIColor colorWithWhite:0 alpha:0.2] itemHorizontalMargin:15. itemVerticalMargin:15. leftInsetOfSepline:0 seplineColor:[UIColor lightGrayColor] arrowSize:6];
+    LDPMPopoverMenu *menu = [[LDPMPopoverMenu alloc] initWithTintColor:[UIColor whiteColor] maskColor:[UIColor colorWithWhite:0 alpha:0.2] itemHorizontalMargin:26. itemVerticalMargin:13. leftInsetOfSepline:10 seplineColor:[UIColor blackColor] arrowSize:8.0];
     
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     
