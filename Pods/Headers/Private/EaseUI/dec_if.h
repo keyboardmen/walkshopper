@@ -1,0 +1,1 @@
+../../../EaseUI/EaseUI/include/3rdparty/DeviceHelper/dec_if.h

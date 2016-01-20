@@ -1,0 +1,34 @@
+{
+  "name": "EaseUI",
+  "version": "1.0.0",
+  "license": "MIT",
+  "summary": "EaseMob UI Kit",
+  "homepage": "https://github.com/easemob/easeui-ios-cocoapods",
+  "authors": {
+    "EaseMob Inc.": "admin@easemob.com"
+  },
+  "source": {
+    "git": "https://github.com/easemob/easeui-ios-cocoapods.git",
+    "tag": "1.0.0"
+  },
+  "source_files": "EaseUI/**/*.{h}",
+  "platforms": {
+    "ios": "6.0"
+  },
+  "requires_arc": true,
+  "resources": "EaseUI/resources/EaseUIResource.bundle",
+  "vendored_libraries": [
+    "EaseUI/lib/libEaseUI.a"
+  ],
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
+  "dependencies": {
+    "MWPhotoBrowser": [
+      "~> 2.1.1"
+    ],
+    "MJRefresh": [
+      "~> 3.0.6"
+    ]
+  }
+}
