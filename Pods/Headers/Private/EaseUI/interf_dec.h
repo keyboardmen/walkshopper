@@ -1,0 +1,1 @@
+../../../EaseUI/EaseUI/include/3rdparty/DeviceHelper/interf_dec.h
