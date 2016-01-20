@@ -11,7 +11,8 @@
 #import "UIViewController+WSOrientations.h"
 #import "WSAppGeneralConfiguration.h"
 #import "WSViewControllerConfiguration.h"
-
+#import "EaseMob.h"
+#import "AppDelegate+EaseMob.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSString *apnsCertName = nil;
+#if DEBUG
+    apnsCertName = @"shopDev";
+#else
+    apnsCertName = @"shopDistri"
+#endif
+    [self easemobApplication:application didFinishLaunchingWithOptions:launchOptions appkey:@"travelshopper#travelshopper" apnsCertName:apnsCertName otherConfig:nil];
     
     [UIViewController configDefaultInterfaceOrientations];
     [WSViewControllerConfiguration hookViewLifeCircle];

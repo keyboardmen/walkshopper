@@ -216,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="1174" y="-552"/>
         </scene>
-        <!--View Controller-->
+        <!--Message View Controller-->
         <scene sceneID="dqH-Yc-e4n">
             <objects>
-                <viewController id="79I-JZ-xuP" sceneMemberID="viewController">
+                <viewController id="79I-JZ-xuP" customClass="WSMessageViewController" customModule="WalkShopper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="va3-eT-hwG"/>
                         <viewControllerLayoutGuide type="bottom" id="PWA-Zm-rh2"/>
