@@ -16,7 +16,7 @@ class WSChatRegister: NSObject {
     static func autoRegister() {
         var isRegistered = NSUserDefaults.standardUserDefaults().boolForKey(isRegisteredKey)
 //        let userName = WSUserSession.sharedSession().loginUserName
-        let userName = "dutest4"
+        let userName = "dutest3"
         if !isRegistered {
             EaseMob.sharedInstance().chatManager.asyncRegisterNewAccount(userName, password: userName, withCompletion: { (name, passwd, error) -> Void in
                 if error == nil {
