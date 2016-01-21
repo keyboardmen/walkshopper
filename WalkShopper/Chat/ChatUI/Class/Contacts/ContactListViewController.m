@@ -65,7 +65,7 @@
     
     [self reloadDataSource];
     // 环信UIdemo中有用到Parse, 加载用户好友个人信息
-    [[UserProfileManager sharedInstance] loadUserProfileInBackgroundWithBuddy:self.contactsSource saveToLoacal:YES completion:NULL];
+//    [[UserProfileManager sharedInstance] loadUserProfileInBackgroundWithBuddy:self.contactsSource saveToLoacal:YES completion:NULL];
 }
 
 - (void)viewWillAppear:(BOOL)animated

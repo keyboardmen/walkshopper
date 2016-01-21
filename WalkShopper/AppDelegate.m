@@ -27,7 +27,7 @@
 #if DEBUG
     apnsCertName = @"shopDev";
 #else
-    apnsCertName = @"shopDistri"
+    apnsCertName = @"shopDistri";
 #endif
     [self easemobApplication:application didFinishLaunchingWithOptions:launchOptions appkey:@"travelshopper#travelshopper" apnsCertName:apnsCertName otherConfig:nil];
     
