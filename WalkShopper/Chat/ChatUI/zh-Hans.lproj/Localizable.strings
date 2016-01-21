@@ -62,7 +62,7 @@
 "hasRead" = "已读";
 
 //app
-"AppName" = "WalkShopper";
+"AppName" = "行购";
 
 //error des
 "error.connectServerFail" = "连接服务器失败!";

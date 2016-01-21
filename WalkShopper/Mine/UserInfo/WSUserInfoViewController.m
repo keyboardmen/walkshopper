@@ -9,8 +9,10 @@
 #import "WSUserInfoViewController.h"
 #import "WSUserInfoCell.h"
 #import "WSImagePickerUtil.h"
+#import "UIImage+Additions.h"
+#import "WSImageCropperViewController.h"
 
-@interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, WSImageCropperViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -61,9 +63,39 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if ( indexPath.section == 0 && indexPath.row == 1 ) {
-        [WSImagePickerUtil showImagePickerActionSheetWithController:self];
+        [WSImagePickerUtil showSystemImagePickerActionSheetWithController:self];
     }
     
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *portraitImg = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    portraitImg = [UIImage imageByScalingToMaxSize:portraitImg];
+    WSImageCropperViewController *imgEditor = [[WSImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 100.0f, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:3.0];
+    imgEditor.delegate = (id<WSImageCropperViewControllerDelegate>)self;
+    [picker pushViewController:imgEditor animated:YES];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - WSImageCropperViewController
+
+- (void)imageCropper:(WSImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage
+{
+    [cropperViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+- (void)imageCropperDidCancel:(WSImageCropperViewController *)cropperViewController
+{
+    [cropperViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -263,7 +263,6 @@
 		3A1A3D1D1C4F32E4003E33F5 /* tabbarSelectBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1A3BAB1C4F32E4003E33F5 /* tabbarSelectBg.png */; };
 		3A1A3D1E1C4F32E4003E33F5 /* tabbarSelectBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1A3BAC1C4F32E4003E33F5 /* tabbarSelectBg@2x.png */; };
 		3A1A3D1F1C4F32E4003E33F5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A1A3BAD1C4F32E4003E33F5 /* Settings.bundle */; };
-		3A1A3D201C4F32E4003E33F5 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1A3C181C4F32E4003E33F5 /* libEaseMobClientSDK.a */; };
 		3A1A3D211C4F32E4003E33F5 /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A1A3C1A1C4F32E4003E33F5 /* EaseMob.bundle */; };
 		3A1A3D221C4F32E4003E33F5 /* WSChatRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A3C1B1C4F32E4003E33F5 /* WSChatRegister.swift */; };
 		3A1A3D251C4F3436003E33F5 /* HomeImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A1A3D241C4F3436003E33F5 /* HomeImages.xcassets */; };
@@ -325,6 +324,9 @@
 		6FCF9A791C3D6B110055796F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A781C3D6B110055796F /* CoreTelephony.framework */; };
 		6FCF9A7B1C3D6B200055796F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */; };
 		6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */; };
+		6FE5362C1C4FE234009841A8 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */; };
+		6FE5362D1C4FE234009841A8 /* 城市码表.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6FE5362B1C4FE234009841A8 /* 城市码表.csv */; };
+		6FE536301C4FE3FB009841A8 /* WSImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */; };
 		6FEE02361C4A053B000DC27A /* WSNetworkingResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE02351C4A053B000DC27A /* WSNetworkingResponseObject.m */; };
 		6FEE02391C4BC535000DC27A /* WSMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE02381C4BC535000DC27A /* WSMineHeaderView.m */; };
 		CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C361BB286CA00F74DD7 /* WSMainTabBarController.m */; };
@@ -776,7 +778,6 @@
 		3A1A3C131C4F32E4003E33F5 /* EMNetworkMonitorDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNetworkMonitorDefs.h; sourceTree = "<group>"; };
 		3A1A3C151C4F32E4003E33F5 /* EMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMError.h; sourceTree = "<group>"; };
 		3A1A3C161C4F32E4003E33F5 /* EMErrorDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMErrorDefs.h; sourceTree = "<group>"; };
-		3A1A3C181C4F32E4003E33F5 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		3A1A3C1A1C4F32E4003E33F5 /* EaseMob.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseMob.bundle; sourceTree = "<group>"; };
 		3A1A3C1B1C4F32E4003E33F5 /* WSChatRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSChatRegister.swift; sourceTree = "<group>"; };
 		3A1A3D231C4F338E003E33F5 /* WalkShopper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WalkShopper-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -879,6 +880,10 @@
 		6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6FCF9A7C1C3D7A600055796F /* WSSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSetPasswordViewController.h; sourceTree = "<group>"; };
 		6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSetPasswordViewController.m; sourceTree = "<group>"; };
+		6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
+		6FE5362B1C4FE234009841A8 /* 城市码表.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "城市码表.csv"; sourceTree = "<group>"; };
+		6FE5362E1C4FE3FB009841A8 /* WSImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSImageCropperViewController.h; sourceTree = "<group>"; };
+		6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSImageCropperViewController.m; sourceTree = "<group>"; };
 		6FEE02341C4A053B000DC27A /* WSNetworkingResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNetworkingResponseObject.h; sourceTree = "<group>"; };
 		6FEE02351C4A053B000DC27A /* WSNetworkingResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNetworkingResponseObject.m; sourceTree = "<group>"; };
 		6FEE02371C4BC535000DC27A /* WSMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMineHeaderView.h; sourceTree = "<group>"; };
@@ -901,6 +906,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FE5362C1C4FE234009841A8 /* libEaseMobClientSDK.a in Frameworks */,
 				3A1A3D341C4F3B79003E33F5 /* libEaseUI.a in Frameworks */,
 				6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */,
 				3A1A3D2D1C4F3492003E33F5 /* MapKit.framework in Frameworks */,
@@ -909,7 +915,6 @@
 				3A1A3D271C4F346A003E33F5 /* Accounts.framework in Frameworks */,
 				6FBEF5CE1C4EBF2E004D1609 /* Photos.framework in Frameworks */,
 				6FCF9A7B1C3D6B200055796F /* CoreLocation.framework in Frameworks */,
-				3A1A3D201C4F32E4003E33F5 /* libEaseMobClientSDK.a in Frameworks */,
 				6FCF9A791C3D6B110055796F /* CoreTelephony.framework in Frameworks */,
 				3A1A3C271C4F32E4003E33F5 /* libMobClickLibrary.a in Frameworks */,
 				6FCF9A771C3D6B000055796F /* MobileCoreServices.framework in Frameworks */,
@@ -1772,8 +1777,8 @@
 		3A1A3BB01C4F32E4003E33F5 /* EaseMobSDK */ = {
 			isa = PBXGroup;
 			children = (
+				6FE536291C4FE234009841A8 /* lib */,
 				3A1A3BB11C4F32E4003E33F5 /* include */,
-				3A1A3C171C4F32E4003E33F5 /* lib */,
 				3A1A3C191C4F32E4003E33F5 /* resources */,
 			);
 			path = EaseMobSDK;
@@ -2020,14 +2025,6 @@
 			path = ErrorManager;
 			sourceTree = "<group>";
 		};
-		3A1A3C171C4F32E4003E33F5 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				3A1A3C181C4F32E4003E33F5 /* libEaseMobClientSDK.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
 		3A1A3C191C4F32E4003E33F5 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -2192,6 +2189,8 @@
 			children = (
 				6FBEF5CA1C4D64B4004D1609 /* WSImagePickerUtil.h */,
 				6FBEF5CB1C4D64B4004D1609 /* WSImagePickerUtil.m */,
+				6FE5362E1C4FE3FB009841A8 /* WSImageCropperViewController.h */,
+				6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */,
 			);
 			path = ImageHelper;
 			sourceTree = "<group>";
@@ -2247,6 +2246,15 @@
 				6FCF9A711C2EA78A0055796F /* UIImage+Additions.m */,
 			);
 			path = "UIImage+Extensions";
+			sourceTree = "<group>";
+		};
+		6FE536291C4FE234009841A8 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */,
+				6FE5362B1C4FE234009841A8 /* 城市码表.csv */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		973CC142C32C7A5CD418C863 /* Frameworks */ = {
@@ -2632,6 +2640,7 @@
 				3A1A3CA91C4F32E4003E33F5 /* chat_video_play.png in Resources */,
 				3A1A3CA31C4F32E4003E33F5 /* call_out_h@2x.png in Resources */,
 				3A1A3C9D1C4F32E4003E33F5 /* VoiceSearchFeedback019@2x.png in Resources */,
+				6FE5362D1C4FE234009841A8 /* 城市码表.csv in Resources */,
 				3A1A3CF11C4F32E4003E33F5 /* chat_receiver_audio_playing_full@2x.png in Resources */,
 				6FCF9A5E1C287B870055796F /* Home.storyboard in Resources */,
 				3A1A3CFF1C4F32E4003E33F5 /* add@2x.png in Resources */,
@@ -2774,6 +2783,7 @@
 				3A1A3C4A1C4F32E4003E33F5 /* MyChatroomListViewController.m in Sources */,
 				3A1A3C5B1C4F32E4003E33F5 /* RobotChatViewController.m in Sources */,
 				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
+				6FE536301C4FE3FB009841A8 /* WSImageCropperViewController.m in Sources */,
 				3A1A3C321C4F32E4003E33F5 /* UIViewController+DismissKeyboard.m in Sources */,
 				3A1A3C331C4F32E4003E33F5 /* UIViewController+HUD.m in Sources */,
 				6FEE02361C4A053B000DC27A /* WSNetworkingResponseObject.m in Sources */,

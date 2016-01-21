@@ -13,7 +13,7 @@
 
 @implementation WSImagePickerUtil
 
-+ (void)showImagePickerActionSheetWithController:(UIViewController *)viewController
++ (void)showSystemImagePickerActionSheetWithController:(UIViewController *)viewController
 {
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
