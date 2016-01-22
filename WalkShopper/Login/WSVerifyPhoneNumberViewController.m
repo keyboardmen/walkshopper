@@ -97,7 +97,7 @@
     NSString *rule = @"^1(3|5|7|8|4)\\d{9}";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", rule];
     BOOL isMatch = [pred evaluateWithObject:self.phoneNumberTextField.text];
-    if (isMatch == NO) {
+    if (!isMatch) {
         
     }
     return isMatch;

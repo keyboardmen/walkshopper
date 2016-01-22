@@ -12,7 +12,6 @@
 
 #import "AppDelegate+EaseMob.h"
 #import "AppDelegate+Parse.h"
-#import <WalkShopper-Swift.h>
 #import "LoginViewController.h"
 
 /**
@@ -40,7 +39,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                                                object:nil];
     
     [self registerEaseMobNotification];
-    [WSChatRegister autoRegister];
 
 //    [self loginStateChange:nil];
 }

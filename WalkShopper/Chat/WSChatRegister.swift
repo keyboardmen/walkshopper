@@ -13,10 +13,14 @@ let isRegisteredKey = "isResigtered"
 class WSChatRegister: NSObject {
     
     override init() {}
-    static func autoRegister() {
+    static func autoRegister(userName: String) {
+        if EaseMob.sharedInstance().chatManager.isLoggedIn {
+            return
+        }
+        if userName.isEmpty {
+            return
+        }
         var isRegistered = NSUserDefaults.standardUserDefaults().boolForKey(isRegisteredKey)
-//        let userName = WSUserSession.sharedSession().loginUserName
-        let userName = "dutest3"
         if !isRegistered {
             EaseMob.sharedInstance().chatManager.asyncRegisterNewAccount(userName, password: userName, withCompletion: { (name, passwd, error) -> Void in
                 if error == nil {
@@ -28,13 +32,11 @@ class WSChatRegister: NSObject {
                 }, onQueue: nil)
         }
         
-        if isRegistered {
-            EaseMob.sharedInstance().chatManager.asyncLoginWithUsername(userName, password: userName, completion: { (loginInfo, error) -> Void in
-                if error != nil {
-                    EaseMob.sharedInstance().chatManager.enableAutoLogin!()
-                    print("chat login success")
-                }
-                }, onQueue: nil)
-        }
+        EaseMob.sharedInstance().chatManager.asyncLoginWithUsername(userName, password: userName, completion: { (loginInfo, error) -> Void in
+            if error != nil {
+                EaseMob.sharedInstance().chatManager.enableAutoLogin!()
+                print("chat login success")
+            }
+            }, onQueue: nil)
     }
 }
