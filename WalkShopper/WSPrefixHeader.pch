@@ -17,6 +17,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <objc/runtime.h>
 
+#import "Masonry.h"
 #import "WSUserSession.h"
 #import "UIViewController+WSUtilities.h"
 #import "WSLoginAction.h"
@@ -28,6 +29,7 @@
 #import "WSNetworkingUtilities.h"
 #import "WSCommonWebUrls.h"
 #import "ChatDemoUIDefine.h"
+#import "WSCommonDefines.h"
 
 #endif
 #endif /* WSPrefixHeader_pch */

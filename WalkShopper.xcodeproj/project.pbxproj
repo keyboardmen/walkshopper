@@ -282,6 +282,8 @@
 		6F6FE4BD1BB1E04600F39F60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */; };
 		6F6FE4BF1BB1E0C600F39F60 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */; };
 		6F6FE4C11BB1E0DC00F39F60 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */; };
+		6F7300951C515DBA0076D915 /* WSChangeNickNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7300941C515DBA0076D915 /* WSChangeNickNameViewController.m */; };
+		6F7300981C515DD60076D915 /* WSChangeGenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7300971C515DD60076D915 /* WSChangeGenderViewController.m */; };
 		6F7C3F1E1C08E68300A82DCD /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F1D1C08E68300A82DCD /* JavaScriptCore.framework */; };
 		6F7C3F201C08E69200A82DCD /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */; };
 		6F7C3F221C08ECA100A82DCD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7C3F211C08ECA100A82DCD /* Security.framework */; };
@@ -807,6 +809,11 @@
 		6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6F7300931C515DBA0076D915 /* WSChangeNickNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSChangeNickNameViewController.h; sourceTree = "<group>"; };
+		6F7300941C515DBA0076D915 /* WSChangeNickNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSChangeNickNameViewController.m; sourceTree = "<group>"; };
+		6F7300961C515DD60076D915 /* WSChangeGenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSChangeGenderViewController.h; sourceTree = "<group>"; };
+		6F7300971C515DD60076D915 /* WSChangeGenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSChangeGenderViewController.m; sourceTree = "<group>"; };
+		6F7300991C51604C0076D915 /* WSCommonDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSCommonDefines.h; sourceTree = "<group>"; };
 		6F7C3F1D1C08E68300A82DCD /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		6F7C3F1F1C08E69200A82DCD /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6F7C3F211C08ECA100A82DCD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -2107,6 +2114,10 @@
 				6F9506CB1C4C116B00389AF6 /* WSUserInfoViewController.m */,
 				6F9506CD1C4C11D800389AF6 /* WSUserInfoCell.h */,
 				6F9506CE1C4C11D800389AF6 /* WSUserInfoCell.m */,
+				6F7300931C515DBA0076D915 /* WSChangeNickNameViewController.h */,
+				6F7300941C515DBA0076D915 /* WSChangeNickNameViewController.m */,
+				6F7300961C515DD60076D915 /* WSChangeGenderViewController.h */,
+				6F7300971C515DD60076D915 /* WSChangeGenderViewController.m */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -2207,6 +2218,7 @@
 		6FC51FDF1C41791D00397633 /* CommonDefines */ = {
 			isa = PBXGroup;
 			children = (
+				6F7300991C51604C0076D915 /* WSCommonDefines.h */,
 				6FC51FE11C4179EB00397633 /* WSCommonWebUrls.h */,
 				6FC51FE21C4179EB00397633 /* WSCommonWebUrls.m */,
 			);
@@ -2438,7 +2450,7 @@
 				TargetAttributes = {
 					6FA69A0F1BB1C74700E39B04 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = A9VAJDN54X;
+						DevelopmentTeam = 7NY77NZ953;
 					};
 					6FA69A281BB1C74700E39B04 = {
 						CreatedOnToolsVersion = 7.0;
@@ -2786,6 +2798,7 @@
 				6FE536301C4FE3FB009841A8 /* WSImageCropperViewController.m in Sources */,
 				3A1A3C321C4F32E4003E33F5 /* UIViewController+DismissKeyboard.m in Sources */,
 				3A1A3C331C4F32E4003E33F5 /* UIViewController+HUD.m in Sources */,
+				6F7300981C515DD60076D915 /* WSChangeGenderViewController.m in Sources */,
 				6FEE02361C4A053B000DC27A /* WSNetworkingResponseObject.m in Sources */,
 				6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */,
 				3A1A3C661C4F32E4003E33F5 /* EMSearchBar.m in Sources */,
@@ -2833,6 +2846,7 @@
 				3A1A3C521C4F32E4003E33F5 /* InvitationManager.m in Sources */,
 				3A1A3C461C4F32E4003E33F5 /* PublicGroupDetailViewController.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
+				6F7300951C515DBA0076D915 /* WSChangeNickNameViewController.m in Sources */,
 				3A1A3D221C4F32E4003E33F5 /* WSChatRegister.swift in Sources */,
 				3A1A3C4B1C4F32E4003E33F5 /* ContactListSelectViewController.m in Sources */,
 				3A1A3C1C1C4F32E4003E33F5 /* EMAlertView.m in Sources */,

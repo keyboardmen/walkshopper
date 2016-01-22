@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString * const WSUserChangeNickNameNotification;
+extern NSString * const WSUserChangeHeadImageNotification;
+extern NSString * const WSUserChangeGenderNotification;
+
 @interface WSUserInfoViewController : UIViewController
 
 @end

@@ -11,8 +11,14 @@
 #import "WSImagePickerUtil.h"
 #import "UIImage+Additions.h"
 #import "WSImageCropperViewController.h"
+#import "WSChangeNickNameViewController.h"
+#import "WSChangeGenderViewController.h"
 
-@interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, WSImageCropperViewControllerDelegate>
+NSString * const WSUserChangeNickNameNotification = @"WSUserChangeNickNameNotification";
+NSString * const WSUserChangeHeadImageNotification = @"WSUserChangeHeadImageNotification";
+NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotification";
+
+@interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, WSImageCropperViewControllerDelegate, WSChangeNickNameDelegate, WSChangeGenderDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -54,6 +60,8 @@
     
     if (!(indexPath.section == 0 && indexPath.row == 0)) {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    } else {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return cell;
@@ -64,6 +72,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if ( indexPath.section == 0 && indexPath.row == 1 ) {
         [WSImagePickerUtil showSystemImagePickerActionSheetWithController:self];
+    } else if (indexPath.section == 0 && indexPath.row == 2) {
+        WSChangeNickNameViewController *vc = [WSChangeNickNameViewController new];
+        vc.delegate = self;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.section == 0 && indexPath.row == 3) {
+        WSChangeGenderViewController *vc = [WSChangeGenderViewController new];
+        vc.delegate = self;
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
 }
@@ -97,5 +113,16 @@
 {
     [cropperViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - WSChangeNickNameDelegate
+
+- (void)changeNickNameSuccessfully:(NSString *)nickName
+{
+    
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:WSUserChangeNickNameNotification object:nil];
+}
+
+
 
 @end
