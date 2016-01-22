@@ -9,7 +9,6 @@
 #ifndef WalkShopper_Bridging_Header_h
 #define WalkShopper_Bridging_Header_h
 
-#import "WSUserSession.h"
 #import "EaseMob.h"
 
 

@@ -9,6 +9,8 @@
 #import "WSUserSession.h"
 #import "WSNetworkingResponseObject.h"
 #import "NSString+Additions.h"
+#import <WalkShopper-Swift.h>
+
 
 NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLoginStatusChangeNotification";
 
@@ -56,7 +58,8 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
             [weakSelf saveUsername:username];
             [weakSelf saveLoginToken:loginToken];
             if (completionBlk) {
-                completionBlk(NO, nil);
+                [WSChatRegister autoRegister:username];
+                completionBlk(YES, nil);
             }
         } else {
             weakSelf.hasLogin = NO;
@@ -91,6 +94,7 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
             weakSelf.hasLogin = YES;
             NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
             [weakSelf saveLoginToken:loginToken];
+            [WSChatRegister autoRegister:_loginUserName];
         } else {
             weakSelf.hasLogin = NO;
         }
