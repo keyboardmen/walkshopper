@@ -1,19 +1,19 @@
 //
-//  WSSellCreationViewController.m
+//  WSSellerAbroadInfoViewController.m
 //  WalkShopper
 //
-//  Created by 丁 一 on 16/1/8.
+//  Created by 丁 一 on 16/1/24.
 //  Copyright © 2016年 Ding Yi. All rights reserved.
 //
 
-#import "WSSellCreationViewController.h"
+#import "WSSellerAbroadInfoViewController.h"
 #import "WSSelectCountryViewController.h"
 #import <PDTSimpleCalendar/PDTSimpleCalendar.h>
 
 static NSString * const kSelectCountryIdentifier = @"Select Country";
 static NSString * const kSelectDateIdentifier = @"Select Date";
 
-@interface WSSellCreationViewController () <UITableViewDataSource, UITableViewDelegate, WSSelectCountryDelegate, PDTSimpleCalendarViewDelegate>
+@interface WSSellerAbroadInfoViewController () <UITableViewDataSource, UITableViewDelegate, WSSelectCountryDelegate, PDTSimpleCalendarViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -22,15 +22,15 @@ static NSString * const kSelectDateIdentifier = @"Select Date";
 @property (strong, nonatomic) NSString *backDate;
 @property (strong, nonatomic) NSString *latestDeliveryDate;
 @property (strong, nonatomic) NSIndexPath *curDatePickerIndexPath;
-
 @end
 
-@implementation WSSellCreationViewController
+@implementation WSSellerAbroadInfoViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.tableView.tableFooterView = [UIView new];
-
+    
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate
@@ -132,5 +132,6 @@ static NSString * const kSelectDateIdentifier = @"Select Date";
     
     return [dateFormat stringFromDate:date];
 }
+
 
 @end

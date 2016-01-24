@@ -104,8 +104,36 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
 
 - (void)imageCropper:(WSImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage
 {
+    WS(weakSelf)
+    NSInteger MaxAvatarUploadSize = 1020;
+    CGFloat MaxAvatarUploadQuality = 0.8;
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
         
+        NSString *username = [WSUserSession sharedSession].loginUserName;
+        NSString *loginToken = [WSUserSession sharedSession].loginToken;
+        NSString *url = [[WSCommonWebUrls sharedInstance] userAvatarImageUrl];
+        
+        NSDictionary *param = @{@"username":username, @"loginToken":loginToken};
+        [weakSelf startActivity:@"正在上传头像..."];
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        [manager POST:url parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            UIImage *newImage = [UIImage compressImage:editedImage constraintSize:MaxAvatarUploadSize];
+            NSData *imageData = UIImageJPEGRepresentation(newImage, MaxAvatarUploadQuality);
+            NSString *name = @"avatarImageFile";
+            if (imageData) {
+                [formData appendPartWithFileData:imageData name:name fileName:@"" mimeType:@"image/jpeg"];
+            }
+        } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+            [weakSelf stopActivity];
+            WSNetworkingResponseObject *response = [WSNetworkingResponseObject initWithResponseObject:responseObject];
+            if (response.retCode == WSNetworkingResponseSuccess) {
+                
+            } else {
+            
+            }
+        } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+            [weakSelf stopActivity];
+        }];
     }];
 }
 
@@ -123,6 +151,11 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
     [[NSNotificationCenter defaultCenter] postNotificationName:WSUserChangeNickNameNotification object:nil];
 }
 
+#pragma mark - WSChangeGenderDelegate
 
+- (void)changeGenderSuccessfully:(NSString *)gender
+{
+    
+}
 
 @end

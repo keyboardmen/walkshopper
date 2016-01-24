@@ -72,11 +72,28 @@
 
 - (void)saveGenderWithIndex:(NSUInteger)index
 {
-    if ([self.delegate respondsToSelector:@selector(changeGenderSuccessfully:)]) {
-        NSArray *tmp = @[@"f", @"m"];
-        [self.delegate changeGenderSuccessfully:tmp[index]];
-    }
-    [self.navigationController popViewControllerAnimated:YES];
+    NSString *url = [[WSCommonWebUrls sharedInstance] userInfoUrl];
+    //NSString *username = [WSUserSession sharedSession].loginUserName;
+    NSString *loginToken = [WSUserSession sharedSession].loginToken;
+    NSArray *tmp = @[@"f", @"m"];
+    NSDictionary *param = @{@"loginToken":loginToken, @"gender":tmp[index]};
+    
+    WS(weakSelf)
+    [self startActivity:@"正在保存..."];
+    [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
+        [weakSelf stopActivity];
+        if (responseObject.retCode == WSNetworkingResponseSuccess) {
+            if ([weakSelf.delegate respondsToSelector:@selector(changeGenderSuccessfully:)]) {
+                [weakSelf.delegate changeGenderSuccessfully:tmp[index]];
+            }
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        } else {
+            [weakSelf showToast:responseObject.retDesc];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [weakSelf stopActivity];
+        [weakSelf showToast:error.localizedDescription];
+    }];
 }
 
 @end

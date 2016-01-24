@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Sell Product Info View Controller-->
+        <!--Seller Product Info View Controller-->
         <scene sceneID="VPJ-Sh-vih">
             <objects>
-                <viewController id="YRE-wP-zE0" customClass="WSSellProductInfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WSSellerProductInfoViewController" id="YRE-wP-zE0" customClass="WSSellerProductInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sQY-40-qvy"/>
                         <viewControllerLayoutGuide type="bottom" id="mxm-qB-qep"/>
@@ -20,15 +20,104 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="s2S-AH-lHe">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Product Title Cell" rowHeight="100" id="s2S-AH-lHe" customClass="WSSellerProductInfoTitleCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s2S-AH-lHe" id="Eba-M6-Uif">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="标题" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nba-Ue-2Kd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nba-Ue-2Kd" firstAttribute="top" secondItem="Eba-M6-Uif" secondAttribute="top" id="DAh-ec-Okt"/>
+                                                <constraint firstAttribute="trailing" secondItem="nba-Ue-2Kd" secondAttribute="trailing" id="dGN-ep-xxx"/>
+                                                <constraint firstItem="nba-Ue-2Kd" firstAttribute="leading" secondItem="Eba-M6-Uif" secondAttribute="leading" id="efa-XU-xeQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="nba-Ue-2Kd" secondAttribute="bottom" id="tIg-1t-R8u"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="nba-Ue-2Kd" id="RDz-w1-IFY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Product Label Cell" id="dCK-Sj-Ne9" customClass="WSSellerProductInfoLabelCell">
+                                        <rect key="frame" x="0.0" y="128" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dCK-Sj-Ne9" id="aJK-7R-LG1">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Commission Cell" id="evd-0R-P0E" customClass="WSSellerProductInfoCommissionCell">
+                                        <rect key="frame" x="0.0" y="172" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evd-0R-P0E" id="Nct-xQ-zLS">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Product Description Cell" rowHeight="100" id="YS8-dt-a1x" customClass="WSSellerProductInfoDescriptionCell">
+                                        <rect key="frame" x="0.0" y="216" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YS8-dt-a1x" id="RIt-dM-oBh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="描述" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gaz-RX-bNz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gaz-RX-bNz" firstAttribute="top" secondItem="RIt-dM-oBh" secondAttribute="top" id="1hZ-cm-dZj"/>
+                                                <constraint firstAttribute="bottom" secondItem="gaz-RX-bNz" secondAttribute="bottom" id="PIs-en-4Rc"/>
+                                                <constraint firstAttribute="trailing" secondItem="gaz-RX-bNz" secondAttribute="trailing" id="Wnb-Dy-LpI"/>
+                                                <constraint firstItem="gaz-RX-bNz" firstAttribute="leading" secondItem="RIt-dM-oBh" secondAttribute="leading" id="c2i-ct-bUJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="gaz-RX-bNz" id="GJC-Vq-wAa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Next Step Cell" rowHeight="50" id="JE6-YZ-lVR" customClass="WSSellerProductInfoNextStepCell">
+                                        <rect key="frame" x="0.0" y="316" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JE6-YZ-lVR" id="b2d-tl-Hb6">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrg-Ur-cDN">
+                                                    <rect key="frame" x="200" y="8" width="200" height="34"/>
+                                                    <color key="backgroundColor" red="1" green="0.64884099529999995" blue="0.214942986" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="uRN-cr-ZeB"/>
+                                                    </constraints>
+                                                    <state key="normal" title="下一步">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qrg-Ur-cDN" firstAttribute="centerX" secondItem="b2d-tl-Hb6" secondAttribute="centerX" id="SiA-K7-hlW"/>
+                                                <constraint firstItem="Qrg-Ur-cDN" firstAttribute="centerY" secondItem="b2d-tl-Hb6" secondAttribute="centerY" id="sDL-uP-7f8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nextStepBtn" destination="Qrg-Ur-cDN" id="6pI-kb-KEj"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YRE-wP-zE0" id="xYM-iY-Fnt"/>
+                                    <outlet property="delegate" destination="YRE-wP-zE0" id="0pJ-UF-OdU"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,17 +129,35 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="DFa-Qg-Kq4" id="QNS-Wb-vyv"/>
+                        <outlet property="tableView" destination="DFa-Qg-Kq4" id="WsC-fB-SSD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BO1-DQ-aul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1148" y="349"/>
         </scene>
-        <!--Sell Creation View Controller-->
+        <!--Seller Product Image View Controller-->
+        <scene sceneID="wYQ-1X-fPB">
+            <objects>
+                <viewController storyboardIdentifier="WSSellerProductImageViewController" id="TJz-sW-IMR" customClass="WSSellerProductImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8CU-zo-xFq"/>
+                        <viewControllerLayoutGuide type="bottom" id="0XF-ak-OyI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="srO-cc-uBX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdn-Jg-Tik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437" y="349"/>
+        </scene>
+        <!--Seller Abroad Info View Controller-->
         <scene sceneID="nhx-RW-TEb">
             <objects>
-                <viewController storyboardIdentifier="WSSellCreationViewController" id="gvx-rT-0js" customClass="WSSellCreationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WSSellerAbroadInfoViewController" id="gvx-rT-0js" customClass="WSSellerAbroadInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kji-x4-h0x"/>
                         <viewControllerLayoutGuide type="bottom" id="OZS-2n-Vhm"/>
@@ -63,7 +170,7 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Select Country" id="aKK-VL-ywO" customClass="WSBuySellCountryCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Select Country" id="aKK-VL-ywO">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aKK-VL-ywO" id="NHT-B7-R8l">
@@ -71,7 +178,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Select Date" id="9BF-Yv-JjW" customClass="WSBuySellCountryCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Select Date" id="9BF-Yv-JjW">
                                         <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9BF-Yv-JjW" id="38Y-9b-M9M">
@@ -79,7 +186,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Descriptions" rowHeight="100" id="ecL-cq-5Lx" customClass="WSBuySellCountryCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Completion Cell" rowHeight="100" id="ecL-cq-5Lx">
                                         <rect key="frame" x="0.0" y="116" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ecL-cq-5Lx" id="yZW-O9-KjC">
@@ -89,8 +196,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="gvx-rT-0js" id="XLs-XI-jz4"/>
-                                    <outlet property="delegate" destination="gvx-rT-0js" id="hvz-Fs-l7m"/>
+                                    <outlet property="dataSource" destination="gvx-rT-0js" id="fja-mF-bxN"/>
+                                    <outlet property="delegate" destination="gvx-rT-0js" id="Val-5L-bwt"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -103,12 +210,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="cxF-mh-yoX" id="Fde-yP-q1e"/>
+                        <outlet property="tableView" destination="cxF-mh-yoX" id="f3A-7o-9BH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bln-F8-b0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="349"/>
+            <point key="canvasLocation" x="261" y="349"/>
         </scene>
         <!--Select Country View Controller-->
         <scene sceneID="8dM-t8-km5">
@@ -198,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kh-cF-q2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="331" y="349"/>
+            <point key="canvasLocation" x="261" y="1140"/>
         </scene>
     </scenes>
 </document>

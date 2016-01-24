@@ -9,7 +9,7 @@
 #import "WSHomeViewController.h"
 #import "WSHomeProductCell.h"
 #import "LDPMPopoverMenu.h"
-#import "WSSellCreationViewController.h"
+#import "WSSellerProductInfoViewController.h"
 
 static NSString * const kProductCellIdentifier = @"Home Product Cell";
 
@@ -89,10 +89,10 @@ static NSString * const kProductCellIdentifier = @"Home Product Cell";
         LDPMPopoverMenuItem *item = self.menuItemArray[i];
         if (sender == item) {
             if (i == 0) {
-                UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellCreationViewController class])];
+                UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellerProductInfoViewController class])];
                 [self.navigationController pushViewController:vc animated:YES];
             } else if (i == 1) {
-                UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellCreationViewController class])];
+                UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellerProductInfoViewController class])];
                 [self.navigationController pushViewController:vc animated:YES];
             }
         }

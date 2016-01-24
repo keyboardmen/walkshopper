@@ -292,10 +292,8 @@
 		6F80A6F31C1DEA930072F4E0 /* UIViewController+WSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F80A6F21C1DEA930072F4E0 /* UIViewController+WSUtilities.m */; };
 		6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D161C14B93C00F28B0A /* UIViewController+WSHook.m */; };
 		6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */; };
-		6F91ED4B1C4566CA00BEC860 /* WSSellProductInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F91ED4A1C4566CA00BEC860 /* WSSellProductInfoViewController.m */; };
 		6F9506CC1C4C116B00389AF6 /* WSUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9506CB1C4C116B00389AF6 /* WSUserInfoViewController.m */; };
 		6F9506CF1C4C11D800389AF6 /* WSUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9506CE1C4C11D800389AF6 /* WSUserInfoCell.m */; };
-		6F9B505D1C3ED2D900E3A573 /* WSSellCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */; };
 		6F9B50601C3ED58B00E3A573 /* WSBuySellCountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */; };
 		6F9D1C121BB3201C001F3B23 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D1C111BB3201C001F3B23 /* Login.storyboard */; };
 		6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D1C141BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m */; };
@@ -326,6 +324,16 @@
 		6FCF9A791C3D6B110055796F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A781C3D6B110055796F /* CoreTelephony.framework */; };
 		6FCF9A7B1C3D6B200055796F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */; };
 		6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */; };
+		6FE426641C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4265F1C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.m */; };
+		6FE426651C54C0F500A4CE6B /* WSSellerProductImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE426611C54C0F500A4CE6B /* WSSellerProductImageViewController.m */; };
+		6FE4266A1C54C74500A4CE6B /* WSSellerProductInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE426691C54C74500A4CE6B /* WSSellerProductInfoViewController.m */; };
+		6FE4266D1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4266C1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.m */; };
+		6FE426701C54C7E800A4CE6B /* WSSellerProductInfoLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4266F1C54C7E800A4CE6B /* WSSellerProductInfoLabelCell.m */; };
+		6FE426731C54C83C00A4CE6B /* WSSellerProductInfoCommissionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE426721C54C83C00A4CE6B /* WSSellerProductInfoCommissionCell.m */; };
+		6FE426761C54C85800A4CE6B /* WSSellerProductInfoDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE426751C54C85800A4CE6B /* WSSellerProductInfoDescriptionCell.m */; };
+		6FE426791C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE426781C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.m */; };
+		6FE4267C1C55183600A4CE6B /* WSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4267B1C55183600A4CE6B /* WSTableViewCell.m */; };
+		6FE4267F1C551EA400A4CE6B /* UIColor+WSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4267E1C551EA400A4CE6B /* UIColor+WSColor.m */; };
 		6FE5362C1C4FE234009841A8 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */; };
 		6FE5362D1C4FE234009841A8 /* 城市码表.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6FE5362B1C4FE234009841A8 /* 城市码表.csv */; };
 		6FE536301C4FE3FB009841A8 /* WSImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */; };
@@ -827,14 +835,10 @@
 		6F903D181C14BA1700F28B0A /* WSPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSPrefixHeader.pch; sourceTree = "<group>"; };
 		6F903D191C14BCDF00F28B0A /* WSViewControllerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSViewControllerConfiguration.h; sourceTree = "<group>"; };
 		6F903D1A1C14BCDF00F28B0A /* WSViewControllerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSViewControllerConfiguration.m; sourceTree = "<group>"; };
-		6F91ED491C4566CA00BEC860 /* WSSellProductInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellProductInfoViewController.h; sourceTree = "<group>"; };
-		6F91ED4A1C4566CA00BEC860 /* WSSellProductInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellProductInfoViewController.m; sourceTree = "<group>"; };
 		6F9506CA1C4C116B00389AF6 /* WSUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserInfoViewController.h; sourceTree = "<group>"; };
 		6F9506CB1C4C116B00389AF6 /* WSUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserInfoViewController.m; sourceTree = "<group>"; };
 		6F9506CD1C4C11D800389AF6 /* WSUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserInfoCell.h; sourceTree = "<group>"; };
 		6F9506CE1C4C11D800389AF6 /* WSUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserInfoCell.m; sourceTree = "<group>"; };
-		6F9B505B1C3ED2D900E3A573 /* WSSellCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellCreationViewController.h; sourceTree = "<group>"; };
-		6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellCreationViewController.m; sourceTree = "<group>"; };
 		6F9B505E1C3ED58B00E3A573 /* WSBuySellCountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSBuySellCountryCell.h; sourceTree = "<group>"; };
 		6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSBuySellCountryCell.m; sourceTree = "<group>"; };
 		6F9D1C111BB3201C001F3B23 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -887,6 +891,26 @@
 		6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6FCF9A7C1C3D7A600055796F /* WSSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSetPasswordViewController.h; sourceTree = "<group>"; };
 		6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSetPasswordViewController.m; sourceTree = "<group>"; };
+		6FE4265E1C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerAbroadInfoViewController.h; sourceTree = "<group>"; };
+		6FE4265F1C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerAbroadInfoViewController.m; sourceTree = "<group>"; };
+		6FE426601C54C0F500A4CE6B /* WSSellerProductImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerProductImageViewController.h; sourceTree = "<group>"; };
+		6FE426611C54C0F500A4CE6B /* WSSellerProductImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerProductImageViewController.m; sourceTree = "<group>"; };
+		6FE426681C54C74500A4CE6B /* WSSellerProductInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerProductInfoViewController.h; sourceTree = "<group>"; };
+		6FE426691C54C74500A4CE6B /* WSSellerProductInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerProductInfoViewController.m; sourceTree = "<group>"; };
+		6FE4266B1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerProductInfoTitleCell.h; sourceTree = "<group>"; };
+		6FE4266C1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerProductInfoTitleCell.m; sourceTree = "<group>"; };
+		6FE4266E1C54C7E800A4CE6B /* WSSellerProductInfoLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerProductInfoLabelCell.h; sourceTree = "<group>"; };
+		6FE4266F1C54C7E800A4CE6B /* WSSellerProductInfoLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerProductInfoLabelCell.m; sourceTree = "<group>"; };
+		6FE426711C54C83C00A4CE6B /* WSSellerProductInfoCommissionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerProductInfoCommissionCell.h; sourceTree = "<group>"; };
+		6FE426721C54C83C00A4CE6B /* WSSellerProductInfoCommissionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerProductInfoCommissionCell.m; sourceTree = "<group>"; };
+		6FE426741C54C85800A4CE6B /* WSSellerProductInfoDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerProductInfoDescriptionCell.h; sourceTree = "<group>"; };
+		6FE426751C54C85800A4CE6B /* WSSellerProductInfoDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerProductInfoDescriptionCell.m; sourceTree = "<group>"; };
+		6FE426771C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerProductInfoNextStepCell.h; sourceTree = "<group>"; };
+		6FE426781C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerProductInfoNextStepCell.m; sourceTree = "<group>"; };
+		6FE4267A1C55183600A4CE6B /* WSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTableViewCell.h; sourceTree = "<group>"; };
+		6FE4267B1C55183600A4CE6B /* WSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCell.m; sourceTree = "<group>"; };
+		6FE4267D1C551EA400A4CE6B /* UIColor+WSColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WSColor.h"; sourceTree = "<group>"; };
+		6FE4267E1C551EA400A4CE6B /* UIColor+WSColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WSColor.m"; sourceTree = "<group>"; };
 		6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		6FE5362B1C4FE234009841A8 /* 城市码表.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "城市码表.csv"; sourceTree = "<group>"; };
 		6FE5362E1C4FE3FB009841A8 /* WSImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSImageCropperViewController.h; sourceTree = "<group>"; };
@@ -2229,6 +2253,8 @@
 			isa = PBXGroup;
 			children = (
 				6FCF9A671C2EA2030055796F /* LDPMPopoverMenu */,
+				6FE4267A1C55183600A4CE6B /* WSTableViewCell.h */,
+				6FE4267B1C55183600A4CE6B /* WSTableViewCell.m */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -2247,6 +2273,8 @@
 			children = (
 				6FCF9A6C1C2EA6060055796F /* UIColor+Additions.h */,
 				6FCF9A6D1C2EA6060055796F /* UIColor+Additions.m */,
+				6FE4267D1C551EA400A4CE6B /* UIColor+WSColor.h */,
+				6FE4267E1C551EA400A4CE6B /* UIColor+WSColor.m */,
 			);
 			path = "UIColor+Extensions";
 			sourceTree = "<group>";
@@ -2258,6 +2286,37 @@
 				6FCF9A711C2EA78A0055796F /* UIImage+Additions.m */,
 			);
 			path = "UIImage+Extensions";
+			sourceTree = "<group>";
+		};
+		6FE4265D1C54C0F500A4CE6B /* SellerCreation */ = {
+			isa = PBXGroup;
+			children = (
+				6FE426671C54C74500A4CE6B /* SellerProductInfo */,
+				6FE426601C54C0F500A4CE6B /* WSSellerProductImageViewController.h */,
+				6FE426611C54C0F500A4CE6B /* WSSellerProductImageViewController.m */,
+				6FE4265E1C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.h */,
+				6FE4265F1C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.m */,
+			);
+			path = SellerCreation;
+			sourceTree = "<group>";
+		};
+		6FE426671C54C74500A4CE6B /* SellerProductInfo */ = {
+			isa = PBXGroup;
+			children = (
+				6FE426681C54C74500A4CE6B /* WSSellerProductInfoViewController.h */,
+				6FE426691C54C74500A4CE6B /* WSSellerProductInfoViewController.m */,
+				6FE4266B1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.h */,
+				6FE4266C1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.m */,
+				6FE4266E1C54C7E800A4CE6B /* WSSellerProductInfoLabelCell.h */,
+				6FE4266F1C54C7E800A4CE6B /* WSSellerProductInfoLabelCell.m */,
+				6FE426711C54C83C00A4CE6B /* WSSellerProductInfoCommissionCell.h */,
+				6FE426721C54C83C00A4CE6B /* WSSellerProductInfoCommissionCell.m */,
+				6FE426741C54C85800A4CE6B /* WSSellerProductInfoDescriptionCell.h */,
+				6FE426751C54C85800A4CE6B /* WSSellerProductInfoDescriptionCell.m */,
+				6FE426771C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.h */,
+				6FE426781C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.m */,
+			);
+			path = SellerProductInfo;
 			sourceTree = "<group>";
 		};
 		6FE536291C4FE234009841A8 /* lib */ = {
@@ -2317,14 +2376,11 @@
 		CD872C381BB286DE00F74DD7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6FE4265D1C54C0F500A4CE6B /* SellerCreation */,
 				CD872C441BB2A20E00F74DD7 /* WSHomeViewController.h */,
 				CD872C451BB2A20E00F74DD7 /* WSHomeViewController.m */,
 				6FCF9A571C25D7CA0055796F /* WSHomeProductCell.h */,
 				6FCF9A581C25D7CA0055796F /* WSHomeProductCell.m */,
-				6F9B505B1C3ED2D900E3A573 /* WSSellCreationViewController.h */,
-				6F9B505C1C3ED2D900E3A573 /* WSSellCreationViewController.m */,
-				6F91ED491C4566CA00BEC860 /* WSSellProductInfoViewController.h */,
-				6F91ED4A1C4566CA00BEC860 /* WSSellProductInfoViewController.m */,
 				6F9B505E1C3ED58B00E3A573 /* WSBuySellCountryCell.h */,
 				6F9B505F1C3ED58B00E3A573 /* WSBuySellCountryCell.m */,
 				6FCF9A5A1C287B520055796F /* WSSelectCountryViewController.h */,
@@ -2786,16 +2842,20 @@
 				3A1A3C591C4F32E4003E33F5 /* EMRobotChatTextBubbleView.m in Sources */,
 				6F903D171C14B93C00F28B0A /* UIViewController+WSHook.m in Sources */,
 				CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */,
+				6FE4266D1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.m in Sources */,
 				3A1A3C4D1C4F32E4003E33F5 /* AddFriendCell.m in Sources */,
 				3A1A3C4F1C4F32E4003E33F5 /* ApplyFriendCell.m in Sources */,
 				6FEE02391C4BC535000DC27A /* WSMineHeaderView.m in Sources */,
 				6FCF9A721C2EA78A0055796F /* UIImage+Additions.m in Sources */,
 				6FC51FDE1C4151DC00397633 /* NSString+Additions.m in Sources */,
 				6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */,
+				6FE426761C54C85800A4CE6B /* WSSellerProductInfoDescriptionCell.m in Sources */,
 				3A1A3C4A1C4F32E4003E33F5 /* MyChatroomListViewController.m in Sources */,
 				3A1A3C5B1C4F32E4003E33F5 /* RobotChatViewController.m in Sources */,
 				CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */,
+				6FE426641C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.m in Sources */,
 				6FE536301C4FE3FB009841A8 /* WSImageCropperViewController.m in Sources */,
+				6FE426731C54C83C00A4CE6B /* WSSellerProductInfoCommissionCell.m in Sources */,
 				3A1A3C321C4F32E4003E33F5 /* UIViewController+DismissKeyboard.m in Sources */,
 				3A1A3C331C4F32E4003E33F5 /* UIViewController+HUD.m in Sources */,
 				6F7300981C515DD60076D915 /* WSChangeGenderViewController.m in Sources */,
@@ -2803,8 +2863,8 @@
 				6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */,
 				3A1A3C661C4F32E4003E33F5 /* EMSearchBar.m in Sources */,
 				3A1A3C391C4F32E4003E33F5 /* CallViewController.m in Sources */,
-				6F9B505D1C3ED2D900E3A573 /* WSSellCreationViewController.m in Sources */,
 				3A1A3C6A1C4F32E4003E33F5 /* EMChooseViewController.m in Sources */,
+				6FE4267C1C55183600A4CE6B /* WSTableViewCell.m in Sources */,
 				3A1A3C2E1C4F32E4003E33F5 /* NSDateFormatter+Category.m in Sources */,
 				3A1A3C341C4F32E4003E33F5 /* AppDelegate+EaseMob.m in Sources */,
 				3A1A3C5C1C4F32E4003E33F5 /* RobotListViewController.m in Sources */,
@@ -2821,6 +2881,7 @@
 				3A1A3C3D1C4F32E4003E33F5 /* EMBubbleView+Gif.m in Sources */,
 				3A1A3C1D1C4F32E4003E33F5 /* EMGifImage.m in Sources */,
 				3A1A3C261C4F32E4003E33F5 /* TTGlobalUICommon.m in Sources */,
+				6FE4266A1C54C74500A4CE6B /* WSSellerProductInfoViewController.m in Sources */,
 				6FC51FDA1C414DC200397633 /* NSString+Crypt.m in Sources */,
 				3A1A3C301C4F32E4003E33F5 /* UIImageView+HeadImage.m in Sources */,
 				6FCF9A591C25D7CA0055796F /* WSHomeProductCell.m in Sources */,
@@ -2830,8 +2891,10 @@
 				3A1A3C571C4F32E4003E33F5 /* MainViewController.m in Sources */,
 				6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */,
 				3A1A3C641C4F32E4003E33F5 /* UserProfileEditViewController.m in Sources */,
+				6FE426701C54C7E800A4CE6B /* WSSellerProductInfoLabelCell.m in Sources */,
 				3A1A3C311C4F32E4003E33F5 /* UIResponder+Router.m in Sources */,
 				3A1A3C241C4F32E4003E33F5 /* SRSlimeView.m in Sources */,
+				6FE426651C54C0F500A4CE6B /* WSSellerProductImageViewController.m in Sources */,
 				3A1A3C351C4F32E4003E33F5 /* AppDelegate+Parse.m in Sources */,
 				3A1A3C611C4F32E4003E33F5 /* EditNicknameViewController.m in Sources */,
 				3A1A3C3A1C4F32E4003E33F5 /* ConversationListController.m in Sources */,
@@ -2842,7 +2905,6 @@
 				6FBEF5CC1C4D64B4004D1609 /* WSImagePickerUtil.m in Sources */,
 				6FCF9A621C2E8EB00055796F /* WSSelectCountryFlowLayout.m in Sources */,
 				3A1A3C401C4F32E4003E33F5 /* ContactView.m in Sources */,
-				6F91ED4B1C4566CA00BEC860 /* WSSellProductInfoViewController.m in Sources */,
 				3A1A3C521C4F32E4003E33F5 /* InvitationManager.m in Sources */,
 				3A1A3C461C4F32E4003E33F5 /* PublicGroupDetailViewController.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
@@ -2851,10 +2913,12 @@
 				3A1A3C4B1C4F32E4003E33F5 /* ContactListSelectViewController.m in Sources */,
 				3A1A3C1C1C4F32E4003E33F5 /* EMAlertView.m in Sources */,
 				3A1A3C651C4F32E4003E33F5 /* BaseTableViewCell.m in Sources */,
+				6FE426791C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.m in Sources */,
 				3A1A3C511C4F32E4003E33F5 /* RealtimeSearchUtil.m in Sources */,
 				3A1A3C5A1C4F32E4003E33F5 /* EMRotbotChatViewCell.m in Sources */,
 				3A1A3C501C4F32E4003E33F5 /* ApplyViewController.m in Sources */,
 				3A1A3C441C4F32E4003E33F5 /* GroupSettingViewController.m in Sources */,
+				6FE4267F1C551EA400A4CE6B /* UIColor+WSColor.m in Sources */,
 				CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */,
 				6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */,
 				3A1A3C3F1C4F32E4003E33F5 /* ContactSelectionViewController.m in Sources */,

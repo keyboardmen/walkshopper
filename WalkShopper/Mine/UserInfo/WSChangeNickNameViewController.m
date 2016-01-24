@@ -54,10 +54,27 @@
 
 - (void)saveName
 {
-    if ([self.delegate respondsToSelector:@selector(changeNickNameSuccessfully:)]) {
-        [self.delegate changeNickNameSuccessfully:self.nameTextField.text];
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+    NSString *url = [[WSCommonWebUrls sharedInstance] userInfoUrl];
+    //NSString *username = [WSUserSession sharedSession].loginUserName;
+    NSString *loginToken = [WSUserSession sharedSession].loginToken;
+    NSDictionary *param = @{@"loginToken":loginToken, @"nickname":self.nameTextField.text};
+    
+    WS(weakSelf)
+    [self startActivity:@"正在保存..."];
+    [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
+        [weakSelf stopActivity];
+        if (responseObject.retCode == WSNetworkingResponseSuccess) {
+            if ([weakSelf.delegate respondsToSelector:@selector(changeNickNameSuccessfully:)]) {
+                [weakSelf.delegate changeNickNameSuccessfully:weakSelf.nameTextField.text];
+            }
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        } else {
+            [weakSelf showToast:responseObject.retDesc];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [weakSelf stopActivity];
+        [RKDropdownAlert title:@"错误" message:error.localizedDescription];
+    }];
 }
 
 @end

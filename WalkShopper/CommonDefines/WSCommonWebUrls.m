@@ -23,6 +23,8 @@ static NSString * const domain = @"http://115.28.228.41";
     return instance;
 }
 
+#pragma mark - Register & login
+
 - (NSString *)registerUrl
 {
     NSString *path = @"project/shop_service/basic/web/index.php?r=api/account/register";
@@ -37,6 +39,20 @@ static NSString * const domain = @"http://115.28.228.41";
 }
 
 - (NSString *)autoLoginUrl
+{
+    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/autologin", domain];
+    return url;
+}
+
+#pragma mark - User info
+
+- (NSString *)userInfoUrl
+{
+    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/changeUserInfo", domain];
+    return url;
+}
+
+- (NSString *)userAvatarImageUrl
 {
     NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/autologin", domain];
     return url;
