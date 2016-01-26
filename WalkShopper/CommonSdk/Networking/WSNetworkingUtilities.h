@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const WSNetworkErrorGeneralHint;
+
+
+
+
+
 @class WSNetworkingResponseObject;
 
 @interface WSNetworkingUtilities : NSObject

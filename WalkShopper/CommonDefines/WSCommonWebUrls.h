@@ -18,6 +18,8 @@
 - (NSString *)loginUrl;
 //自动登录接口
 - (NSString *)autoLoginUrl;
+//登出接口
+- (NSString *)logoutUrl;
 //用户个人信息接口
 - (NSString *)userInfoUrl;
 //用户头像接口

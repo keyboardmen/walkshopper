@@ -68,3 +68,21 @@
 }
 
 @end
+
+@implementation WSUserInfoLogoutCell
+
+- (void)awakeFromNib
+{
+    [self.logoutBtn addTarget:self action:@selector(logoutBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)logoutBtnTapped
+{
+    if ([self.delegate respondsToSelector:@selector(userLogoutAction)]) {
+        [self.delegate userLogoutAction];
+    }
+}
+
+@end
+

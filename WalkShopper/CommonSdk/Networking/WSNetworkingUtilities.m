@@ -11,6 +11,8 @@
 #import "WSNetworkingResponseObject.h"
 #import "NSString+Additions.h"
 
+NSString * const WSNetworkErrorGeneralHint = @"网络错误，请稍后再试";
+
 @implementation WSNetworkingUtilities
 
 + (instancetype)sharedInstance

@@ -18,7 +18,7 @@ NSString * const WSUserChangeNickNameNotification = @"WSUserChangeNickNameNotifi
 NSString * const WSUserChangeHeadImageNotification = @"WSUserChangeHeadImageNotification";
 NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotification";
 
-@interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, WSImageCropperViewControllerDelegate, WSChangeNickNameDelegate, WSChangeGenderDelegate>
+@interface WSUserInfoViewController () <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, WSImageCropperViewControllerDelegate, WSChangeNickNameDelegate, WSChangeGenderDelegate, WSUserInfoCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -31,7 +31,7 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.identifierArray = @[@[@"Username Cell", @"Head Image Cell", @"Nickname Cell", @"Gender Cell"], @[@"Company Cell", @"Company Verification Cell"]];
+    self.identifierArray = @[@[@"Username Cell", @"Head Image Cell", @"Nickname Cell", @"Gender Cell"], @[@"Company Cell", @"Company Verification Cell"], @[@"Logout Cell"]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -58,10 +58,14 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
 {
     WSUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:self.identifierArray[indexPath.section][indexPath.row] forIndexPath:indexPath];
     
-    if (!(indexPath.section == 0 && indexPath.row == 0)) {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    } else {
+    cell.delegate = self;
+    if (indexPath.section == 0 && indexPath.row == 0) {
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    } else if (indexPath.section == 2) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     return cell;
@@ -156,6 +160,19 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
 - (void)changeGenderSuccessfully:(NSString *)gender
 {
     
+}
+
+#pragma mark - WSUserInfoCellDelegate
+
+- (void)userLogoutAction
+{
+    [self startActivity:@"正在退出登录..."];
+    [[WSUserSession sharedSession] logoutWithSuccessBLk:^{
+        [self stopActivity];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    } withFailureBlk:^{
+        [self stopActivity];
+    }];
 }
 
 @end

@@ -25,10 +25,12 @@ extern NSString * const WSUserSessionLoginStatusChangeNotification;
 + (WSUserSession *)sharedSession;
 - (void)loginWithParamters:(NSDictionary *)parameters completionBlock:(void(^)(BOOL success, NSError *error))completionBlk;
 - (void)autoLogin;
-- (void)logout;
+- (void)logoutWithSuccessBLk:(void(^)(void))successBlk withFailureBlk:(void(^)(void))failureBlk;
 - (void)saveUsername:(NSString *)username;
 - (NSString *)readUsername;
+- (void)removeUsername;
 - (void)saveLoginToken:(NSString *)loginToken;
 - (NSString *)readLoginToken;
+- (void)removeLoginToken;
 
 @end

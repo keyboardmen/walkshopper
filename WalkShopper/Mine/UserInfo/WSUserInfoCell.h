@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WSUserInfoCellDelegate;
+
 @interface WSUserInfoCell : UITableViewCell
 
+@property (weak, nonatomic) id<WSUserInfoCellDelegate>delegate;
+
 @end
+
+@protocol WSUserInfoCellDelegate <NSObject>
+
+@optional
+
+- (void)userLogoutAction;
+
+@end
+
+
 
 @interface WSUserInfoUsernameCell : WSUserInfoCell
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
@@ -40,5 +54,11 @@
 @interface WSUserInfoCompanyVerificationCell : WSUserInfoCell
 
 @property (weak, nonatomic) IBOutlet UILabel *companyVerificationLabel;
+
+@end
+
+@interface WSUserInfoLogoutCell : WSUserInfoCell
+
+@property (weak, nonatomic) IBOutlet UIButton *logoutBtn;
 
 @end

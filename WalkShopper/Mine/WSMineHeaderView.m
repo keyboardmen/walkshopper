@@ -19,10 +19,6 @@
 
 - (void)awakeFromNib
 {
-//    self.imageView.layer.cornerRadius = 22.0f;
-//    self.imageView.clipsToBounds = YES;
-//    self.imageView.layer.borderColor = [UIColor whiteColor].CGColor;
-//    self.imageView.layer.borderWidth = 2.0f;
     self.imageView.userInteractionEnabled = YES;
     self.nameLabel.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapImageViewGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureRecognizer:)];
@@ -42,7 +38,9 @@
         }
     } else {
         [WSLoginAction loginWithSuccessBlock:^{
-            
+            if ([self.headerViewDelegate respondsToSelector:@selector(showUserInfoViewController)]) {
+                [self.headerViewDelegate showUserInfoViewController];
+            }
         } andFailureBlock:^{
             
         }];

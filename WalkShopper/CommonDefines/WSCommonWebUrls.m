@@ -44,6 +44,12 @@ static NSString * const domain = @"http://115.28.228.41";
     return url;
 }
 
+- (NSString *)logoutUrl
+{
+    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/logout", domain];
+    return url;
+}
+
 #pragma mark - User info
 
 - (NSString *)userInfoUrl

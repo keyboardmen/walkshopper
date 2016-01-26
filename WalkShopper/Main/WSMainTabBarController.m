@@ -25,20 +25,6 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self.viewControllers indexOfObject:viewController];
-    UINavigationController *nav = (UINavigationController *)viewController;
-    if ([nav.viewControllers.firstObject isKindOfClass:[WSMineViewController class]]) {
-        if (![WSUserSession sharedSession].hasLogin) {
-            [WSLoginAction loginWithSuccessBlock:^{
-                self.selectedIndex = index;
-            } andFailureBlock:^{
-                
-            }];
-            
-            return NO;
-        }
-    }
-
     return YES;
 }
 
