@@ -57,6 +57,7 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
             NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
             [weakSelf saveUsername:username];
             [weakSelf saveLoginToken:loginToken];
+            [[NSNotificationCenter defaultCenter] postNotificationName:WSUserSessionLoginStatusChangeNotification object:nil];
             if (completionBlk) {
                 [WSChatRegister autoRegister:username];
                 completionBlk(YES, nil);
@@ -94,6 +95,7 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
             weakSelf.hasLogin = YES;
             NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
             [weakSelf saveLoginToken:loginToken];
+            [[NSNotificationCenter defaultCenter] postNotificationName:WSUserSessionLoginStatusChangeNotification object:nil];
             [WSChatRegister autoRegister:_loginUserName];
         } else {
             //weakSelf.hasLogin = NO;
@@ -108,12 +110,13 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
 {
     WS(weakSelf)
     NSMutableDictionary *param = [NSMutableDictionary dictionaryWithDictionary:@{@"loginToken":_loginToken}];
-    NSString *url = [[WSCommonWebUrls sharedInstance] loginUrl];
+    NSString *url = [[WSCommonWebUrls sharedInstance] logoutUrl];
     [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
         if (responseObject.retCode == WSNetworkingResponseSuccess) {
             weakSelf.hasLogin = NO;
             [weakSelf removeUsername];
             [weakSelf removeLoginToken];
+            [[NSNotificationCenter defaultCenter] postNotificationName:WSUserSessionLoginStatusChangeNotification object:nil];
             if (successBlk) {
                 successBlk();
             }
@@ -193,11 +196,5 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
 }
 
 #pragma mark - getter & setter
-
-- (void)setHasLogin:(BOOL)hasLogin
-{
-    _hasLogin = hasLogin;
-    [[NSNotificationCenter defaultCenter] postNotificationName:WSUserSessionLoginStatusChangeNotification object:nil];
-}
 
 @end

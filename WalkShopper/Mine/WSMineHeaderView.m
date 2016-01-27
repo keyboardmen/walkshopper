@@ -38,9 +38,9 @@
         }
     } else {
         [WSLoginAction loginWithSuccessBlock:^{
-            if ([self.headerViewDelegate respondsToSelector:@selector(showUserInfoViewController)]) {
-                [self.headerViewDelegate showUserInfoViewController];
-            }
+//            if ([self.headerViewDelegate respondsToSelector:@selector(showUserInfoViewController)]) {
+//                [self.headerViewDelegate showUserInfoViewController];
+//            }
         } andFailureBlock:^{
             
         }];
