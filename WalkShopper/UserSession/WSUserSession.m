@@ -10,6 +10,7 @@
 #import "WSNetworkingResponseObject.h"
 #import "NSString+Additions.h"
 #import <WalkShopper-Swift.h>
+#import "WSUserAccount.h"
 
 static NSString * const WSLoginActionDomain = @"WSLoginActionDomain";
 NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLoginStatusChangeNotification";
@@ -53,13 +54,8 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
     
     [[WSNetworkingUtilities sharedInstance] POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
         if (responseObject.retCode == WSNetworkingResponseSuccess) {
-            weakSelf.hasLogin = YES;
-            NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
-            [weakSelf saveUsername:username];
-            [weakSelf saveLoginToken:loginToken];
-            [[NSNotificationCenter defaultCenter] postNotificationName:WSUserSessionLoginStatusChangeNotification object:nil];
+            [weakSelf doLoginCompletionWithUsername:username response:responseObject];
             if (completionBlk) {
-                [WSChatRegister autoRegister:username];
                 completionBlk(YES, nil);
             }
         } else {
@@ -92,11 +88,7 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
     NSString *url = [[WSCommonWebUrls sharedInstance] autoLoginUrl];
     [[WSNetworkingUtilities sharedInstance] POST:url parameters:param success:^(AFHTTPRequestOperation *operation, WSNetworkingResponseObject *responseObject) {
         if (responseObject.retCode == WSNetworkingResponseSuccess) {
-            weakSelf.hasLogin = YES;
-            NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
-            [weakSelf saveLoginToken:loginToken];
-            [[NSNotificationCenter defaultCenter] postNotificationName:WSUserSessionLoginStatusChangeNotification object:nil];
-            [WSChatRegister autoRegister:_loginUserName];
+            [weakSelf doLoginCompletionWithUsername:weakSelf.loginUserName response:responseObject];
         } else {
             //weakSelf.hasLogin = NO;
         }
@@ -133,6 +125,23 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
         }
     }];
     
+}
+
+- (void)doLoginCompletionWithUsername:(NSString *)username response:(WSNetworkingResponseObject *)responseObject
+{
+    self.hasLogin = YES;
+    NSString *loginToken = [responseObject.ret objectForKey:@"loginToken"];
+    [self saveUsername:username];
+    [self saveLoginToken:loginToken];
+    [WSChatRegister autoRegister:username];
+    
+    NSDictionary *userAccount = [[responseObject.ret objectForKey:@"userInfo"] firstObject];
+    if (userAccount) {
+        self.userAccount = [[WSUserAccount alloc] initWithJson:userAccount];
+        [self.userAccount changeUsername:username];
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:WSUserSessionLoginStatusChangeNotification object:nil];
 }
 
 - (void)saveUsername:(NSString *)username

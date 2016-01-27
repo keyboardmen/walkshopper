@@ -10,6 +10,7 @@
 
 extern NSString * const WSUserSessionLoginStatusChangeNotification;
 
+@class WSUserAccount;
 
 @interface WSUserSession : NSObject
 
@@ -21,6 +22,8 @@ extern NSString * const WSUserSessionLoginStatusChangeNotification;
 @property (nonatomic, strong, readonly) NSString *loginToken;
 
 @property (assign, nonatomic) BOOL hasLogin;
+
+@property (strong, nonatomic) WSUserAccount *userAccount;
 
 + (WSUserSession *)sharedSession;
 - (void)loginWithParamters:(NSDictionary *)parameters completionBlock:(void(^)(BOOL success, NSError *error))completionBlk;

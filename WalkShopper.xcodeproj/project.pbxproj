@@ -324,6 +324,8 @@
 		6FCF9A791C3D6B110055796F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A781C3D6B110055796F /* CoreTelephony.framework */; };
 		6FCF9A7B1C3D6B200055796F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */; };
 		6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */; };
+		6FD6F4301C59313600075044 /* WSUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6F42F1C59313600075044 /* WSUserAccount.m */; };
+		6FD6F4351C59354300075044 /* MCCoderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD6F4331C59354300075044 /* MCCoderUtil.m */; };
 		6FE426641C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4265F1C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.m */; };
 		6FE426651C54C0F500A4CE6B /* WSSellerProductImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE426611C54C0F500A4CE6B /* WSSellerProductImageViewController.m */; };
 		6FE4266A1C54C74500A4CE6B /* WSSellerProductInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE426691C54C74500A4CE6B /* WSSellerProductInfoViewController.m */; };
@@ -891,6 +893,10 @@
 		6FCF9A7A1C3D6B200055796F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6FCF9A7C1C3D7A600055796F /* WSSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSetPasswordViewController.h; sourceTree = "<group>"; };
 		6FCF9A7D1C3D7A600055796F /* WSSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSetPasswordViewController.m; sourceTree = "<group>"; };
+		6FD6F42E1C59313600075044 /* WSUserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUserAccount.h; sourceTree = "<group>"; };
+		6FD6F42F1C59313600075044 /* WSUserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUserAccount.m; sourceTree = "<group>"; };
+		6FD6F4321C59354300075044 /* MCCoderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCoderUtil.h; sourceTree = "<group>"; };
+		6FD6F4331C59354300075044 /* MCCoderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCoderUtil.m; sourceTree = "<group>"; };
 		6FE4265E1C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerAbroadInfoViewController.h; sourceTree = "<group>"; };
 		6FE4265F1C54C0F500A4CE6B /* WSSellerAbroadInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSellerAbroadInfoViewController.m; sourceTree = "<group>"; };
 		6FE426601C54C0F500A4CE6B /* WSSellerProductImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSellerProductImageViewController.h; sourceTree = "<group>"; };
@@ -2252,6 +2258,7 @@
 		6FCF9A661C2EA2030055796F /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				6FD6F4311C59354300075044 /* ModelCoderUtil */,
 				6FCF9A671C2EA2030055796F /* LDPMPopoverMenu */,
 				6FE4267A1C55183600A4CE6B /* WSTableViewCell.h */,
 				6FE4267B1C55183600A4CE6B /* WSTableViewCell.m */,
@@ -2286,6 +2293,15 @@
 				6FCF9A711C2EA78A0055796F /* UIImage+Additions.m */,
 			);
 			path = "UIImage+Extensions";
+			sourceTree = "<group>";
+		};
+		6FD6F4311C59354300075044 /* ModelCoderUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6FD6F4321C59354300075044 /* MCCoderUtil.h */,
+				6FD6F4331C59354300075044 /* MCCoderUtil.m */,
+			);
+			path = ModelCoderUtil;
 			sourceTree = "<group>";
 		};
 		6FE4265D1C54C0F500A4CE6B /* SellerCreation */ = {
@@ -2432,6 +2448,8 @@
 			children = (
 				CD872C3E1BB29B4100F74DD7 /* WSUserSession.h */,
 				CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */,
+				6FD6F42E1C59313600075044 /* WSUserAccount.h */,
+				6FD6F42F1C59313600075044 /* WSUserAccount.m */,
 			);
 			path = UserSession;
 			sourceTree = "<group>";
@@ -2860,7 +2878,9 @@
 				3A1A3C331C4F32E4003E33F5 /* UIViewController+HUD.m in Sources */,
 				6F7300981C515DD60076D915 /* WSChangeGenderViewController.m in Sources */,
 				6FEE02361C4A053B000DC27A /* WSNetworkingResponseObject.m in Sources */,
+				6FD6F4301C59313600075044 /* WSUserAccount.m in Sources */,
 				6F1A7FD01BB64ED800A60911 /* UIViewController+WSToast.m in Sources */,
+				6FD6F4351C59354300075044 /* MCCoderUtil.m in Sources */,
 				3A1A3C661C4F32E4003E33F5 /* EMSearchBar.m in Sources */,
 				3A1A3C391C4F32E4003E33F5 /* CallViewController.m in Sources */,
 				3A1A3C6A1C4F32E4003E33F5 /* EMChooseViewController.m in Sources */,

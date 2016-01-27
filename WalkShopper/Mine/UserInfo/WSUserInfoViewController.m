@@ -13,6 +13,7 @@
 #import "WSImageCropperViewController.h"
 #import "WSChangeNickNameViewController.h"
 #import "WSChangeGenderViewController.h"
+#import "WSUserAccount.h"
 
 NSString * const WSUserChangeNickNameNotification = @"WSUserChangeNickNameNotification";
 NSString * const WSUserChangeHeadImageNotification = @"WSUserChangeHeadImageNotification";
@@ -59,13 +60,33 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
     WSUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:self.identifierArray[indexPath.section][indexPath.row] forIndexPath:indexPath];
     
     cell.delegate = self;
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    } else if (indexPath.section == 2) {
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
+    
+    WSUserAccount *account = [WSUserSession sharedSession].userAccount;
+    
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            ((WSUserInfoUsernameCell *)cell).usernameLabel.text = account.username;
+        } else if (indexPath.row == 1) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            ((WSUserInfoHeadImageCell *)cell).headImageView = nil;
+        } else if (indexPath.row == 2) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            ((WSUserInfoNickNameCell *)cell).nicknameLabel.text = account.nickname;
+        } else if (indexPath.row == 3) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            ((WSUserInfoGenderCell *)cell).genderLabel.text = account.gender;
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            ((WSUserInfoCompanyNameCell *)cell).companyNameLabel.text = account.company;
+        } else if (indexPath.row == 1) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            ((WSUserInfoCompanyVerificationCell *)cell).companyVerificationLabel.text = account.company;
+        }
     } else {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
     }
     
     return cell;

@@ -34,6 +34,7 @@
 #import "UIColor+WSColor.h"
 #import "WSTableViewCell.h"
 #import "RKDropdownAlert.h"
+#import "MCCoderUtil.h"
 
 #endif
 #endif /* WSPrefixHeader_pch */

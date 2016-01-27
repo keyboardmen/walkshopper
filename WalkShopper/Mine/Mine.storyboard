@@ -215,23 +215,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRg-q0-foo">
-                                                    <rect key="frame" x="200" y="8" width="200" height="40"/>
-                                                    <color key="backgroundColor" red="0.94901960780000005" green="0.37647058820000001" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="JJc-AH-Fv6"/>
-                                                        <constraint firstAttribute="height" constant="40" id="fbb-GY-2w1"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="55.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="退出登录">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="MRg-q0-foo" firstAttribute="centerY" secondItem="iSE-tu-059" secondAttribute="centerY" id="CTX-QI-flq"/>
-                                                <constraint firstItem="MRg-q0-foo" firstAttribute="centerX" secondItem="iSE-tu-059" secondAttribute="centerX" id="Ie0-hT-L7L"/>
+                                                <constraint firstItem="MRg-q0-foo" firstAttribute="leading" secondItem="iSE-tu-059" secondAttribute="leading" id="ASe-GC-Tz6"/>
+                                                <constraint firstAttribute="bottom" secondItem="MRg-q0-foo" secondAttribute="bottom" id="gLH-FC-5SG"/>
+                                                <constraint firstAttribute="top" secondItem="MRg-q0-foo" secondAttribute="top" id="id4-Nx-QNF"/>
+                                                <constraint firstAttribute="trailing" secondItem="MRg-q0-foo" secondAttribute="trailing" id="nvx-dW-4st"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="logoutBtn" destination="MRg-q0-foo" id="jTl-n7-A4I"/>
                                         </connections>
