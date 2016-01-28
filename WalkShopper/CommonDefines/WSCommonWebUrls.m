@@ -8,7 +8,7 @@
 
 #import "WSCommonWebUrls.h"
 
-static NSString * const domain = @"http://115.28.228.41";
+static NSString * const domain = @"http://115.28.228.41/project/shop_service/basic/web/index.php?r=api";
 
 @implementation WSCommonWebUrls
 
@@ -27,26 +27,25 @@ static NSString * const domain = @"http://115.28.228.41";
 
 - (NSString *)registerUrl
 {
-    NSString *path = @"project/shop_service/basic/web/index.php?r=api/account/register";
-    NSString *url = [NSString stringWithFormat:@"%@/%@", domain, path];
+    NSString *url = [NSString stringWithFormat:@"%@/account/register", domain];
     return url;
 }
 
 - (NSString *)loginUrl
 {
-    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/login", domain];
+    NSString *url = [NSString stringWithFormat:@"%@/account/login", domain];
     return url;
 }
 
 - (NSString *)autoLoginUrl
 {
-    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/autologin", domain];
+    NSString *url = [NSString stringWithFormat:@"%@/account/autologin", domain];
     return url;
 }
 
 - (NSString *)logoutUrl
 {
-    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/logout", domain];
+    NSString *url = [NSString stringWithFormat:@"%@/account/logout", domain];
     return url;
 }
 
@@ -54,13 +53,13 @@ static NSString * const domain = @"http://115.28.228.41";
 
 - (NSString *)userInfoUrl
 {
-    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/changeUserInfo", domain];
+    NSString *url = [NSString stringWithFormat:@"%@/account/changeuserinfo", domain];
     return url;
 }
 
 - (NSString *)userAvatarImageUrl
 {
-    NSString *url = [NSString stringWithFormat:@"%@/project/shop_service/basic/web/index.php?r=api/account/autologin", domain];
+    NSString *url = [NSString stringWithFormat:@"%@/account/uploadheadimg", domain];
     return url;
 }
 

@@ -135,7 +135,7 @@ NSString * const WSUserSessionLoginStatusChangeNotification = @"WSUserSessionLog
     [self saveLoginToken:loginToken];
     [WSChatRegister autoRegister:username];
     
-    NSDictionary *userAccount = [[responseObject.ret objectForKey:@"userInfo"] firstObject];
+    NSDictionary *userAccount = [responseObject.ret objectForKey:@"userInfo"];
     if (userAccount) {
         self.userAccount = [[WSUserAccount alloc] initWithJson:userAccount];
         [self.userAccount changeUsername:username];

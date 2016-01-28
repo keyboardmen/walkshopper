@@ -14,6 +14,7 @@
 #import "WSChangeNickNameViewController.h"
 #import "WSChangeGenderViewController.h"
 #import "WSUserAccount.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 NSString * const WSUserChangeNickNameNotification = @"WSUserChangeNickNameNotification";
 NSString * const WSUserChangeHeadImageNotification = @"WSUserChangeHeadImageNotification";
@@ -24,6 +25,7 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSArray *identifierArray;
+@property (strong, nonatomic) NSArray *heightArray;
 
 @end
 
@@ -33,6 +35,7 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
     [super viewDidLoad];
     
     self.identifierArray = @[@[@"Username Cell", @"Head Image Cell", @"Nickname Cell", @"Gender Cell"], @[@"Company Cell", @"Company Verification Cell"], @[@"Logout Cell"]];
+    self.heightArray = @[@[@"44", @"56", @"44", @"44"], @[@"44", @"44"], @[@"44"]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -55,6 +58,11 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
     return CGFLOAT_MIN;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.heightArray[indexPath.section][indexPath.row] floatValue];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WSUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:self.identifierArray[indexPath.section][indexPath.row] forIndexPath:indexPath];
@@ -69,13 +77,25 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
             ((WSUserInfoUsernameCell *)cell).usernameLabel.text = account.username;
         } else if (indexPath.row == 1) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            ((WSUserInfoHeadImageCell *)cell).headImageView = nil;
+            WSUserInfoHeadImageCell *localCell  = (WSUserInfoHeadImageCell *)cell;
+            if (account.avatarImageThumbnailsUrl.length > 0) {
+                [localCell.headImageView sd_setImageWithURL:[NSURL URLWithString:account.avatarImageThumbnailsUrl] placeholderImage:[UIImage imageNamed:@"defaultAvatar"]];
+            } else {
+                localCell.headImageView.image = [UIImage imageNamed:@"defaultAvatar"];
+            }
         } else if (indexPath.row == 2) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             ((WSUserInfoNickNameCell *)cell).nicknameLabel.text = account.nickname;
         } else if (indexPath.row == 3) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            ((WSUserInfoGenderCell *)cell).genderLabel.text = account.gender;
+            if ([account.gender isEqualToString:@"m"]) {
+                ((WSUserInfoGenderCell *)cell).genderLabel.text = @"男";
+            } else if ([account.gender isEqualToString:@"f"]) {
+                ((WSUserInfoGenderCell *)cell).genderLabel.text = @"女";
+            } else {
+                ((WSUserInfoGenderCell *)cell).genderLabel.text = @"未知";
+            }
+            
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
@@ -83,7 +103,11 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
             ((WSUserInfoCompanyNameCell *)cell).companyNameLabel.text = account.company;
         } else if (indexPath.row == 1) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            ((WSUserInfoCompanyVerificationCell *)cell).companyVerificationLabel.text = account.company;
+            if (account.companyVerification) {
+                ((WSUserInfoCompanyVerificationCell *)cell).companyVerificationLabel.text = @"已认证";
+            } else {
+                ((WSUserInfoCompanyVerificationCell *)cell).companyVerificationLabel.text = @"未认证";
+            }
         }
     } else {
         
@@ -171,8 +195,9 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
 
 - (void)changeNickNameSuccessfully:(NSString *)nickName
 {
-    
-    
+    [[WSUserSession sharedSession].userAccount changeNickname:nickName];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     [[NSNotificationCenter defaultCenter] postNotificationName:WSUserChangeNickNameNotification object:nil];
 }
 
@@ -180,7 +205,10 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
 
 - (void)changeGenderSuccessfully:(NSString *)gender
 {
-    
+    [[WSUserSession sharedSession].userAccount changeGender:gender];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [[NSNotificationCenter defaultCenter] postNotificationName:WSUserChangeGenderNotification object:nil];
 }
 
 #pragma mark - WSUserInfoCellDelegate
