@@ -35,6 +35,8 @@
 #import "WSTableViewCell.h"
 #import "RKDropdownAlert.h"
 #import "MCCoderUtil.h"
+#import "LGAlertView.h"
+#import "UIViewController+WSHook.h"
 
 #endif
 #endif /* WSPrefixHeader_pch */

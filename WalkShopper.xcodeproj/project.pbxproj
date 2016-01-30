@@ -279,6 +279,9 @@
 		6F1A7FDC1BB7007C00A60911 /* WSNetworkingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FDB1BB7007C00A60911 /* WSNetworkingUtilities.m */; };
 		6F1A7FDF1BB7025800A60911 /* NSData+Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */; };
 		6F4760B51C4BCA2E00F466B6 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F4760B41C4BCA2E00F466B6 /* Mine.storyboard */; };
+		6F47C0791C5C9259001C94EC /* WSProductLabelSelectorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F47C0781C5C9259001C94EC /* WSProductLabelSelectorCell.m */; };
+		6F47C07C1C5C935E001C94EC /* WSProductLabelSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F47C07B1C5C935E001C94EC /* WSProductLabelSelectorViewController.m */; };
+		6F47C07F1C5CBD83001C94EC /* WSTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F47C07E1C5CBD83001C94EC /* WSTextFieldViewController.m */; };
 		6F6FE4BD1BB1E04600F39F60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */; };
 		6F6FE4BF1BB1E0C600F39F60 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */; };
 		6F6FE4C11BB1E0DC00F39F60 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */; };
@@ -816,6 +819,12 @@
 		6F1A7FDD1BB7025800A60911 /* NSData+Crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Crypt.h"; sourceTree = "<group>"; };
 		6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Crypt.m"; sourceTree = "<group>"; };
 		6F4760B41C4BCA2E00F466B6 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		6F47C0771C5C9259001C94EC /* WSProductLabelSelectorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProductLabelSelectorCell.h; sourceTree = "<group>"; };
+		6F47C0781C5C9259001C94EC /* WSProductLabelSelectorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProductLabelSelectorCell.m; sourceTree = "<group>"; };
+		6F47C07A1C5C935E001C94EC /* WSProductLabelSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProductLabelSelectorViewController.h; sourceTree = "<group>"; };
+		6F47C07B1C5C935E001C94EC /* WSProductLabelSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProductLabelSelectorViewController.m; sourceTree = "<group>"; };
+		6F47C07D1C5CBD83001C94EC /* WSTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTextFieldViewController.h; sourceTree = "<group>"; };
+		6F47C07E1C5CBD83001C94EC /* WSTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTextFieldViewController.m; sourceTree = "<group>"; };
 		6F6FE4BC1BB1E04600F39F60 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6F6FE4BE1BB1E0C600F39F60 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		6F6FE4C01BB1E0DC00F39F60 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -2262,6 +2271,8 @@
 				6FCF9A671C2EA2030055796F /* LDPMPopoverMenu */,
 				6FE4267A1C55183600A4CE6B /* WSTableViewCell.h */,
 				6FE4267B1C55183600A4CE6B /* WSTableViewCell.m */,
+				6F47C07D1C5CBD83001C94EC /* WSTextFieldViewController.h */,
+				6F47C07E1C5CBD83001C94EC /* WSTextFieldViewController.m */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -2321,6 +2332,10 @@
 			children = (
 				6FE426681C54C74500A4CE6B /* WSSellerProductInfoViewController.h */,
 				6FE426691C54C74500A4CE6B /* WSSellerProductInfoViewController.m */,
+				6F47C07A1C5C935E001C94EC /* WSProductLabelSelectorViewController.h */,
+				6F47C07B1C5C935E001C94EC /* WSProductLabelSelectorViewController.m */,
+				6F47C0771C5C9259001C94EC /* WSProductLabelSelectorCell.h */,
+				6F47C0781C5C9259001C94EC /* WSProductLabelSelectorCell.m */,
 				6FE4266B1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.h */,
 				6FE4266C1C54C7A400A4CE6B /* WSSellerProductInfoTitleCell.m */,
 				6FE4266E1C54C7E800A4CE6B /* WSSellerProductInfoLabelCell.h */,
@@ -2895,6 +2910,7 @@
 				3A1A3C291C4F32E4003E33F5 /* wav.mm in Sources */,
 				3A1A3C6B1C4F32E4003E33F5 /* EMNavigationController.m in Sources */,
 				3A1A3C251C4F32E4003E33F5 /* THProgressView.m in Sources */,
+				6F47C07C1C5C935E001C94EC /* WSProductLabelSelectorViewController.m in Sources */,
 				3A1A3C5F1C4F32E4003E33F5 /* BlackListViewController.m in Sources */,
 				6FC51FE31C4179EB00397633 /* WSCommonWebUrls.m in Sources */,
 				3A1A3C691C4F32E4003E33F5 /* BaseViewController.m in Sources */,
@@ -2919,6 +2935,7 @@
 				3A1A3C611C4F32E4003E33F5 /* EditNicknameViewController.m in Sources */,
 				3A1A3C3A1C4F32E4003E33F5 /* ConversationListController.m in Sources */,
 				6F9506CF1C4C11D800389AF6 /* WSUserInfoCell.m in Sources */,
+				6F47C07F1C5CBD83001C94EC /* WSTextFieldViewController.m in Sources */,
 				3A1A3C561C4F32E4003E33F5 /* LoginViewController.m in Sources */,
 				3A1A3C671C4F32E4003E33F5 /* EMTextView.m in Sources */,
 				3A1A3C411C4F32E4003E33F5 /* CreateGroupViewController.m in Sources */,
@@ -2933,6 +2950,7 @@
 				3A1A3C4B1C4F32E4003E33F5 /* ContactListSelectViewController.m in Sources */,
 				3A1A3C1C1C4F32E4003E33F5 /* EMAlertView.m in Sources */,
 				3A1A3C651C4F32E4003E33F5 /* BaseTableViewCell.m in Sources */,
+				6F47C0791C5C9259001C94EC /* WSProductLabelSelectorCell.m in Sources */,
 				6FE426791C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.m in Sources */,
 				3A1A3C511C4F32E4003E33F5 /* RealtimeSearchUtil.m in Sources */,
 				3A1A3C5A1C4F32E4003E33F5 /* EMRotbotChatViewCell.m in Sources */,

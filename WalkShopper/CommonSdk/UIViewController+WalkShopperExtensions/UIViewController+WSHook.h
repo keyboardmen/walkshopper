@@ -10,7 +10,10 @@
 
 @interface UIViewController (WSHook)
 
+@property (nonatomic,strong) UIGestureRecognizer *ws_autoResignGesture;
+@property (nonatomic) BOOL enableBackGroundTapToResignFirstResponder;
 @property (nonatomic,assign) BOOL ws_enableViewLifeCircleHook;
+
 - (void)ws_viewDidLoad;
 
 @end

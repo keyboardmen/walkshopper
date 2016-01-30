@@ -162,7 +162,10 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
         NSString *loginToken = [WSUserSession sharedSession].loginToken;
         NSString *url = [[WSCommonWebUrls sharedInstance] userAvatarImageUrl];
         
-        NSDictionary *param = @{@"username":username, @"loginToken":loginToken};
+        NSMutableDictionary *param = [NSMutableDictionary new];
+        [param addEntriesFromDictionary:@{@"username":username, @"loginToken":loginToken}];
+        [param addEntriesFromDictionary:[[WSNetworkingUtilities sharedInstance] commonHttpParameters]];
+        
         [weakSelf startActivity:@"正在上传头像..."];
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         [manager POST:url parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {

@@ -7,6 +7,7 @@
 //
 
 #import "WSSellerProductInfoViewController.h"
+#import "WSProductLabelSelectorViewController.h"
 
 @interface WSSellerProductInfoViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -53,7 +54,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (indexPath.row == 1) {
+        UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSProductLabelSelectorViewController class])];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end
