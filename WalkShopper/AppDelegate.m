@@ -34,8 +34,8 @@
     [UIViewController configDefaultInterfaceOrientations];
     [WSViewControllerConfiguration hookViewLifeCircle];
     [SMSSDK registerApp:@"9cfb8e7d0120" withSecret:@"c3d1ff0fd893b2f14ded0cba9876a18d"];
-#if !(TARGET_IPHONE_SIMULATOR)
-    [self registerRemoteNotification];
+#if !(TARGET_OS_SIMULATOR)
+    [self appRegisterRemoteNotification];
 #endif
     [[WSAppGeneralConfiguration sharedInstance] registerAppInServer];
     
@@ -46,7 +46,7 @@
 
 #pragma mark - Register remote notification
 
-- (void)registerRemoteNotification
+- (void)appRegisterRemoteNotification
 {
     UIApplication *application = [UIApplication sharedApplication];
     
