@@ -172,8 +172,9 @@ NSString * const WSUserChangeGenderNotification = @"WSUserChangeGenderNotificati
             UIImage *newImage = [UIImage compressImage:editedImage constraintSize:MaxAvatarUploadSize];
             NSData *imageData = UIImageJPEGRepresentation(newImage, MaxAvatarUploadQuality);
             NSString *name = @"avatarImageFile";
+            NSString *fileName = [NSString stringWithFormat:@"%@.jpg", name];
             if (imageData) {
-                [formData appendPartWithFileData:imageData name:name fileName:@"" mimeType:@"image/jpeg"];
+                [formData appendPartWithFileData:imageData name:name fileName:fileName mimeType:@"image/jpeg"];
             }
         } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
             [weakSelf stopActivity];

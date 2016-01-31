@@ -27,9 +27,16 @@ static NSString *kAddItemIdentifier = @"Add Item";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    [self initDataSource];
+    [self initNavigationBar];
+}
+
+- (void)initDataSource
+{
     self.dataSource = [NSMutableArray new];
     
-    NSArray *text = @[@"电子产品",@"iPhone",@"MacBook",@"iPad",@"化妆品",@"名牌包包",@"手机",@"香奈儿",@"Gucci",@"Dior",@"香水",@"面膜",@"保养品",@"首饰"];
+    NSArray *text = @[@"电子产品",@"iPhone",@"MacBook",@"iPad",@"化妆品",@"名牌包包",@"手机",@"香奈儿",@"Gucci",@"Salvatore Ferragamo",@"香水",@"面膜",@"保养品",@"首饰"];
     for (int i = 0; i < 2; i++) {
         NSMutableArray *tmp = [NSMutableArray new];
         if (i == 0) {
@@ -41,6 +48,17 @@ static NSString *kAddItemIdentifier = @"Add Item";
         }
         [self.dataSource addObject:tmp];
     }
+}
+
+- (void)initNavigationBar
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 40, 40);
+    [button setTitle:@"保存" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(saveLabels:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -166,6 +184,20 @@ static NSString *kAddItemIdentifier = @"Add Item";
         }];
     } else {
         [collectionView moveItemAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
+    }
+}
+
+#pragma mark - Handle actions
+
+- (void)saveLabels:(id)sender
+{
+    NSArray *array = [self.dataSource firstObject];
+    if (array.count == 0) {
+        return;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(showProductLabels:)]) {
+        [self.delegate showProductLabels:array];
     }
 }
 

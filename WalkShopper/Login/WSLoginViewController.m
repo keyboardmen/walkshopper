@@ -70,9 +70,6 @@
             }
         } else {
             [weakSelf showToast:error.localizedDescription];
-            if ([weakSelf.loginDelegate respondsToSelector:@selector(loginController:completeWithResult:)]) {
-                [weakSelf.loginDelegate loginController:weakSelf completeWithResult:NO];
-            }
         }
     }];
 }

@@ -9,7 +9,7 @@
 #import "WSSellerProductInfoViewController.h"
 #import "WSProductLabelSelectorViewController.h"
 
-@interface WSSellerProductInfoViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface WSSellerProductInfoViewController () <UITableViewDataSource, UITableViewDelegate, WSProductLabelSelectorViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *identifierArray;
@@ -58,6 +58,13 @@
         UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSProductLabelSelectorViewController class])];
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+#pragma mark - WSProductLabelSelectorViewControllerDelegate
+
+- (void)showProductLabels:(NSArray *)labels
+{
+    
 }
 
 @end

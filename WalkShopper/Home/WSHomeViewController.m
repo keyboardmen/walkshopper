@@ -85,18 +85,22 @@ static NSString * const kProductCellIdentifier = @"Home Product Cell";
 
 - (void)menuTapped:(LDPMPopoverMenuItem *)sender
 {
-    for (int i = 0; i < self.menuItemArray.count; i++) {
-        LDPMPopoverMenuItem *item = self.menuItemArray[i];
-        if (sender == item) {
-            if (i == 0) {
-                UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellerProductInfoViewController class])];
-                [self.navigationController pushViewController:vc animated:YES];
-            } else if (i == 1) {
-                UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellerProductInfoViewController class])];
-                [self.navigationController pushViewController:vc animated:YES];
+    [WSLoginAction loginWithSuccessBlock:^{
+        for (int i = 0; i < self.menuItemArray.count; i++) {
+            LDPMPopoverMenuItem *item = self.menuItemArray[i];
+            if (sender == item) {
+                if (i == 0) {
+                    UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellerProductInfoViewController class])];
+                    [self.navigationController pushViewController:vc animated:YES];
+                } else if (i == 1) {
+                    UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellerProductInfoViewController class])];
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
             }
         }
-    }
+    } andFailureBlock:^{
+        
+    }];
 }
 
 - (NSMutableArray *)menuItemArray

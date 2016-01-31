@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WSProductLabelSelectorViewControllerDelegate;
+
 @interface WSProductLabelSelectorViewController : UIViewController
+
+@property (weak, nonatomic) id<WSProductLabelSelectorViewControllerDelegate>delegate;
+
+@end
+
+
+@protocol WSProductLabelSelectorViewControllerDelegate <NSObject>
+
+- (void)showProductLabels:(NSArray *)labels;
 
 @end
