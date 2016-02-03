@@ -68,6 +68,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"kDeviceToken"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+    [[EaseMob sharedInstance] application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo

@@ -10,6 +10,9 @@
 #define WalkShopper_Bridging_Header_h
 
 #import "EaseMob.h"
-
+#import "WSMineHeaderView.h"
+#import "WSUserInfoViewController.h"
+#import "WSUserSession.h"
+#import "WSLoginAction.h"
 
 #endif /* WalkShopper_Bridging_Header_h */

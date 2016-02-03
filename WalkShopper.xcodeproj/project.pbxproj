@@ -270,6 +270,9 @@
 		3A1A3D291C4F3473003E33F5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1A3D281C4F3473003E33F5 /* Social.framework */; };
 		3A1A3D2B1C4F3488003E33F5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1A3D2A1C4F3488003E33F5 /* AddressBook.framework */; };
 		3A1A3D341C4F3B79003E33F5 /* libEaseUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1A3D321C4F38DB003E33F5 /* libEaseUI.a */; };
+		3A3F7C361C61A0C900F96D99 /* WSMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F7C351C61A0C900F96D99 /* WSMineViewController.swift */; };
+		3A3F7C391C61A79400F96D99 /* SSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F7C381C61A79400F96D99 /* SSButton.swift */; };
+		3A3F7C3B1C61AD4B00F96D99 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F7C3A1C61AD4B00F96D99 /* Extension.swift */; };
 		6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FC51BB643DF00A60911 /* UIViewController+WSOrientations.m */; };
 		6F1A7FC91BB6475E00A60911 /* UIViewController+WSActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FC81BB6475E00A60911 /* UIViewController+WSActivity.m */; };
 		6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1A7FCC1BB64B9B00A60911 /* UIDevice+Extensions.m */; };
@@ -347,7 +350,6 @@
 		CD872C401BB29B4100F74DD7 /* WSUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C3F1BB29B4100F74DD7 /* WSUserSession.m */; };
 		CD872C431BB2A1E200F74DD7 /* WSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C421BB2A1E200F74DD7 /* WSLoginViewController.m */; };
 		CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C451BB2A20E00F74DD7 /* WSHomeViewController.m */; };
-		CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD872C481BB2A22700F74DD7 /* WSMineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -802,6 +804,9 @@
 		3A1A3D2E1C4F375C003E33F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A1A3D301C4F3763003E33F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3A1A3D321C4F38DB003E33F5 /* libEaseUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEaseUI.a; path = Pods/EaseUI/EaseUI/lib/libEaseUI.a; sourceTree = "<group>"; };
+		3A3F7C351C61A0C900F96D99 /* WSMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSMineViewController.swift; sourceTree = "<group>"; };
+		3A3F7C381C61A79400F96D99 /* SSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSButton.swift; sourceTree = "<group>"; };
+		3A3F7C3A1C61AD4B00F96D99 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6F1A7FC41BB643DF00A60911 /* UIViewController+WSOrientations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSOrientations.h"; sourceTree = "<group>"; };
 		6F1A7FC51BB643DF00A60911 /* UIViewController+WSOrientations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WSOrientations.m"; sourceTree = "<group>"; };
 		6F1A7FC71BB6475E00A60911 /* UIViewController+WSActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WSActivity.h"; sourceTree = "<group>"; };
@@ -941,8 +946,6 @@
 		CD872C421BB2A1E200F74DD7 /* WSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoginViewController.m; sourceTree = "<group>"; };
 		CD872C441BB2A20E00F74DD7 /* WSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSHomeViewController.h; sourceTree = "<group>"; };
 		CD872C451BB2A20E00F74DD7 /* WSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSHomeViewController.m; sourceTree = "<group>"; };
-		CD872C471BB2A22700F74DD7 /* WSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMineViewController.h; sourceTree = "<group>"; };
-		CD872C481BB2A22700F74DD7 /* WSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2131,6 +2134,8 @@
 		6F6FE4B41BB1DF8100F39F60 /* CommonSdk */ = {
 			isa = PBXGroup;
 			children = (
+				3A3F7C3A1C61AD4B00F96D99 /* Extension.swift */,
+				3A3F7C381C61A79400F96D99 /* SSButton.swift */,
 				6FBEF5C91C4D645C004D1609 /* ImageHelper */,
 				6FC51FDB1C4151BF00397633 /* NSString+Extensions */,
 				6FCF9A6F1C2EA78A0055796F /* UIImage+Extensions */,
@@ -2429,11 +2434,10 @@
 			isa = PBXGroup;
 			children = (
 				6F9506C91C4C116B00389AF6 /* UserInfo */,
-				CD872C471BB2A22700F74DD7 /* WSMineViewController.h */,
-				CD872C481BB2A22700F74DD7 /* WSMineViewController.m */,
 				6FEE02371C4BC535000DC27A /* WSMineHeaderView.h */,
 				6FEE02381C4BC535000DC27A /* WSMineHeaderView.m */,
 				6F4760B41C4BCA2E00F466B6 /* Mine.storyboard */,
+				3A3F7C351C61A0C900F96D99 /* WSMineViewController.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -2535,7 +2539,7 @@
 				TargetAttributes = {
 					6FA69A0F1BB1C74700E39B04 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 7NY77NZ953;
+						DevelopmentTeam = A9VAJDN54X;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -2865,6 +2869,7 @@
 				6F80A6F31C1DEA930072F4E0 /* UIViewController+WSUtilities.m in Sources */,
 				6F1A7FD41BB6FCE900A60911 /* WSAppGeneralConfiguration.m in Sources */,
 				3A1A3C3E1C4F32E4003E33F5 /* ChatGroupDetailViewController.m in Sources */,
+				3A3F7C361C61A0C900F96D99 /* WSMineViewController.swift in Sources */,
 				6F9506CC1C4C116B00389AF6 /* WSUserInfoViewController.m in Sources */,
 				CD872C371BB286CA00F74DD7 /* WSMainTabBarController.m in Sources */,
 				6FCF9A651C2E99060055796F /* WSSelectCountryCell.m in Sources */,
@@ -2884,6 +2889,7 @@
 				3A1A3C4F1C4F32E4003E33F5 /* ApplyFriendCell.m in Sources */,
 				6FEE02391C4BC535000DC27A /* WSMineHeaderView.m in Sources */,
 				6FCF9A721C2EA78A0055796F /* UIImage+Additions.m in Sources */,
+				3A3F7C3B1C61AD4B00F96D99 /* Extension.swift in Sources */,
 				6FC51FDE1C4151DC00397633 /* NSString+Additions.m in Sources */,
 				6FCF9A7E1C3D7A600055796F /* WSSetPasswordViewController.m in Sources */,
 				6FE426761C54C85800A4CE6B /* WSSellerProductInfoDescriptionCell.m in Sources */,
@@ -2949,6 +2955,7 @@
 				3A1A3C521C4F32E4003E33F5 /* InvitationManager.m in Sources */,
 				3A1A3C461C4F32E4003E33F5 /* PublicGroupDetailViewController.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
+				3A3F7C391C61A79400F96D99 /* SSButton.swift in Sources */,
 				6F7300951C515DBA0076D915 /* WSChangeNickNameViewController.m in Sources */,
 				3A1A3D221C4F32E4003E33F5 /* WSChatRegister.swift in Sources */,
 				3A1A3C4B1C4F32E4003E33F5 /* ContactListSelectViewController.m in Sources */,
@@ -2961,7 +2968,6 @@
 				3A1A3C501C4F32E4003E33F5 /* ApplyViewController.m in Sources */,
 				3A1A3C441C4F32E4003E33F5 /* GroupSettingViewController.m in Sources */,
 				6FE4267F1C551EA400A4CE6B /* UIColor+WSColor.m in Sources */,
-				CD872C491BB2A22700F74DD7 /* WSMineViewController.m in Sources */,
 				6F9D1C151BB322B3001F3B23 /* WSVerifyPhoneNumberViewController.m in Sources */,
 				3A1A3C3F1C4F32E4003E33F5 /* ContactSelectionViewController.m in Sources */,
 				3A1A3C2F1C4F32E4003E33F5 /* NSString+Valid.m in Sources */,
@@ -3229,9 +3235,9 @@
 					"-weak_framework",
 					"\"Photos\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaowu.walkshopper;
+				PRODUCT_BUNDLE_IDENTIFIER = WS.WalkShopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8d36361a-6e23-4155-98fb-21018aff1fd2";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WalkShopper/WalkShopper-Bridging-Header.h";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -3326,9 +3332,9 @@
 					"-weak_framework",
 					"\"Photos\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaowu.walkshopper;
+				PRODUCT_BUNDLE_IDENTIFIER = WS.WalkShopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8d36361a-6e23-4155-98fb-21018aff1fd2";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WalkShopper/WalkShopper-Bridging-Header.h";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
