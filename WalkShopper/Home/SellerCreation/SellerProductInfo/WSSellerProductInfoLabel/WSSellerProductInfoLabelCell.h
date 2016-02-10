@@ -10,4 +10,9 @@
 
 @interface WSSellerProductInfoLabelCell : WSTableViewCell
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
++ (CGFloat)cellHeight;
+- (void)configureProductInfoLabelCell:(NSArray *)data;
+
 @end

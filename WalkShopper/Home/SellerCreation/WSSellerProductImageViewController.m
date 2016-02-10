@@ -7,7 +7,14 @@
 //
 
 #import "WSSellerProductImageViewController.h"
+#import "WSSellerPublishInfo.h"
 
 @implementation WSSellerProductImageViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+}
 
 @end

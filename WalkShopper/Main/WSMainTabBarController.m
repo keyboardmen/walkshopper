@@ -7,7 +7,6 @@
 //
 
 #import "WSMainTabBarController.h"
-#import "WSMineViewController.h"
 #import "WSLoginViewController.h"
 
 @interface WSMainTabBarController () <UITabBarControllerDelegate>

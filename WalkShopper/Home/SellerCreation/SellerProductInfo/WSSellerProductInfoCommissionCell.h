@@ -10,4 +10,8 @@
 
 @interface WSSellerProductInfoCommissionCell : WSTableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
++ (CGFloat)cellHeight;
+
 @end

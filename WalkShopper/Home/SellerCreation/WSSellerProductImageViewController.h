@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class WSSellerPublishInfo;
+
 @interface WSSellerProductImageViewController : UIViewController
+
+@property (strong, nonatomic) WSSellerPublishInfo *publishInfo;
 
 @end

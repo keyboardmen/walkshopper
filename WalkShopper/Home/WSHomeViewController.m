@@ -91,9 +91,11 @@ static NSString * const kProductCellIdentifier = @"Home Product Cell";
             if (sender == item) {
                 if (i == 0) {
                     UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellerProductInfoViewController class])];
+                    vc.hidesBottomBarWhenPushed = YES;
                     [self.navigationController pushViewController:vc animated:YES];
                 } else if (i == 1) {
                     UIViewController *vc = [UIViewController ws_initViewControllerWithStoryBoard:@"Home" withIdentifier:NSStringFromClass([WSSellerProductInfoViewController class])];
+                    vc.hidesBottomBarWhenPushed = YES;
                     [self.navigationController pushViewController:vc animated:YES];
                 }
             }

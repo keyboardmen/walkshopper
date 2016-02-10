@@ -10,4 +10,9 @@
 
 @implementation WSSellerProductInfoTitleCell
 
++ (CGFloat)cellHeight
+{
+    return 60.0f;
+}
+
 @end

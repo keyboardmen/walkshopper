@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WSSellerProductInfoNextStepDelegate;
+
 @interface WSSellerProductInfoNextStepCell : WSTableViewCell
 
 @property (weak, nonatomic) IBOutlet UIButton *nextStepBtn;
+@property (weak, nonatomic) id<WSSellerProductInfoNextStepDelegate>delegate;
+
++ (CGFloat)cellHeight;
+
+@end
+
+
+@protocol WSSellerProductInfoNextStepDelegate <NSObject>
+
+- (void)showNextViewController;
 
 @end

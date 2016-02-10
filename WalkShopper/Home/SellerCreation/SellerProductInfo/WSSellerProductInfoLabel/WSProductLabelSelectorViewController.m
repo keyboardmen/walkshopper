@@ -28,22 +28,33 @@ static NSString *kAddItemIdentifier = @"Add Item";
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
-    [self initDataSource];
     [self initNavigationBar];
 }
 
-- (void)initDataSource
+- (void)initDataSource:(NSArray *)selectedLabels
 {
     self.dataSource = [NSMutableArray new];
     
-    NSArray *text = @[@"电子产品",@"iPhone",@"MacBook",@"iPad",@"化妆品",@"名牌包包",@"手机",@"香奈儿",@"Gucci",@"Salvatore Ferragamo",@"香水",@"面膜",@"保养品",@"首饰"];
+    NSArray *fullLabels = @[@"电子产品",@"iPhone",@"MacBook",@"iPad",@"化妆品",@"名牌包包",@"手机",@"香奈儿",@"Gucci",@"Salvatore Ferragamo",@"香水",@"面膜",@"保养品",@"首饰"];
+    //section分为选中和未选中
     for (int i = 0; i < 2; i++) {
         NSMutableArray *tmp = [NSMutableArray new];
         if (i == 0) {
-            
+            if (selectedLabels.count > 0) {
+                tmp = [NSMutableArray arrayWithArray:selectedLabels];
+            }
         } else {
-            for (int j = 0; j < text.count; j++) {
-                [tmp addObject:text[j]];
+            for (NSString *label in fullLabels) {
+                BOOL flag = YES;
+                for (NSString *selected in selectedLabels) {
+                    if ([label isEqualToString:selected]) {
+                        flag = NO;
+                        break;
+                    }
+                }
+                if (flag) {
+                    [tmp addObject:label];
+                }
             }
         }
         [self.dataSource addObject:tmp];
@@ -193,11 +204,14 @@ static NSString *kAddItemIdentifier = @"Add Item";
 {
     NSArray *array = [self.dataSource firstObject];
     if (array.count == 0) {
+        LGAlertView *alert = [LGAlertView alertViewWithTitle:@"请至少选择一个商品" message:nil style:LGAlertViewStyleAlert buttonTitles:nil cancelButtonTitle:@"确定" destructiveButtonTitle:nil];
+        [alert showAnimated:YES completionHandler:nil];
         return;
     }
     
     if ([self.delegate respondsToSelector:@selector(showProductLabels:)]) {
         [self.delegate showProductLabels:array];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

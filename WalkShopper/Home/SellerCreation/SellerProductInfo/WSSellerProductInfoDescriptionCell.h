@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
++ (CGFloat)cellHeight;
 
 @end

@@ -10,4 +10,16 @@
 
 @implementation WSSellerProductInfoCommissionCell
 
++ (CGFloat)cellHeight
+{
+    return 44.0f;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.textField.placeholder = @"请输入佣金，例如300或1%";
+    self.textField.font = [UIFont systemFontOfSize:14];
+}
+
 @end

@@ -13,6 +13,7 @@
 @interface WSProductLabelSelectorViewController : UIViewController
 
 @property (weak, nonatomic) id<WSProductLabelSelectorViewControllerDelegate>delegate;
+- (void)initDataSource:(NSArray *)selectedLabels;
 
 @end
 

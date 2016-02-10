@@ -10,4 +10,23 @@
 
 @implementation WSSellerProductInfoNextStepCell
 
++ (CGFloat)cellHeight
+{
+    return 60.0f;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self.nextStepBtn addTarget:self action:@selector(handleNextStepAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)handleNextStepAction:(id)sender
+{
+    if ([self.delegate respondsToSelector:@selector(showNextViewController)]) {
+        [self.delegate showNextViewController];
+    }
+}
+
+
 @end

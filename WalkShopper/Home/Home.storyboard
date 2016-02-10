@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Seller Product Info View Controller-->
@@ -27,7 +27,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="标题" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nba-Ue-2Kd">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入标题" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nba-Ue-2Kd">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -45,30 +45,93 @@
                                             <outlet property="textView" destination="nba-Ue-2Kd" id="RDz-w1-IFY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Product Label Cell" id="dCK-Sj-Ne9" customClass="WSSellerProductInfoLabelCell">
-                                        <rect key="frame" x="0.0" y="128" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Product Label Cell" rowHeight="100" id="dCK-Sj-Ne9" customClass="WSSellerProductInfoLabelCell">
+                                        <rect key="frame" x="0.0" y="128" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dCK-Sj-Ne9" id="aJK-7R-LG1">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dCt-gB-D5Y">
+                                                    <rect key="frame" x="0.0" y="6" width="600" height="87.5"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R0D-cj-BxR">
+                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Product Label Displayer" id="Yks-Vg-DsI" customClass="WSProductLabelDisplayerCell">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygq-ap-66Z">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="ygq-ap-66Z" secondAttribute="trailing" id="8ZS-gS-w3W"/>
+                                                                <constraint firstItem="ygq-ap-66Z" firstAttribute="leading" secondItem="Yks-Vg-DsI" secondAttribute="leading" id="d6n-eE-tBw"/>
+                                                                <constraint firstItem="ygq-ap-66Z" firstAttribute="top" secondItem="Yks-Vg-DsI" secondAttribute="top" id="g0e-zl-mzd"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ygq-ap-66Z" secondAttribute="bottom" id="xGA-e9-ByL"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="label" destination="ygq-ap-66Z" id="0oL-iB-NZ8"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dCt-gB-D5Y" firstAttribute="leading" secondItem="aJK-7R-LG1" secondAttribute="leading" id="RDR-DB-N54"/>
+                                                <constraint firstItem="dCt-gB-D5Y" firstAttribute="top" secondItem="aJK-7R-LG1" secondAttribute="top" constant="6" id="Rx9-ss-7gh"/>
+                                                <constraint firstAttribute="trailing" secondItem="dCt-gB-D5Y" secondAttribute="trailing" id="Xbx-dF-0Sz"/>
+                                                <constraint firstAttribute="bottom" secondItem="dCt-gB-D5Y" secondAttribute="bottom" constant="6" id="XpN-8o-OQG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="dCt-gB-D5Y" id="xcU-fu-shh"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Commission Cell" id="evd-0R-P0E" customClass="WSSellerProductInfoCommissionCell">
-                                        <rect key="frame" x="0.0" y="172" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="228" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evd-0R-P0E" id="Nct-xQ-zLS">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jiz-NW-NBk">
+                                                    <rect key="frame" x="0.0" y="7" width="600" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jiz-NW-NBk" firstAttribute="centerY" secondItem="Nct-xQ-zLS" secondAttribute="centerY" id="MPf-tR-6UL"/>
+                                                <constraint firstAttribute="trailing" secondItem="jiz-NW-NBk" secondAttribute="trailing" id="bGa-K0-ux7"/>
+                                                <constraint firstItem="jiz-NW-NBk" firstAttribute="leading" secondItem="Nct-xQ-zLS" secondAttribute="leading" id="lio-wx-40a"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="jiz-NW-NBk" id="Z07-ln-SYs"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Product Description Cell" rowHeight="100" id="YS8-dt-a1x" customClass="WSSellerProductInfoDescriptionCell">
-                                        <rect key="frame" x="0.0" y="216" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="272" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YS8-dt-a1x" id="RIt-dM-oBh">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="描述" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gaz-RX-bNz">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入描述" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gaz-RX-bNz">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -87,7 +150,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Next Step Cell" rowHeight="50" id="JE6-YZ-lVR" customClass="WSSellerProductInfoNextStepCell">
-                                        <rect key="frame" x="0.0" y="316" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="372" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JE6-YZ-lVR" id="b2d-tl-Hb6">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
