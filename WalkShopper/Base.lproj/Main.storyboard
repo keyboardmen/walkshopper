@@ -260,12 +260,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQ8-W2-k0K">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <connections>
-                                    <segue destination="niJ-Zb-cm5" kind="embed" id="sKM-cL-5ll"/>
-                                </connections>
-                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkV-XE-OwG" userLabel="Header View" customClass="WSMineHeaderView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="100"/>
                                 <subviews>
@@ -297,6 +291,12 @@
                                     <outlet property="nameLabel" destination="bU3-po-SLE" id="L2n-NW-25p"/>
                                 </connections>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQ8-W2-k0K">
+                                <rect key="frame" x="0.0" y="164" width="600" height="436"/>
+                                <connections>
+                                    <segue destination="niJ-Zb-cm5" kind="embed" id="sKM-cL-5ll"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -304,10 +304,16 @@
                             <constraint firstAttribute="bottom" secondItem="oQ8-W2-k0K" secondAttribute="bottom" id="Xsd-ya-YKW"/>
                             <constraint firstItem="NkV-XE-OwG" firstAttribute="width" secondItem="dbm-1Q-9ML" secondAttribute="width" id="orV-DU-yKp"/>
                             <constraint firstItem="oQ8-W2-k0K" firstAttribute="trailing" secondItem="NkV-XE-OwG" secondAttribute="trailing" id="pHT-kn-Dyv"/>
+                            <constraint firstItem="oQ8-W2-k0K" firstAttribute="top" secondItem="NkV-XE-OwG" secondAttribute="bottom" id="qf6-eu-LJs"/>
                             <constraint firstItem="oQ8-W2-k0K" firstAttribute="top" secondItem="iJE-h5-A7b" secondAttribute="bottom" id="tb1-7X-f8r"/>
                             <constraint firstItem="oQ8-W2-k0K" firstAttribute="leading" secondItem="NkV-XE-OwG" secondAttribute="leading" id="u8i-20-B12"/>
                             <constraint firstItem="NkV-XE-OwG" firstAttribute="leading" secondItem="dbm-1Q-9ML" secondAttribute="leading" id="wq6-O1-1it"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tb1-7X-f8r"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="N8I-qy-5rG">
@@ -347,7 +353,7 @@
             <objects>
                 <tableViewController id="niJ-Zb-cm5" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="8" sectionFooterHeight="8" id="LhC-Qg-Mqu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -515,7 +521,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Aeu-4a-C8n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PVq-AG-paJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
