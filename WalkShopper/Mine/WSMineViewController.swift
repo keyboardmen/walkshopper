@@ -19,6 +19,6 @@ class WSMineViewController: UIViewController, WSMineHeaderViewDelegate {
     //MARK: - header view delegate
     func showUserInfoViewController() {
         let userInfoVC = UIStoryboard(name: "Mine", bundle: nil).instantiateViewControllerWithIdentifier("WSUserInfoViewController")
-        self.navigationController?.pushViewController(userInfoVC, animated: true)
+        self.navigationController?.showViewController(userInfoVC, sender: nil)
     }
 }
