@@ -13,6 +13,13 @@
 #import "JLRoutes.h"
 
 
+NSString *const kJLRoutePatternKey = @"JLRoutePattern";
+NSString *const kJLRouteURLKey = @"JLRouteURL";
+NSString *const kJLRouteNamespaceKey = @"JLRouteNamespace";
+NSString *const kJLRouteWildcardComponentsKey = @"JLRouteWildcardComponents";
+NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalNamespace";
+
+
 static NSMutableDictionary *routeControllersMap = nil;
 static BOOL verboseLoggingEnabled = NO;
 static BOOL shouldDecodePlusSymbols = YES;
@@ -112,6 +119,11 @@ static BOOL shouldDecodePlusSymbols = YES;
 				if ([variableName length] > 0 && [urlDecodedVariableValue length] > 0) {
 					variables[variableName] = urlDecodedVariableValue;
 				}
+                else {
+                    NSMutableArray * newComponents = [NSMutableArray arrayWithArray:URLComponents];
+                    [newComponents addObject:@""];
+                    URLComponents = newComponents;
+                }
 			} else if ([patternComponent isEqualToString:@"*"]) {
 				// match wildcards
 				variables[kJLRouteWildcardComponentsKey] = [URLComponents subarrayWithRange:NSMakeRange(componentIndex, URLComponents.count-componentIndex)];
@@ -204,7 +216,7 @@ static BOOL shouldDecodePlusSymbols = YES;
 
 
 - (void)addRoute:(NSString *)routePattern handler:(BOOL (^)(NSDictionary *parameters))handlerBlock {
-	[self addRoute:routePattern priority:0 handler:handlerBlock];
+    [self addRoute:routePattern priority:0 handler:handlerBlock];
 }
 
 - (void)addRoutes:(NSArray *)routePatterns handler:(BOOL (^)(NSDictionary *parameters))handlerBlock {
@@ -215,6 +227,37 @@ static BOOL shouldDecodePlusSymbols = YES;
 
 
 - (void)addRoute:(NSString *)routePattern priority:(NSUInteger)priority handler:(BOOL (^)(NSDictionary *parameters))handlerBlock {
+    
+    // if there's a pair of parenthesis, process optionals, trim the parenthesis, put it on trimmedRoute
+    NSString *trimmedRoute = routePattern;
+    
+    // repeat until no parenthesis pair is found
+    while ([trimmedRoute rangeOfString:@")" options:NSBackwardsSearch].location > [trimmedRoute rangeOfString:@"(" options:NSBackwardsSearch].location) {
+        
+        //Build route with the optionals
+        NSString *patternWithOptionals = [trimmedRoute stringByReplacingOccurrencesOfString:@"(" withString:@""];
+        patternWithOptionals = [patternWithOptionals stringByReplacingOccurrencesOfString:@")" withString:@""];
+        [self registerRoute:patternWithOptionals priority:priority handler:handlerBlock];
+        
+        //Build route without optionals
+        NSRange rangeOfLastParentheses = [trimmedRoute rangeOfString:@"(" options:NSBackwardsSearch];
+        NSRange rangeToRemove = NSMakeRange(rangeOfLastParentheses.location, trimmedRoute.length - rangeOfLastParentheses.location);
+        NSString *patternWithLastOptionalRemoved = [trimmedRoute stringByReplacingCharactersInRange:rangeToRemove withString:@""];
+        //Remove any parenthesis for other optionals that might still be in the route
+        NSString *patternWithoutOptionals = [patternWithLastOptionalRemoved stringByReplacingOccurrencesOfString:@"(" withString:@""];
+        patternWithoutOptionals = [patternWithoutOptionals stringByReplacingOccurrencesOfString:@")" withString:@""];
+        [self registerRoute:patternWithoutOptionals priority:priority handler:handlerBlock];
+        
+        trimmedRoute = patternWithLastOptionalRemoved;
+    }
+    
+    //Only register original route if trimmedRoute haven't been modified.
+    if (trimmedRoute == routePattern) {
+        [self registerRoute:routePattern priority:priority handler:handlerBlock];
+    }
+}
+
+- (void)registerRoute:(NSString *)routePattern priority:(NSUInteger)priority handler:(BOOL (^)(NSDictionary *parameters))handlerBlock {
 	_JLRoute *route = [[_JLRoute alloc] init];
 	route.pattern = routePattern;
 	route.priority = priority;
@@ -392,7 +435,7 @@ static BOOL shouldDecodePlusSymbols = YES;
 	// break the URL down into path components and filter out any leading/trailing slashes from it
 	NSArray *pathComponents = [(URL.pathComponents ?: @[]) filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"NOT SELF like '/'"]];
 	
-	if ([URL.host rangeOfString:@"."].location == NSNotFound && ![URL.host isEqualToString:@"localhost"]) {
+	if (URL.host.length > 0 && ![URL.host isEqualToString:@"localhost"]) {
 		// For backward compatibility, handle scheme://path/to/ressource as if path was part of the
 		// path if it doesn't look like a domain name (no dot in it)
 		pathComponents = [@[URL.host] arrayByAddingObjectsFromArray:pathComponents];
