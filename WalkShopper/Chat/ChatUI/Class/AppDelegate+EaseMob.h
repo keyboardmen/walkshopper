@@ -23,4 +23,5 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)easemobApplication:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
+- (void)easeMobApplication:(UIApplication *)application failToRegisterRemoteNotificationWithError:(NSError *)error;
 @end

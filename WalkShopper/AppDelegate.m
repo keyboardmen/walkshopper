@@ -78,6 +78,7 @@
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
+    [self easeMobApplication:application failToRegisterRemoteNotificationWithError:error];
     NSLog(@"%@", error);
 }
 

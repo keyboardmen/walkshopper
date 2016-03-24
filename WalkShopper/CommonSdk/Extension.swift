@@ -92,3 +92,15 @@ extension UIImageView {
         return (self.image?.sizeThatFits(self.bounds.size))!
     }
 }
+
+extension UIButton {
+    func setOneImage(imagePrefix: String) {
+        self.setImage(UIImage(named: imagePrefix + "Normal"), forState: .Normal)
+        self.setImage(UIImage(named: imagePrefix + "Normal"), forState: .Highlighted)
+    }
+    
+    func setAllImage(imagePrefix: String) {
+        self.setImage(UIImage(named: imagePrefix + "Normal"), forState: .Normal)
+        self.setImage(UIImage(named: imagePrefix + "Press"), forState: .Highlighted)
+    }
+}

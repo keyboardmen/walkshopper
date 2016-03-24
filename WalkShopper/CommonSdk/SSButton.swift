@@ -47,19 +47,18 @@ class SSButton: UIButton {
         self.configure()
     }
 
-    init(frame: CGRect, type: SSButtonType, normalImageName: String, pressImageName: String) {
+    init(frame: CGRect, type: SSButtonType, imageNamePrefix: String) {
         super.init(frame: frame)
         self.ssButtonType = type
-        self.config(normalImageName, pressImageName: pressImageName)
+        self.config(imageNamePrefix)
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)!
     }
     
-    func config(normalImageName: String, pressImageName: String) {
-        self.setImage(UIImage(named: normalImageName), forState: UIControlState.Normal)
-        self.setImage(UIImage(named: pressImageName), forState: UIControlState.Highlighted)
+    func config(imageNamePrefix: String) {
+        self.setAllImage(imageNamePrefix)
         self.configure()
     }
     

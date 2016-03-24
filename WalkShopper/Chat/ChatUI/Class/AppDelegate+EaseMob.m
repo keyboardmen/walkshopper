@@ -20,6 +20,7 @@
 
 @implementation AppDelegate (EaseMob)
 
+#pragma mark - public method
 - (void)easemobApplication:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                     appkey:(NSString *)appkey
@@ -39,15 +40,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                                                object:nil];
     
     [self registerEaseMobNotification];
+    [self easeMobRegisterRemoteNotification];
 
 //    [self loginStateChange:nil];
 }
 
-#pragma mark - App Delegate
-
-// 注册deviceToken失败，此处失败，与环信SDK无关，一般是您的环境配置或者证书配置有误
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
-{
+- (void)easeMobApplication:(UIApplication *)application failToRegisterRemoteNotificationWithError:(NSError *)error {
+    // 注册deviceToken失败，此处失败，与环信SDK无关，一般是您的环境配置或者证书配置有误
     [[EaseMob sharedInstance] application:application didFailToRegisterForRemoteNotificationsWithError:error];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"apns.failToRegisterApns", Fail to register apns)
@@ -58,8 +57,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [alert show];
 }
 
-// 注册推送
-- (void)registerRemoteNotification{
+- (void)easeMobRegisterRemoteNotification {
     UIApplication *application = [UIApplication sharedApplication];
     application.applicationIconBadgeNumber = 0;
     
