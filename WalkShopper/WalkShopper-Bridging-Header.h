@@ -14,5 +14,7 @@
 #import "WSUserInfoViewController.h"
 #import "WSUserSession.h"
 #import "WSLoginAction.h"
+#import "WSTableViewCell.h"
+
 
 #endif /* WalkShopper_Bridging_Header_h */
