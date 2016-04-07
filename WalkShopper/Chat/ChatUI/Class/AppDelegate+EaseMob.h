@@ -20,8 +20,5 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
               apnsCertName:(NSString *)apnsCertName
                otherConfig:(NSDictionary *)otherConfig;
 
-- (void)easemobApplication:(UIApplication *)application
-didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
-
 - (void)easeMobApplication:(UIApplication *)application failToRegisterRemoteNotificationWithError:(NSError *)error;
 @end
