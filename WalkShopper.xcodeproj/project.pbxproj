@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AFAD6D21CEC5F2B00B43AA8 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFAD6D11CEC5F2B00B43AA8 /* libEaseMobClientSDK.a */; };
+		2AFAD6E61CEC69E000B43AA8 /* WSBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAD6E31CEC69E000B43AA8 /* WSBaseObject.m */; };
+		2AFAD6E71CEC69E000B43AA8 /* WSBaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAD6E51CEC69E000B43AA8 /* WSBaseResponse.m */; };
+		2AFAD6EA1CEC69F300B43AA8 /* WSOrderListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFAD6E91CEC69F300B43AA8 /* WSOrderListResponse.m */; };
 		3A11E1A399D83B786A2B02F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0006C10BC7D70D7BE6331484 /* libPods.a */; };
 		3A1A3C1C1C4F32E4003E33F5 /* EMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A3A211C4F32E4003E33F5 /* EMAlertView.m */; };
 		3A1A3C1D1C4F32E4003E33F5 /* EMGifImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1A3A251C4F32E4003E33F5 /* EMGifImage.m */; };
@@ -348,7 +352,6 @@
 		6FE426791C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE426781C54C88300A4CE6B /* WSSellerProductInfoNextStepCell.m */; };
 		6FE4267C1C55183600A4CE6B /* WSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4267B1C55183600A4CE6B /* WSTableViewCell.m */; };
 		6FE4267F1C551EA400A4CE6B /* UIColor+WSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4267E1C551EA400A4CE6B /* UIColor+WSColor.m */; };
-		6FE5362C1C4FE234009841A8 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */; };
 		6FE5362D1C4FE234009841A8 /* 城市码表.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6FE5362B1C4FE234009841A8 /* 城市码表.csv */; };
 		6FE536301C4FE3FB009841A8 /* WSImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */; };
 		6FEE02361C4A053B000DC27A /* WSNetworkingResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE02351C4A053B000DC27A /* WSNetworkingResponseObject.m */; };
@@ -377,6 +380,13 @@
 
 /* Begin PBXFileReference section */
 		0006C10BC7D70D7BE6331484 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AFAD6D11CEC5F2B00B43AA8 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
+		2AFAD6E21CEC69E000B43AA8 /* WSBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSBaseObject.h; sourceTree = "<group>"; };
+		2AFAD6E31CEC69E000B43AA8 /* WSBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSBaseObject.m; sourceTree = "<group>"; };
+		2AFAD6E41CEC69E000B43AA8 /* WSBaseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSBaseResponse.h; sourceTree = "<group>"; };
+		2AFAD6E51CEC69E000B43AA8 /* WSBaseResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSBaseResponse.m; sourceTree = "<group>"; };
+		2AFAD6E81CEC69F300B43AA8 /* WSOrderListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOrderListResponse.h; sourceTree = "<group>"; };
+		2AFAD6E91CEC69F300B43AA8 /* WSOrderListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOrderListResponse.m; sourceTree = "<group>"; };
 		30AB299A03CE4FF6D6DF9A68 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3A1A3A201C4F32E4003E33F5 /* EMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAlertView.h; sourceTree = "<group>"; };
 		3A1A3A211C4F32E4003E33F5 /* EMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAlertView.m; sourceTree = "<group>"; };
@@ -945,7 +955,6 @@
 		6FE4267B1C55183600A4CE6B /* WSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTableViewCell.m; sourceTree = "<group>"; };
 		6FE4267D1C551EA400A4CE6B /* UIColor+WSColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WSColor.h"; sourceTree = "<group>"; };
 		6FE4267E1C551EA400A4CE6B /* UIColor+WSColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WSColor.m"; sourceTree = "<group>"; };
-		6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		6FE5362B1C4FE234009841A8 /* 城市码表.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "城市码表.csv"; sourceTree = "<group>"; };
 		6FE5362E1C4FE3FB009841A8 /* WSImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSImageCropperViewController.h; sourceTree = "<group>"; };
 		6FE5362F1C4FE3FB009841A8 /* WSImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSImageCropperViewController.m; sourceTree = "<group>"; };
@@ -967,8 +976,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AFAD6D21CEC5F2B00B43AA8 /* libEaseMobClientSDK.a in Frameworks */,
 				6FCA22621C6B716600F7D332 /* AssetsLibrary.framework in Frameworks */,
-				6FE5362C1C4FE234009841A8 /* libEaseMobClientSDK.a in Frameworks */,
 				3A1A3D341C4F3B79003E33F5 /* libEaseUI.a in Frameworks */,
 				6F7C3F241C08ED0C00A82DCD /* AdSupport.framework in Frameworks */,
 				3A1A3D2B1C4F3488003E33F5 /* AddressBook.framework in Frameworks */,
@@ -1009,6 +1018,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AFAD6D31CEC642B00B43AA8 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2AFAD6E11CEC69E000B43AA8 /* base */,
+				2AFAD6E81CEC69F300B43AA8 /* WSOrderListResponse.h */,
+				2AFAD6E91CEC69F300B43AA8 /* WSOrderListResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2AFAD6E11CEC69E000B43AA8 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				2AFAD6E21CEC69E000B43AA8 /* WSBaseObject.h */,
+				2AFAD6E31CEC69E000B43AA8 /* WSBaseObject.m */,
+				2AFAD6E41CEC69E000B43AA8 /* WSBaseResponse.h */,
+				2AFAD6E51CEC69E000B43AA8 /* WSBaseResponse.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		3A1A3A191C4F32E4003E33F5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -2134,6 +2164,7 @@
 		6F1A7FD91BB7007C00A60911 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2AFAD6D31CEC642B00B43AA8 /* Response */,
 				6F1A7FDD1BB7025800A60911 /* NSData+Crypt.h */,
 				6F1A7FDE1BB7025800A60911 /* NSData+Crypt.m */,
 				6FC51FD81C414DC200397633 /* NSString+Crypt.h */,
@@ -2403,7 +2434,7 @@
 		6FE536291C4FE234009841A8 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				6FE5362A1C4FE234009841A8 /* libEaseMobClientSDK.a */,
+				2AFAD6D11CEC5F2B00B43AA8 /* libEaseMobClientSDK.a */,
 				6FE5362B1C4FE234009841A8 /* 城市码表.csv */,
 			);
 			path = lib;
@@ -2966,6 +2997,7 @@
 				6F1A7FC61BB643DF00A60911 /* UIViewController+WSOrientations.m in Sources */,
 				3A1A3C581C4F32E4003E33F5 /* UserProfileViewController.m in Sources */,
 				6FCF9A751C30646C0055796F /* WSContinentCollectionReusableView.m in Sources */,
+				2AFAD6EA1CEC69F300B43AA8 /* WSOrderListResponse.m in Sources */,
 				3A1A3C291C4F32E4003E33F5 /* wav.mm in Sources */,
 				3A1A3C6B1C4F32E4003E33F5 /* EMNavigationController.m in Sources */,
 				3A1A3C251C4F32E4003E33F5 /* THProgressView.m in Sources */,
@@ -2982,6 +3014,7 @@
 				3A1A3C3B1C4F32E4003E33F5 /* ChatViewController.m in Sources */,
 				6F1A7FCD1BB64B9B00A60911 /* UIDevice+Extensions.m in Sources */,
 				3A1A3C451C4F32E4003E33F5 /* GroupSubjectChangingViewController.m in Sources */,
+				2AFAD6E61CEC69E000B43AA8 /* WSBaseObject.m in Sources */,
 				3A1A3C571C4F32E4003E33F5 /* MainViewController.m in Sources */,
 				6F903D1B1C14BCDF00F28B0A /* WSViewControllerConfiguration.m in Sources */,
 				3A1A3C641C4F32E4003E33F5 /* UserProfileEditViewController.m in Sources */,
@@ -3001,6 +3034,7 @@
 				6FCF9A621C2E8EB00055796F /* WSSelectCountryFlowLayout.m in Sources */,
 				3A1A3C401C4F32E4003E33F5 /* ContactView.m in Sources */,
 				3A1A3C521C4F32E4003E33F5 /* InvitationManager.m in Sources */,
+				2AFAD6E71CEC69E000B43AA8 /* WSBaseResponse.m in Sources */,
 				3A1A3C461C4F32E4003E33F5 /* PublicGroupDetailViewController.m in Sources */,
 				CD872C461BB2A20E00F74DD7 /* WSHomeViewController.m in Sources */,
 				3A3F7C391C61A79400F96D99 /* SSButton.swift in Sources */,
